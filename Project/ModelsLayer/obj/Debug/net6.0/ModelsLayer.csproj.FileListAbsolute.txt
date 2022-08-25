@@ -1,0 +1,12 @@
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\ModelsLayer\bin\Debug\net6.0\ModelsLayer.deps.json
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\ModelsLayer\bin\Debug\net6.0\ModelsLayer.dll
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\ModelsLayer\bin\Debug\net6.0\ModelsLayer.pdb
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\ModelsLayer\obj\Debug\net6.0\ModelsLayer.csproj.AssemblyReference.cache
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\ModelsLayer\obj\Debug\net6.0\ModelsLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\ModelsLayer\obj\Debug\net6.0\ModelsLayer.AssemblyInfoInputs.cache
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\ModelsLayer\obj\Debug\net6.0\ModelsLayer.AssemblyInfo.cs
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\ModelsLayer\obj\Debug\net6.0\ModelsLayer.csproj.CoreCompileInputs.cache
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\ModelsLayer\obj\Debug\net6.0\ModelsLayer.dll
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\ModelsLayer\obj\Debug\net6.0\refint\ModelsLayer.dll
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\ModelsLayer\obj\Debug\net6.0\ModelsLayer.pdb
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\ModelsLayer\obj\Debug\net6.0\ref\ModelsLayer.dll
