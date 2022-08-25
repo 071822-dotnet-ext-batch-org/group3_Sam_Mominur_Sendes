@@ -1,0 +1,15 @@
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\RepoLayer\bin\Debug\net6.0\RepoLayer.deps.json
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\RepoLayer\bin\Debug\net6.0\RepoLayer.dll
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\RepoLayer\bin\Debug\net6.0\RepoLayer.pdb
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\RepoLayer\bin\Debug\net6.0\ModelsLayer.dll
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\RepoLayer\bin\Debug\net6.0\ModelsLayer.pdb
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\RepoLayer\obj\Debug\net6.0\RepoLayer.csproj.AssemblyReference.cache
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\RepoLayer\obj\Debug\net6.0\RepoLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\RepoLayer\obj\Debug\net6.0\RepoLayer.AssemblyInfoInputs.cache
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\RepoLayer\obj\Debug\net6.0\RepoLayer.AssemblyInfo.cs
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\RepoLayer\obj\Debug\net6.0\RepoLayer.csproj.CoreCompileInputs.cache
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\RepoLayer\obj\Debug\net6.0\RepoLayer.csproj.CopyComplete
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\RepoLayer\obj\Debug\net6.0\RepoLayer.dll
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\RepoLayer\obj\Debug\net6.0\refint\RepoLayer.dll
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\RepoLayer\obj\Debug\net6.0\RepoLayer.pdb
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\Project\RepoLayer\obj\Debug\net6.0\ref\RepoLayer.dll
