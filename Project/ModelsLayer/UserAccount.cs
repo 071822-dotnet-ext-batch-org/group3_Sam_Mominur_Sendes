@@ -8,7 +8,7 @@ namespace ModelsLayer
     public class UserAccount
     
     {
-           public Product(int userId, string userName, string firstName, string lastName, string password, string email, bool userRole)
+           public UserAccount(int userId, string userName, string firstName, string lastName, string password, string email, bool userRole)
         {
              
             userId = userId;

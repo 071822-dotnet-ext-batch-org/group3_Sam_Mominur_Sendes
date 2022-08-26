@@ -7,7 +7,7 @@ namespace ModelsLayer
 {
     public class Products
     {
-      public Product(int productId, int userId, string productName, string productDescription, double productPrice, int productInventory)
+      public Products(int productId, int userId, string productName, string productDescription, double productPrice, int productInventory)
         {
             productId = productId;
             userId = userId;
