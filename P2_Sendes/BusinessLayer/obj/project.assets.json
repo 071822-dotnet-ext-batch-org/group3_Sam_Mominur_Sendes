@@ -1,0 +1,111 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "ModelLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ModelLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ModelLayer.dll": {}
+        }
+      },
+      "RepoLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ModelLayer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RepoLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RepoLayer.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ModelLayer/1.0.0": {
+      "type": "project",
+      "path": "../ModelLayer/ModelLayer.csproj",
+      "msbuildProject": "../ModelLayer/ModelLayer.csproj"
+    },
+    "RepoLayer/1.0.0": {
+      "type": "project",
+      "path": "../RepoLayer/RepoLayer.csproj",
+      "msbuildProject": "../RepoLayer/RepoLayer.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "ModelLayer >= 1.0.0",
+      "RepoLayer >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/sendes/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/sendes/Desktop/Revature_Files/Group3/P2_Sendes/BusinessLayer/BusinessLayer.csproj",
+      "projectName": "BusinessLayer",
+      "projectPath": "/Users/sendes/Desktop/Revature_Files/Group3/P2_Sendes/BusinessLayer/BusinessLayer.csproj",
+      "packagesPath": "/Users/sendes/.nuget/packages/",
+      "outputPath": "/Users/sendes/Desktop/Revature_Files/Group3/P2_Sendes/BusinessLayer/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/sendes/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "/Users/sendes/Desktop/Revature_Files/Group3/P2_Sendes/ModelLayer/ModelLayer.csproj": {
+              "projectPath": "/Users/sendes/Desktop/Revature_Files/Group3/P2_Sendes/ModelLayer/ModelLayer.csproj"
+            },
+            "/Users/sendes/Desktop/Revature_Files/Group3/P2_Sendes/RepoLayer/RepoLayer.csproj": {
+              "projectPath": "/Users/sendes/Desktop/Revature_Files/Group3/P2_Sendes/RepoLayer/RepoLayer.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
