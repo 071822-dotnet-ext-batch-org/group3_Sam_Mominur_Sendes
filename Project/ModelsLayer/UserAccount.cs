@@ -8,16 +8,16 @@ namespace ModelsLayer
     public class UserAccount
     
     {
-           public Product(int userId, string userName, string firstName, string lastName, string password, string email, bool userRole)
+           public UserAccount(int user_Id, string user_Name, string first_Name, string last_Name, string user_password, string user_email, bool user_Role)
         {
              
-            userId = userId;
-            userName = userName;
-            firstName = firstName;
-            lastName = lastName;
-            password = password;
-            email = email;
-            userRole = userRole;
+            userId = user_Id;
+            userName = user_Name;
+            firstName = first_Name;
+            lastName = last_Name;
+            password = user_password;
+            email = user_email;
+            userRole = user_Role;
 
         }
 
