@@ -10,7 +10,7 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: '**/*.sln'
+  solution: '**/*.sln' # this is the path to your sln file in proj - relative path in your repo
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
@@ -19,7 +19,7 @@ steps:
 
 - task: NuGetCommand@2
   inputs:
-    restoreSolution: '$(solution)'
+    restoreSolution: '$(solution)' # building solution
 
 - task: VSBuild@1
   inputs:
