@@ -8,27 +8,27 @@ namespace ModelsLayer
     public class UserAccount
     
     {
-           public UserAccount(int user_Id, string user_Name, string first_Name, string last_Name, string user_password, string user_email, bool user_Role)
+           public UserAccount(Guid user_Id, string user_Name, string first_Name, string last_Name, string user_password, string user_email, bool user_Role)
         {
              
-            userId = user_Id;
-            userName = user_Name;
-            firstName = first_Name;
-            lastName = last_Name;
-            password = user_password;
-            email = user_email;
-            userRole = user_Role;
+            UserID = user_Id;
+            UserName = user_Name;
+            FirstName = first_Name;
+            LastName = last_Name;
+            Password = user_password;
+            Email = user_email;
+            Role = user_Role;
 
         }
 
 
-        public int userId { get; set; }
-        public string userName { get; set; }
-        public string firstName { get; set; }
-        public string lastName { get; set; }
-        public string password { get; set; }
-        public string email { get; set; }
-        public bool userRole { get; set; }
+        public Guid UserID { get; set; }
+        public string UserName { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Password { get; set; }
+        public string Email { get; set; }
+        public bool Role { get; set; }
 
     }
 }
