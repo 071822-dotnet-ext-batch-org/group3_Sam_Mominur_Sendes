@@ -2,19 +2,53 @@
 # Build and test ASP.NET projects.
 # Add steps that publish symbols, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
+pr: none #What is pr?
 
-trigger:
-- main
+#trigger: # sets a trigger on main for any change made to main
+#- main
+
+trigger: #To specify which thing in the branch to trigger a run
+  branches:
+    include:
+      - main  
+  paths:
+    include:
+      - Official_GroupProject2
 
 pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: '**/*.sln' # this is the path to your sln file in proj - relative path in your repo
+  solution: 'Official_GroupProject2/ApiLayer/ApiLayer.sln' # this is the path to your sln file in proj - relative path in your repo
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-
-steps:
+stages: #This is the build stage
+  -stage: prep
+    jobs: 
+      -job: sdk_download # the job to download correct SDK
+        displayName: download the most up to date SDK for Dotnet Core
+        steps:
+        - task: UseDotNet@2
+          inputs:
+            packageType: 'sdk'
+            version: '6.x'
+  -stage: build
+    jobs:
+    -job: build the app
+      steps:
+      - task: DotNetCoreCLI@2
+        inputs:
+          command: 'custom'
+          projects: '$(solution)'
+  -stage: Test
+    jobs:
+    -job: Test the app
+      steps:
+      - task: DotNetCoreCLI@2
+        inputs:
+          command: 'test'
+          projects: '$(solution)'
+    
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
