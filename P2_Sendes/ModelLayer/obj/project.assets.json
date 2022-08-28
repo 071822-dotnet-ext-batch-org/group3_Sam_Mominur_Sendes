@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/sendes/Desktop/Revature_Files/Group3/P2_Sendes/ModelLayer/ModelLayer.csproj",
+      "projectUniqueName": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ModelLayer/ModelLayer.csproj",
       "projectName": "ModelLayer",
-      "projectPath": "/Users/sendes/Desktop/Revature_Files/Group3/P2_Sendes/ModelLayer/ModelLayer.csproj",
+      "projectPath": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ModelLayer/ModelLayer.csproj",
       "packagesPath": "/Users/sendes/.nuget/packages/",
-      "outputPath": "/Users/sendes/Desktop/Revature_Files/Group3/P2_Sendes/ModelLayer/obj/",
+      "outputPath": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ModelLayer/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/sendes/.nuget/NuGet/NuGet.Config"

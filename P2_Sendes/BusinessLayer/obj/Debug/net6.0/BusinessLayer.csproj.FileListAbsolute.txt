@@ -1,0 +1,17 @@
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/BusinessLayer/obj/Debug/net6.0/BusinessLayer.csproj.AssemblyReference.cache
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/BusinessLayer/obj/Debug/net6.0/BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/BusinessLayer/obj/Debug/net6.0/BusinessLayer.AssemblyInfoInputs.cache
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/BusinessLayer/obj/Debug/net6.0/BusinessLayer.AssemblyInfo.cs
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/BusinessLayer/obj/Debug/net6.0/BusinessLayer.csproj.CoreCompileInputs.cache
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/BusinessLayer/bin/Debug/net6.0/BusinessLayer.deps.json
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/BusinessLayer/bin/Debug/net6.0/BusinessLayer.dll
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/BusinessLayer/bin/Debug/net6.0/BusinessLayer.pdb
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/BusinessLayer/bin/Debug/net6.0/ModelLayer.dll
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/BusinessLayer/bin/Debug/net6.0/RepoLayer.dll
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/BusinessLayer/bin/Debug/net6.0/RepoLayer.pdb
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/BusinessLayer/bin/Debug/net6.0/ModelLayer.pdb
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/BusinessLayer/obj/Debug/net6.0/BusinessLayer.csproj.CopyComplete
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/BusinessLayer/obj/Debug/net6.0/BusinessLayer.dll
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/BusinessLayer/obj/Debug/net6.0/refint/BusinessLayer.dll
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/BusinessLayer/obj/Debug/net6.0/BusinessLayer.pdb
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/BusinessLayer/obj/Debug/net6.0/ref/BusinessLayer.dll

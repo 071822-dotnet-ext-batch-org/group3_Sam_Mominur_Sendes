@@ -1,0 +1,15 @@
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/RepoLayer/bin/Debug/net6.0/RepoLayer.deps.json
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/RepoLayer/bin/Debug/net6.0/RepoLayer.dll
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/RepoLayer/bin/Debug/net6.0/RepoLayer.pdb
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/RepoLayer/bin/Debug/net6.0/ModelLayer.dll
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/RepoLayer/bin/Debug/net6.0/ModelLayer.pdb
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/RepoLayer/obj/Debug/net6.0/RepoLayer.csproj.AssemblyReference.cache
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/RepoLayer/obj/Debug/net6.0/RepoLayer.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/RepoLayer/obj/Debug/net6.0/RepoLayer.AssemblyInfoInputs.cache
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/RepoLayer/obj/Debug/net6.0/RepoLayer.AssemblyInfo.cs
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/RepoLayer/obj/Debug/net6.0/RepoLayer.csproj.CoreCompileInputs.cache
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/RepoLayer/obj/Debug/net6.0/RepoLayer.csproj.CopyComplete
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/RepoLayer/obj/Debug/net6.0/RepoLayer.dll
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/RepoLayer/obj/Debug/net6.0/refint/RepoLayer.dll
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/RepoLayer/obj/Debug/net6.0/RepoLayer.pdb
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/RepoLayer/obj/Debug/net6.0/ref/RepoLayer.dll
