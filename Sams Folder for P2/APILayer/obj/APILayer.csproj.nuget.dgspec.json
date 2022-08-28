@@ -1,0 +1,261 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\APILayer\\APILayer.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\APILayer\\APILayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\APILayer\\APILayer.csproj",
+        "projectName": "APILayer",
+        "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\APILayer\\APILayer.csproj",
+        "packagesPath": "C:\\Users\\samba\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\APILayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\samba\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\BusinessLayer\\BusinessLayer.csproj": {
+                "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\BusinessLayer\\BusinessLayer.csproj"
+              },
+              "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\ModelsLayer\\ModelsLayer.csproj": {
+                "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\ModelsLayer\\ModelsLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\BusinessLayer\\BusinessLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\BusinessLayer\\BusinessLayer.csproj",
+        "projectName": "BusinessLayer",
+        "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\BusinessLayer\\BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\samba\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\BusinessLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\samba\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\ModelsLayer\\ModelsLayer.csproj": {
+                "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\ModelsLayer\\ModelsLayer.csproj"
+              },
+              "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\RepoLayer\\RepoLayer.csproj": {
+                "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\RepoLayer\\RepoLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\ModelsLayer\\ModelsLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\ModelsLayer\\ModelsLayer.csproj",
+        "projectName": "ModelsLayer",
+        "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\ModelsLayer\\ModelsLayer.csproj",
+        "packagesPath": "C:\\Users\\samba\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\ModelsLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\samba\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\RepoLayer\\RepoLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\RepoLayer\\RepoLayer.csproj",
+        "projectName": "RepoLayer",
+        "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\RepoLayer\\RepoLayer.csproj",
+        "packagesPath": "C:\\Users\\samba\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\RepoLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\samba\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\ModelsLayer\\ModelsLayer.csproj": {
+                "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\ProjectTwo\\ModelsLayer\\ModelsLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
