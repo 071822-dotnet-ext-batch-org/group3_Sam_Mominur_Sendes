@@ -1,0 +1,12 @@
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ModelLayer/bin/Debug/net6.0/ModelLayer.deps.json
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ModelLayer/bin/Debug/net6.0/ModelLayer.dll
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ModelLayer/bin/Debug/net6.0/ModelLayer.pdb
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ModelLayer/obj/Debug/net6.0/ModelLayer.csproj.AssemblyReference.cache
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ModelLayer/obj/Debug/net6.0/ModelLayer.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ModelLayer/obj/Debug/net6.0/ModelLayer.AssemblyInfoInputs.cache
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ModelLayer/obj/Debug/net6.0/ModelLayer.AssemblyInfo.cs
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ModelLayer/obj/Debug/net6.0/ModelLayer.csproj.CoreCompileInputs.cache
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ModelLayer/obj/Debug/net6.0/ModelLayer.dll
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ModelLayer/obj/Debug/net6.0/refint/ModelLayer.dll
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ModelLayer/obj/Debug/net6.0/ModelLayer.pdb
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ModelLayer/obj/Debug/net6.0/ref/ModelLayer.dll

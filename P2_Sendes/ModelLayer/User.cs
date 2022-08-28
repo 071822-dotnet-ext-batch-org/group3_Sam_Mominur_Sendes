@@ -5,6 +5,12 @@ using System.Threading.Tasks;
 
 namespace ModelLayer
 {
+    public enum Status
+    {
+        User,
+        Admin,
+        SuperAdmin
+    }
     public class User
     {
         //This is the User class
@@ -98,20 +104,20 @@ namespace ModelLayer
             this.First = "Fname";
             this.Last = "Lname";
             this.Email = "example@email.com";
-            this.Role = "User";
+            this.Role = Status.User.ToString();
             this.SignupDate = DateTime.Now;
         }
 
         //User that gets created
-        public User(string username, string password, string firstname, string lastname, string email)
+        public User(UserDTO user)
         {
             this.PK_EmployeeID = Guid.NewGuid();
-            this.Username = username;
-            this.Password = password;
-            this.First = firstname;
-            this.Last = lastname;
-            this.Email = email;
-            this.Role = "User";
+            this.Username = user.Username;
+            this.Password = user.Password;
+            this.First = user.First;
+            this.Last = user.Last;
+            this.Email = user.Email;
+            this.Role = Status.User.ToString();
             this.SignupDate = DateTime.Now;
         }
 
@@ -125,10 +131,15 @@ namespace ModelLayer
             this.Last = lastname;
             this.Email = email;
             if(roleBIT_TYPE == 0){
-                this.Role = "User";
+                this.Role = Status.User.ToString();
 
-            }else{
-                this.Role = "Admin";
+            }else if(roleBIT_TYPE == 1)
+            {
+                this.Role = Status.Admin.ToString();
+            }
+            else
+            {
+                this.Role = Status.SuperAdmin.ToString();
             }
             this.SignupDate = registerDate;
         }
