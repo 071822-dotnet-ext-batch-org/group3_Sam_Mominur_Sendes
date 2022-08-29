@@ -49,17 +49,15 @@ namespace APILayer.Controllers
         }
 
         /// <summary>
-        /// #3 Display products
+        /// #3 Display Products
         /// </summary>
-        /// <param name="productName"></param>
-        /// <param name="productInventory"></param>
-        /// <param name="id"></param>
+        /// <param name="displayDto"></param>
         /// <returns></returns>
-        [HttpGet("Products")] //get all of the products
-        public async Task<ActionResult<List<Product>>> ProductsAsync(int productInventory, Guid? id)
+        [HttpGet("Display Products")] //get all of a type request
+        public async Task<ActionResult<List<DisplayDto>>> ProductDisplayAsync()
         {
-            List<Product> productList = await this._businessLayer.ProductsAsync(productInventory); //its in the bussiness Layer, because BusinessLayer deals with all the logics. Due to seperation concern, leave minimum logic as possible
-            return Ok(productList); //returns 200
+            List<DisplayDto> productDisplayList = await this._businessLayer.ProductDisplayAsync(); //its in the bussiness Layer, because BusinessLayer deals with all the logics. Due to seperation concern, leave minimum logic as possible
+            return Ok(productDisplayList); //returns 200
             //return null;
             //0=pending, 1=Aprroved, 2=Denied
 

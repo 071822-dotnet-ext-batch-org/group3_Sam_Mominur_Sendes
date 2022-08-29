@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\Sams Folder for P2\\ModelsLayer\\ModelsLayer.csproj",
+      "projectUniqueName": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\ModelsLayer\\ModelsLayer.csproj",
       "projectName": "ModelsLayer",
-      "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\Sams Folder for P2\\ModelsLayer\\ModelsLayer.csproj",
+      "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\ModelsLayer\\ModelsLayer.csproj",
       "packagesPath": "C:\\Users\\samba\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\Sams Folder for P2\\ModelsLayer\\obj\\",
+      "outputPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\ModelsLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\samba\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -491,11 +491,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\Sams Folder for P2\\RepoLayer\\RepoLayer.csproj",
+      "projectUniqueName": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\RepoLayer\\RepoLayer.csproj",
       "projectName": "RepoLayer",
-      "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\Sams Folder for P2\\RepoLayer\\RepoLayer.csproj",
+      "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\RepoLayer\\RepoLayer.csproj",
       "packagesPath": "C:\\Users\\samba\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\Sams Folder for P2\\RepoLayer\\obj\\",
+      "outputPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\RepoLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\samba\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -512,8 +512,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\Sams Folder for P2\\ModelsLayer\\ModelsLayer.csproj": {
-              "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\Sams Folder for P2\\ModelsLayer\\ModelsLayer.csproj"
+            "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\ModelsLayer\\ModelsLayer.csproj": {
+              "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\ModelsLayer\\ModelsLayer.csproj"
             }
           }
         }
