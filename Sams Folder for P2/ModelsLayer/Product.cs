@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ModelsLayer
 {
-    internal class Product
+    public class Product
     {
         public Product(Guid productID, Guid fK_UserName, string productName, string productDetails, decimal productPrice, int productInventory)
         {

@@ -15,3 +15,20 @@ C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\ProjectTwo\Bu
 C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\ProjectTwo\BusinessLayer\obj\Debug\net6.0\refint\BusinessLayer.dll
 C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\ProjectTwo\BusinessLayer\obj\Debug\net6.0\BusinessLayer.pdb
 C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\ProjectTwo\BusinessLayer\obj\Debug\net6.0\ref\BusinessLayer.dll
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\BusinessLayer\bin\Debug\net6.0\BusinessLayer.deps.json
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\BusinessLayer\bin\Debug\net6.0\BusinessLayer.dll
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\BusinessLayer\bin\Debug\net6.0\BusinessLayer.pdb
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\BusinessLayer\bin\Debug\net6.0\ModelsLayer.dll
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\BusinessLayer\bin\Debug\net6.0\RepoLayer.dll
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\BusinessLayer\bin\Debug\net6.0\ModelsLayer.pdb
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\BusinessLayer\bin\Debug\net6.0\RepoLayer.pdb
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\BusinessLayer\obj\Debug\net6.0\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\BusinessLayer\obj\Debug\net6.0\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\BusinessLayer\obj\Debug\net6.0\BusinessLayer.AssemblyInfoInputs.cache
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\BusinessLayer\obj\Debug\net6.0\BusinessLayer.AssemblyInfo.cs
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\BusinessLayer\obj\Debug\net6.0\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\BusinessLayer\obj\Debug\net6.0\BusinessLayer.csproj.CopyComplete
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\BusinessLayer\obj\Debug\net6.0\BusinessLayer.dll
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\BusinessLayer\obj\Debug\net6.0\refint\BusinessLayer.dll
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\BusinessLayer\obj\Debug\net6.0\BusinessLayer.pdb
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\BusinessLayer\obj\Debug\net6.0\ref\BusinessLayer.dll
