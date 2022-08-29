@@ -20,52 +20,89 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: 'OFFICIAL_PROJECT2/Project2.sln' # this is the path to your sln file in proj - relative path in your repo
+  solution: 'OFFICIAL_PROJECT2/*.sln' # this is the path to your sln file in proj - relative path in your repo
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  workingDirectory: 'OFFICIAL_PROJECT2/'
 
 
-# stages: #This is the build stage
-#   -stage: prep
-#     jobs: 
-#       -job: sdk_download # the job to download correct SDK
-#         displayName: download the most up to date SDK for Dotnet Core
-#         steps:
-#         - task: UseDotNet@2
-#           inputs:
-#             packageType: 'sdk'
-#             version: '6.x'
-#   -stage: build
-#     jobs:
-#     -job: build the app
+stages:
+
+#---------------------------------------PREP STAGE
+- stage: Prep
+  jobs: 
+    - job: PreppingBy_downloadRequiredSDK #Job name CANNOT have spaces but can have _
+      displayName: download most recent sdk version
+      steps:
+      - task: UseDotNet@2
+        displayName: Get the SDK
+        inputs:
+          packageType: 'sdk'
+          version: '6.x'
+
+#---------------------------------------BUILD STAGE
+- stage: Build
+  jobs:
+  - job: BuildingBy_InstallReguiredPackages
+    steps:
+    - task: NuGetToolInstaller@1 #tool to install packages
+    #NuGetCommand downloads necessary nuget packages
+    - task: NuGetCommand@2 #Generated using the 'NuGet' task and setting path to solution as $(solution)
+      displayName: restore_the_app
+      inputs:
+        command: 'restore'
+        restoreSolution: '$(solution)'
+        # feedsToUse: 'select'
+    
+      #Dotnet SDK installed in the prep stage is used to build
+    - task: DotNetCoreCLI@2
+      displayName: build_the_app
+      inputs:
+        command: 'build'
+        projects: '$(solution)'
+        arguments: '--configuration $(buildConfiguration)'
+        workingDirectory: '$(workingDirectory)'
+
+
+
+#---------------------------------------TEST STAGE
+- stage: Test
+  jobs:
+    - job: TestingBy_TBA
+      # steps:
+    # - task: VSTest@2
+    #   inputs:
+    #     platform: '$(buildPlatform)'
+    #     configuration: '$(buildConfiguration)'
+
+
+#---------------------------------------PUBLISH STAGE
+- stage: Publish
+  jobs:
+    - job: PublishingBy_ConvertingTOZIP
+      steps:
+        - task: DotNetCoreCLI@2
+          displayName: Publishing
+          inputs:
+            command: 'publish'
+            publishWebProjects: true
+            workingDirectory: '$(workingDirectory)'
+            projects: $(solution)
+            zipAfterPublish: true #to makke a zip file of the published app
+
+
+#---------------------------------------DEPLOY STAGE
+# - stage: Deploy
+#   jobs:
+#     - job: DeployingBy_AzureAppServiceDEPLOY
+#       displayName: Deploying To Azure App Service to push to website
 #       steps:
-#       - task: DotNetCoreCLI@2
+#       - task: AzureRmWebAppDeployment@4
 #         inputs:
-#           command: 'custom'
-#           projects: '$(solution)'
-#   -stage: Test
-#     jobs:
-#     -job: Test the app
-#       steps:
-#       - task: DotNetCoreCLI@2
-        # inputs:
-        #   command: 'test'
-        #   projects: '$(solution)'
-steps:   
-- task : NuGetToolInstaller@1    
-
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '$(solution)' # building solution
-
-- task: VSBuild@1
-  inputs:
-    solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+#           ConnectionType: 'AzureRM'
+#           appType: 'webApp'
+#           WebAppName: 'P2_Ecomm_Store' #Will
+#           deployToSlotOrASE: true
+#           ResourceGroupName: 'Group3_P2_Sam_Mominur_Sendes'
+#           SlotName: 'production'
+#           packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
