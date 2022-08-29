@@ -4,6 +4,7 @@ namespace RepoLayer
 {
     public interface IADO_Access
     {
-        Task<dynamic> Register_User(User user);
+        Task<bool> Register_User(User user);
+        Task<bool> CheckFor_User(User user);
     }
 }

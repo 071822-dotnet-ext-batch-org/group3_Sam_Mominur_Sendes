@@ -6,7 +6,13 @@
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.ApiLayer PreferredExecutionTarget="/Applications/Firefox.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="RepoLayer/ADO_Access.cs">
+    <Files>
+      <File FileName="RepoLayer/RepoLayer_Project2.cs" Line="36" Column="1" />
+      <File FileName="BusinessLayer/VerifyAnswers.cs" Line="847" Column="136" />
+      <File FileName="ModelLayer/Products.cs" Line="1" Column="1" />
+      <File FileName="RepoLayer/IADO_Access.cs" Line="5" Column="22" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">

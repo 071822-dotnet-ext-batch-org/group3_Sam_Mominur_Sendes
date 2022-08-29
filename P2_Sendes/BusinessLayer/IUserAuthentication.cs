@@ -8,6 +8,7 @@ namespace BusinessLayer
 {
     public interface IUserAuthentication
     {
+        Task<bool> CheckIf_UserExists(UserDTO user);
         Task<dynamic> User_Register(UserDTO user);
         //Task<UserDTO> User_Login(UserDTO user);
 
