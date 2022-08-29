@@ -12,6 +12,7 @@ namespace BusinessLayer
             this._repoLayer = new Repo();
         }
 
+
         /// <summary>
         /// #1 Login
         /// </summary>
@@ -33,16 +34,16 @@ namespace BusinessLayer
             User user = await this._repoLayer.NewUserAsync(newUser);
             return user;
         }
+        
         /// <summary>
-        /// #3 Display products
+        /// #3 Display Products
         /// </summary>
-        /// <param name="productInventory"></param>
+        /// <param name="displayDto"></param>
         /// <returns></returns>
-        public async Task<List<Product>> ProductsAsync(int productInventory)
+        public async Task<List<DisplayDto>> ProductDisplayAsync()
         {
-            List<Product> list = await this._repoLayer.ProductsAsync(productInventory);
+            List<DisplayDto> list = await this._repoLayer.ProductDisplayAsync();
             return list;
         }
-
     }
 }

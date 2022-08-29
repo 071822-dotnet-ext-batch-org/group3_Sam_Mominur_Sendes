@@ -63,25 +63,27 @@ namespace RepoLayer
 
         }
 
-       
-        public async Task<List<Product>> ProductsAsync(int productInventory)
+
+
+
+        public async Task<List<DisplayDto>> ProductDisplayAsync()
         {
             // made a connection wusing Sql connection class
-            SqlConnection conn1 = new SqlConnection("Server=tcp:revature.database.windows.net,1433;Initial Catalog=Group3Project2;Persist Security Info=False;User ID=samRevature;Password=Hulanlove23;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
-            using (SqlCommand command = new SqlCommand($"SELECT * FROM Products WHERE ProductInventory = @pi", conn1)) //created a command using the query and the connection string,
+            SqlConnection conn1 = new SqlConnection("Server = tcp:revature.database.windows.net,1433; Initial Catalog = Group3Project2; Persist Security Info = False; User ID = samRevature; Password = Hulanlove23; MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;");
+            using (SqlCommand command = new SqlCommand($"SELECT ProductId, ProductName, ProductDetails, ProductPrice, ProductInventory FROM Products", conn1)) //created a command using the query and the connection string,
             {
-                command.Parameters.AddWithValue("@pi", productInventory); //I gave parameter to the command
+                //I gave parameter to the command
                 conn1.Open();                                   // opening connection
                 SqlDataReader? ret = await command.ExecuteReaderAsync(); //Reding data from the db, (read only)
-                List<Product> pList = new List<Product>(); //creating list as empty list naming it tList
+                List<DisplayDto> tList = new List<DisplayDto>(); //creating list as empty list naming it tList
 
                 while (ret.Read()) //advances to the first row
                 {
-                    Product p = new Product((Guid)ret[0], (Guid)ret[1], ret.GetString(2), ret.GetString(3), ret.GetDecimal(3), ret.GetInt32(4));
-                    pList.Add(p);
+                    DisplayDto t = new DisplayDto((Guid)ret[0], ret.GetString(1), ret.GetString(2), ret.GetDecimal(3), ret.GetInt32(4));
+                    tList.Add(t);
                 }
                 conn1.Close();
-                return pList;
+                return tList;
             }
         }
     }
