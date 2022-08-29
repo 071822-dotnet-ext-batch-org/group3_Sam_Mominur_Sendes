@@ -78,6 +78,7 @@ stages:
 
 #---------------------------------------PUBLISH STAGE
 - stage: Publish
+  dependsOn: Build #if the build fails, the app will not be published
   jobs:
     - job: PublishingBy_ConvertingTOZIP
       steps:
