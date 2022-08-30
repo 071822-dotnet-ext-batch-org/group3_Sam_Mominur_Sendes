@@ -57,15 +57,21 @@ namespace BusinessLayer
 
         }
 
-        public async Task<UserProfileDTO?> User_GetProfile(string username)
+        public async Task<List<UserProfile>?> User_GetProfiles(string username)
         {
-            UserProfile? loadedProfile = await this._repoLayer.Get_UserProfile(username);
-            if (loadedProfile != null)//If the username matched and the Profile was gotten
-            {
-                UserProfileDTO profile = new UserProfileDTO(loadedProfile.Username, loadedProfile.About);
-                return profile;
-            }
-            return null;
+            //List<UserProfile> pList = new List<UserProfileDTO>();
+            List<UserProfile>? loadedProfileList = await this._repoLayer.Get_UserProfiles();
+            //if (loadedProfileList != null)//If the username matched and the Profile was gotten
+            //{
+            //    foreach(UserProfile p in loadedProfileList)
+            //    {
+            //        UserProfileDTO? profile = new UserProfileDTO(p.Username, p.About);
+            //        pList.Add(profile);
+
+            //    }
+            //    return pList;
+            //}
+            return loadedProfileList;
         }
     }
 }

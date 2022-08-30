@@ -25,35 +25,53 @@ namespace ApiLayer.Controllers
         [HttpPost("CreateProfile")]
         public async Task<ActionResult<string>> User_CreateProfile(UserProfileDTO profile)
         {
-            //TODO Add a check if the username is correct before its sent to get the profile
-            dynamic checkIfRegistered = await this._userProfile_BL.User_CreateProfile(profile);
-            if (checkIfRegistered.GetType() == typeof(bool))//If the check is a boolean, it was saved successfully
+            if (ModelState.IsValid)
             {
-                if (checkIfRegistered == true)
+                //TODO Add a check if the username is correct before its sent to get the profile
+                dynamic checkIfRegistered = await this._userProfile_BL.User_CreateProfile(profile);
+                if (checkIfRegistered.GetType() == typeof(bool))//If the check is a boolean, it was saved successfully
                 {
-                    //User profile was saved
-                    //return ;
-                    return Ok($"\n\t\tYour new profile has been saved {profile.Username}\n");
+                    if (checkIfRegistered == true)
+                    {
+                        //User profile was saved
+                        //return ;
+                        return Created($"\n\t\tYour new profile has been saved {profile.Username}\n", profile);
+                    }
+                    else
+                    {
+                        //User profile not saved
+                        //return ;
+                        return Conflict("\n\t\tYour profile was not saved!\n");
+                    }
                 }
-                else
+                else//If the check wasnt a boolen
                 {
-                    //User profile not saved
-                    //return ;
-                    return Conflict("\n\t\tYour profile was not saved!\n");
+                    return checkIfRegistered;//return the error message that was returned
                 }
             }
-            else//If the check wasnt a boolen
+            else
             {
-                return checkIfRegistered;//return the error message that was returned
+                return BadRequest("\n\t\tYour response was not valid.\n\t\t\tTRY AGAIN!!!\n");
             }
         }
-        [HttpGet("ViewProfile/{username}/")]
-        public async Task<ActionResult<UserProfileDTO>> User_ViewProfile(string username)
-        {
-            //TODO Add a check if the username is correct before its sent to get the profile
-            UserProfileDTO profile = await _userProfile_BL.User_GetProfile(username);
-            return profile;
-        }
-    }
-}
 
+
+        [HttpGet("ViewProfiles")]
+        [HttpGet("ViewProfile/{username?}")]
+        public async Task<ActionResult<List<UserProfile>?>> User_ViewAllProfiles(string username = "default")
+        {
+            List<UserProfile>? profiles = await _userProfile_BL.User_GetProfiles(username);
+            if (ModelState.IsValid)
+            {
+                //TODO Add a check if the username is correct before its sent to get the profile
+                return profiles;
+            }
+            else
+            {
+                return profiles;//BadRequest("\n\t\tYour response was not valid.\n\t\t\tTRY AGAIN!!!\n");
+            }
+        }
+
+    }
+
+}
