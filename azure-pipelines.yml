@@ -13,7 +13,7 @@ trigger: #To specify which thing in the branch to trigger a run
       - main  
   paths:
     include:
-      - OFFICIAL_PROJECT2 # This entir sectio here is made to trigger on any changes
+      - OFFICIAL_PROJECT2 # This entire branch here is made to trigger on any changes
       #to the path OFFICIAL_PROJECT2
 
 pool:
