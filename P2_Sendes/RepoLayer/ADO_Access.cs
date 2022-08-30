@@ -296,12 +296,12 @@ public class ADO_Access : IADO_Access
         }
     }//End Create User Profile
 
-    public async Task<UserProfile?> Get_UserProfile(string username)
+    public async Task<List<UserProfile>?> Get_UserProfiles()
     {
         SqlConnection conn = new SqlConnection(myconnection);
-        using (SqlCommand command = new SqlCommand("SELECT ProfileID, Username, About, FK_UserID from UserProfiles WHERE UserName=@UN", conn))
+        using (SqlCommand command = new SqlCommand("SELECT * FROM UserProfiles", conn))
         {
-            command.Parameters.AddWithValue("@UN", username);
+            //command.Parameters.AddWithValue("@UN", username);
             //int passedCheck = 0;
 
             if (conn.State == ConnectionState.Closed)
@@ -317,31 +317,35 @@ public class ADO_Access : IADO_Access
             }
             Console.WriteLine("\n\n\t\tAbout to read for User\n\n");
             SqlDataReader check = await command.ExecuteReaderAsync();
+            List<UserProfile>? profilesList = new List<UserProfile>();
             UserProfile loadedUserProfile = new UserProfile();
             while (check.Read())
             {
                 loadedUserProfile.ProfileID = check.GetGuid(0);
                 loadedUserProfile.Username = check.GetString(1);
                 loadedUserProfile.About = check.GetString(2);
-                loadedUserProfile.FK_UserID = check.GetGuid(3);
+                //loadedUserProfile.FK_UserID = check.GetGuid(3);
+                profilesList.Add(loadedUserProfile);
                 Console.WriteLine(
                     $"ID: {loadedUserProfile.ProfileID}" +
                     $"ID: {loadedUserProfile.Username}"
                     );
             }
 
-            if (loadedUserProfile == null)
-            {
-                //check did not find a user that matched both credentials
-                conn.Close();
-                return null;
-            }
-            else
-            {
-                conn.Close();
-                return loadedUserProfile;
+            return profilesList;
 
-            }
+            //if (loadedUserProfile == null)
+            //{
+            //    //check did not find a user that matched both credentials
+            //    conn.Close();
+            //    return null;
+            //}
+            //else
+            //{
+            //    conn.Close();
+            //    return loadedUserProfile;
+
+            //}
         }
     }//End of GET User Profile 
 
