@@ -296,6 +296,8 @@ public class ADO_Access : IADO_Access
         }
     }//End Create User Profile
 
+
+
     public async Task<List<UserProfile>?> Get_UserProfiles()
     {
         SqlConnection conn = new SqlConnection(myconnection);
