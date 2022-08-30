@@ -127,7 +127,7 @@ namespace BusinessLayer
         /// <returns></returns>
         public dynamic Verify_API_Form_Data__StringsONLY(string strinVal, int responseMin, int responseMax)
         {
-            string? answer = strinVal;
+            string answer = strinVal;
             string msgLessthan = $"\n\n\t\tYour answer '{answer}' cannot be less than {responseMin} or greater than {responseMax}\nMAKE ANOTHER RESPONSE";
             string msgGreaterthan = $"\n\n\t\tYour answer '{answer}' cannot be less than {responseMin} or greater than {responseMax} characters\nMAKE ANOTHER RESPONSE";
             string msgEmpty = $"\n\n\t\t\tYour answer '{answer}' cannot be empty\nMAKE ANOTHER RESPONSE BELOW:";
