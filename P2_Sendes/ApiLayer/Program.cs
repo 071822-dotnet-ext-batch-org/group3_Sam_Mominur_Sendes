@@ -11,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUserAuthentication, UserAuthentication>();
 builder.Services.AddScoped<IADO_Access, ADO_Access>();
+builder.Services.AddScoped<IUserProfileBL, UserProfileBL>();
 
 var app = builder.Build();
 

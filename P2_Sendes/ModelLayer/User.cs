@@ -98,14 +98,6 @@ namespace ModelLayer
         /// </summary>
         public User()
         {
-            this.PK_EmployeeID = Guid.NewGuid();
-            this.Username = "User";
-            this.Password = "Pass";
-            this.First = "Fname";
-            this.Last = "Lname";
-            this.Email = "example@email.com";
-            this.Role = Status.User.ToString();
-            this.SignupDate = DateTime.Now;
         }
 
         //User that gets created
