@@ -4,17 +4,40 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
+<<<<<<< HEAD
+<<<<<<<< HEAD:SamsFolderforP2/APILayer/Properties/launchSettings.json
       "applicationUrl": "http://localhost:29073",
       "sslPort": 44343
     }
   },
   "profiles": {
     "APILayer": {
+========
+=======
+>>>>>>> main
+      "applicationUrl": "http://localhost:49158",
+      "sslPort": 44398
+    }
+  },
+  "profiles": {
+    "Ecomproject": {
+<<<<<<< HEAD
+>>>>>>>> main:P2_Mominur/Ecomproject/Properties/launchSettings.json
+=======
+>>>>>>> main
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
+<<<<<<< HEAD
+<<<<<<<< HEAD:SamsFolderforP2/APILayer/Properties/launchSettings.json
       "applicationUrl": "https://localhost:7130;http://localhost:5130",
+========
+      "applicationUrl": "https://localhost:7034;http://localhost:5008",
+>>>>>>>> main:P2_Mominur/Ecomproject/Properties/launchSettings.json
+=======
+      "applicationUrl": "https://localhost:7034;http://localhost:5008",
+>>>>>>> main
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

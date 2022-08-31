@@ -1,3 +1,33 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+{
+  "version": 2,
+  "dgSpecHash": "TbsghCHdvCZhprP7hoxCX+ZiYt56dBsFdjiL2kfWgGCLfd5/wYsj4Wsg836eR7DWh9eZvSIWb0PAVKXgKyoCqQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\BusinessLayer\\BusinessLayer.csproj",
+=======
+<<<<<<<< HEAD:SamsFolderforP2/RepoLayer/obj/project.nuget.cache
+{
+  "version": 2,
+  "dgSpecHash": "VCL1cT+G9RVOF8A87D48QQXQFgNaCf4oE9Yi3LwRKvq/GZLK8o9Ju1c2oyrviAwbYIXrRYtiKIAYM1UBd/GKUQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\RepoLayer\\RepoLayer.csproj",
+>>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+  "expectedPackageFiles": [
+    "C:\\Users\\sobuj\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\sobuj\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\sobuj\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\sobuj\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\sobuj\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\sobuj\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\sobuj\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
+    "C:\\Users\\sobuj\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\sobuj\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+<<<<<<< HEAD
+=======
+========
 {
   "version": 2,
 <<<<<<<< HEAD:SamsFolderforP2/BusinessLayer/obj/project.nuget.cache
@@ -21,4 +51,31 @@
     "C:\\Users\\samba\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
   "logs": []
+>>>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503:SamsFolderforP2/BusinessLayer/obj/project.nuget.cache
+>>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+=======
+{
+  "version": 2,
+<<<<<<<< HEAD:SamsFolderforP2/BusinessLayer/obj/project.nuget.cache
+  "dgSpecHash": "Vk0mc6smiQoRXEW7BT29VIOviN9WBGYXqRNCw94vZzkTHKFzSy1X/fANa9e0uKRqrUaO/HLj82PSBh+wNFlF0w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\BusinessLayer\\BusinessLayer.csproj",
+========
+  "dgSpecHash": "XJc9DDh55HTleHmSJ/DbI24/XfF1b3a8W9LuVNXI6vPP3Mkd2FZGNxo/7MaC/3FySv77T5lpOKPIQ0fAeC9CrQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\Sams Folder for P2\\BusinessLayer\\BusinessLayer.csproj",
+>>>>>>>> main:Sams Folder for P2/BusinessLayer/obj/project.nuget.cache
+  "expectedPackageFiles": [
+    "C:\\Users\\samba\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\samba\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\samba\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\samba\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\samba\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\samba\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\samba\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
+    "C:\\Users\\samba\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\samba\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+>>>>>>> main
 }
