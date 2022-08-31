@@ -10,3 +10,15 @@
 /Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ModelLayer/obj/Debug/net6.0/refint/ModelLayer.dll
 /Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ModelLayer/obj/Debug/net6.0/ModelLayer.pdb
 /Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ModelLayer/obj/Debug/net6.0/ref/ModelLayer.dll
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Sendes\ModelLayer\bin\Debug\net6.0\ModelLayer.deps.json
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Sendes\ModelLayer\bin\Debug\net6.0\ModelLayer.dll
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Sendes\ModelLayer\bin\Debug\net6.0\ModelLayer.pdb
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Sendes\ModelLayer\obj\Debug\net6.0\ModelLayer.csproj.AssemblyReference.cache
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Sendes\ModelLayer\obj\Debug\net6.0\ModelLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Sendes\ModelLayer\obj\Debug\net6.0\ModelLayer.AssemblyInfoInputs.cache
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Sendes\ModelLayer\obj\Debug\net6.0\ModelLayer.AssemblyInfo.cs
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Sendes\ModelLayer\obj\Debug\net6.0\ModelLayer.csproj.CoreCompileInputs.cache
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Sendes\ModelLayer\obj\Debug\net6.0\ModelLayer.dll
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Sendes\ModelLayer\obj\Debug\net6.0\refint\ModelLayer.dll
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Sendes\ModelLayer\obj\Debug\net6.0\ModelLayer.pdb
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Sendes\ModelLayer\obj\Debug\net6.0\ref\ModelLayer.dll
