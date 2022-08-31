@@ -7,7 +7,7 @@ namespace RepositoryAccessLayer
     {
         public async Task<List<Products>> ProductsAsync(int type)
         {
-            SqlConnection conn = new SqlConnection("Server=tcp:dbpro.database.windows.net,1433;Initial Catalog=Project1;Persist Security Info=False;User ID=mominur;Password=A123456789a;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            SqlConnection conn = new SqlConnection(" ");
             using (SqlCommand command = new SqlCommand($"SELECT * FROM Products", conn))
             {
 
@@ -32,7 +32,7 @@ namespace RepositoryAccessLayer
         {
         
         
-            SqlConnection conn = new SqlConnection("Server=tcp:dbpro.database.windows.net,1433;Initial Catalog=Project1;Persist Security Info=False;User ID=mominur;Password=A123456789a;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            SqlConnection conn = new SqlConnection(" ");
             using (SqlCommand command = new SqlCommand($"SELECT Email, Password FROM Users WHERE Email = @email AND Password = @password", conn))
             {
 
@@ -57,7 +57,7 @@ namespace RepositoryAccessLayer
         {
            // throw new NotImplementedException();
            
-             SqlConnection conn = new SqlConnection("Server=tcp:dbpro.database.windows.net,1433;Initial Catalog=Project1;Persist Security Info=False;User ID=mominur;Password=A123456789a;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+             SqlConnection conn = new SqlConnection(" ");
             using (SqlCommand command = new SqlCommand($"INSERT INTO Products (ProductID,FK_UserID,ProductName,ProductDetails,ProductPrice,ProductInventory) VALUES(@pid,@fk,@pn,@pd,@pp,@pi);", conn))
 
             {
