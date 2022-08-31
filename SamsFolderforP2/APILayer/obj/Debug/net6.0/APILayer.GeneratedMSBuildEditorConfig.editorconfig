@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 is_global = true
 build_property.TargetFramework = net6.0
 build_property.TargetPlatformMinVersion = 
@@ -41,3 +42,29 @@ build_property.MSBuildProjectDirectory = C:\Users\samba\OneDrive\Desktop\Revatur
 >>>>>>>> main:Sams Folder for P2/APILayer/obj/Debug/net6.0/APILayer.GeneratedMSBuildEditorConfig.editorconfig
 build_property._RazorSourceGeneratorDebug = 
 >>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+=======
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = APILayer
+build_property.RootNamespace = APILayer
+<<<<<<<< HEAD:SamsFolderforP2/APILayer/obj/Debug/net6.0/APILayer.GeneratedMSBuildEditorConfig.editorconfig
+build_property.ProjectDir = C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderforP2\APILayer\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderforP2\APILayer
+========
+build_property.ProjectDir = C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\APILayer\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\APILayer
+>>>>>>>> main:Sams Folder for P2/APILayer/obj/Debug/net6.0/APILayer.GeneratedMSBuildEditorConfig.editorconfig
+build_property._RazorSourceGeneratorDebug = 
+>>>>>>> main

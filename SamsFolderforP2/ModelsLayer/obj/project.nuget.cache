@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 {
   "version": 2,
   "dgSpecHash": "2U+26Hw9qV11AYEISts9PNYMnK6xS11LBS3t4I+d5YqMJTg1alqOfiVe6tAXb0SM0Te8fWZWZNi5vjJ3VQxIyg==",
@@ -15,4 +16,13 @@
   "expectedPackageFiles": [],
   "logs": []
 >>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+=======
+{
+  "version": 2,
+  "dgSpecHash": "rYOdgI5IbQRlMeM90BGJOgeDRDw9IfnPFL+AQoy68Q4ad7Tok4NzY0gkoHwKVjD0vSk01/AlVdwZr3lpj53ihg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\ModelsLayer\\ModelsLayer.csproj",
+  "expectedPackageFiles": [],
+  "logs": []
+>>>>>>> main
 }

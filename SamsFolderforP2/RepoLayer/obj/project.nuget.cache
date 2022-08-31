@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:SamsFolderforP2/RepoLayer/obj/project.nuget.cache
 {
   "version": 2,
@@ -30,6 +31,8 @@
   "projectFilePath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\Sams Folder for P2\\BusinessLayer\\BusinessLayer.csproj",
 >>>>>>>> main:Sams Folder for P2/BusinessLayer/obj/project.nuget.cache
 =======
+=======
+>>>>>>> main
 {
   "version": 2,
 <<<<<<<< HEAD:SamsFolderforP2/RepoLayer/obj/project.nuget.cache
@@ -41,7 +44,10 @@
   "success": true,
   "projectFilePath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\Sams Folder for P2\\RepoLayer\\RepoLayer.csproj",
 >>>>>>>> main:Sams Folder for P2/RepoLayer/obj/project.nuget.cache
+<<<<<<< HEAD
 >>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+=======
+>>>>>>> main
   "expectedPackageFiles": [
     "C:\\Users\\samba\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\samba\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
@@ -55,7 +61,10 @@
   ],
   "logs": []
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503:SamsFolderforP2/BusinessLayer/obj/project.nuget.cache
 =======
 >>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+=======
+>>>>>>> main
 }

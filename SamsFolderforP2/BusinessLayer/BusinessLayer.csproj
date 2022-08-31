@@ -7,8 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
+<<<<<<<< HEAD:SamsFolderforP2/BusinessLayer/BusinessLayer.csproj
     <ProjectReference Include="..\ModelsLayer\ModelsLayer.csproj" />
     <ProjectReference Include="..\RepoLayer\RepoLayer.csproj" />
+========
+    <ProjectReference Include="..\Models\Models.csproj" />
+    <ProjectReference Include="..\RepositoryAccessLayer\RepositoryAccessLayer.csproj" />
+>>>>>>>> main:P2_Mominur/BusinessLayer/BusinessLayer.csproj
+=======
+    <ProjectReference Include="..\Models\Models.csproj" />
+    <ProjectReference Include="..\RepositoryAccessLayer\RepositoryAccessLayer.csproj" />
+>>>>>>> main
   </ItemGroup>
 
 </Project>

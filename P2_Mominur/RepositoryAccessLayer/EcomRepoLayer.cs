@@ -25,6 +25,11 @@ namespace RepositoryAccessLayer
 
             }
         }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> main
         
         public async Task<Login> LoginAsync(Login login)
         {
@@ -53,6 +58,10 @@ namespace RepositoryAccessLayer
 
          public async Task<Products>AddProductAsync(Products product)
         {
+<<<<<<< HEAD
+=======
+           // throw new NotImplementedException();
+>>>>>>> main
            
              SqlConnection conn = new SqlConnection(" ");
             using (SqlCommand command = new SqlCommand($"INSERT INTO Products (ProductID,FK_UserID,ProductName,ProductDetails,ProductPrice,ProductInventory) VALUES(@pid,@fk,@pn,@pd,@pp,@pi);", conn))
@@ -81,5 +90,11 @@ namespace RepositoryAccessLayer
 
         }
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> main
     }
 }

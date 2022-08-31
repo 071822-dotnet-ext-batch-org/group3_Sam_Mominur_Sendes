@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ModelsLayer
 {
+<<<<<<<< HEAD:SamsFolderforP2/ModelsLayer/DisplayDto.cs
     public class DisplayDto
+========
+    public class Product
+>>>>>>>> main:SamsFolderforP2/ModelsLayer/Product.cs
     {
         public DisplayDto(Guid productID, string productName, string productDetails, decimal productPrice, int productInventory)
         {

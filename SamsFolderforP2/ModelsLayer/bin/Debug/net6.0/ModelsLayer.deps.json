@@ -7,6 +7,8 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
 <<<<<<< HEAD
+<<<<<<<< HEAD:SamsFolderforP2/ModelsLayer/bin/Debug/net6.0/ModelsLayer.deps.json
+<<<<<<< HEAD
       "ModelsLayer/1.0.0": {
         "runtime": {
           "ModelsLayer.dll": {}
@@ -15,16 +17,34 @@
         "runtime": {
           "Models.dll": {}
 >>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+========
+      "Models/1.0.0": {
+        "runtime": {
+          "Models.dll": {}
+>>>>>>>> main:P2_Mominur/Models/bin/Debug/net6.0/Models.deps.json
+=======
+      "Models/1.0.0": {
+        "runtime": {
+          "Models.dll": {}
+>>>>>>> main
         }
       }
     }
   },
   "libraries": {
 <<<<<<< HEAD
+<<<<<<<< HEAD:SamsFolderforP2/ModelsLayer/bin/Debug/net6.0/ModelsLayer.deps.json
+<<<<<<< HEAD
     "ModelsLayer/1.0.0": {
 =======
     "Models/1.0.0": {
 >>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+========
+    "Models/1.0.0": {
+>>>>>>>> main:P2_Mominur/Models/bin/Debug/net6.0/Models.deps.json
+=======
+    "Models/1.0.0": {
+>>>>>>> main
       "type": "project",
       "serviceable": false,
       "sha512": ""

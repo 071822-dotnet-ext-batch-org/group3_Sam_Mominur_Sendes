@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "profiles": {
     "ModelsLayer": {
@@ -7,4 +8,15 @@
       "commandName": "Project"
     }
   }
+=======
+{
+  "profiles": {
+    "ModelsLayer": {
+      "commandName": "Project"
+    },
+    "Profile 1": {
+      "commandName": "Project"
+    }
+  }
+>>>>>>> main
 }

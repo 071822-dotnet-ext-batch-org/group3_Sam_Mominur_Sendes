@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:P2_Mominur/Ecomproject/Ecomproject.csproj
+=======
+>>>>>>> main
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
@@ -17,6 +20,7 @@
   </ItemGroup>
 
 </Project>
+<<<<<<< HEAD
 ========
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
@@ -38,3 +42,5 @@
 
 </Project>
 >>>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503:SamsFolderforP2/APILayer/APILayer.csproj
+=======
+>>>>>>> main

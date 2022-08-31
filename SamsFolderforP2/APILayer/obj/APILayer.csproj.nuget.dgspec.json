@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:SamsFolderforP2/APILayer/obj/APILayer.csproj.nuget.dgspec.json
 {
   "format": 1,
@@ -290,6 +291,8 @@
         "outputPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\Sams Folder for P2\\BusinessLayer\\obj\\",
 >>>>>>>> main:Sams Folder for P2/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
 =======
+=======
+>>>>>>> main
 {
   "format": 1,
   "restore": {
@@ -318,7 +321,10 @@
         "packagesPath": "C:\\Users\\samba\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\Sams Folder for P2\\APILayer\\obj\\",
 >>>>>>>> main:Sams Folder for P2/APILayer/obj/APILayer.csproj.nuget.dgspec.json
+<<<<<<< HEAD
 >>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+=======
+>>>>>>> main
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\samba\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -336,8 +342,11 @@
             "targetAlias": "net6.0",
             "projectReferences": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:SamsFolderforP2/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
 =======
+=======
+>>>>>>> main
 <<<<<<<< HEAD:SamsFolderforP2/APILayer/obj/APILayer.csproj.nuget.dgspec.json
               "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\BusinessLayer\\BusinessLayer.csproj": {
                 "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\BusinessLayer\\BusinessLayer.csproj"
@@ -433,7 +442,10 @@
             "targetAlias": "net6.0",
             "projectReferences": {
 <<<<<<<< HEAD:SamsFolderforP2/APILayer/obj/APILayer.csproj.nuget.dgspec.json
+<<<<<<< HEAD
 >>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+=======
+>>>>>>> main
               "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\ModelsLayer\\ModelsLayer.csproj": {
                 "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\ModelsLayer\\ModelsLayer.csproj"
               },
@@ -446,10 +458,14 @@
               "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\Sams Folder for P2\\RepoLayer\\RepoLayer.csproj": {
                 "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\Sams Folder for P2\\RepoLayer\\RepoLayer.csproj"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>> main:Sams Folder for P2/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
 =======
 >>>>>>>> main:Sams Folder for P2/APILayer/obj/APILayer.csproj.nuget.dgspec.json
 >>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+=======
+>>>>>>>> main:Sams Folder for P2/APILayer/obj/APILayer.csproj.nuget.dgspec.json
+>>>>>>> main
               }
             }
           }
@@ -484,10 +500,14 @@
       }
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:SamsFolderforP2/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
 =======
 <<<<<<<< HEAD:SamsFolderforP2/APILayer/obj/APILayer.csproj.nuget.dgspec.json
 >>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+=======
+<<<<<<<< HEAD:SamsFolderforP2/APILayer/obj/APILayer.csproj.nuget.dgspec.json
+>>>>>>> main
     "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\ModelsLayer\\ModelsLayer.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -506,10 +526,14 @@
         "packagesPath": "C:\\Users\\samba\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\Sams Folder for P2\\ModelsLayer\\obj\\",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>> main:Sams Folder for P2/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
 =======
 >>>>>>>> main:Sams Folder for P2/APILayer/obj/APILayer.csproj.nuget.dgspec.json
 >>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+=======
+>>>>>>>> main:Sams Folder for P2/APILayer/obj/APILayer.csproj.nuget.dgspec.json
+>>>>>>> main
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\samba\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -558,10 +582,14 @@
       }
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:SamsFolderforP2/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
 =======
 <<<<<<<< HEAD:SamsFolderforP2/APILayer/obj/APILayer.csproj.nuget.dgspec.json
 >>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+=======
+<<<<<<<< HEAD:SamsFolderforP2/APILayer/obj/APILayer.csproj.nuget.dgspec.json
+>>>>>>> main
     "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\RepoLayer\\RepoLayer.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -580,10 +608,14 @@
         "packagesPath": "C:\\Users\\samba\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\Sams Folder for P2\\RepoLayer\\obj\\",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>> main:Sams Folder for P2/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
 =======
 >>>>>>>> main:Sams Folder for P2/APILayer/obj/APILayer.csproj.nuget.dgspec.json
 >>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+=======
+>>>>>>>> main:Sams Folder for P2/APILayer/obj/APILayer.csproj.nuget.dgspec.json
+>>>>>>> main
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\samba\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -601,20 +633,28 @@
             "targetAlias": "net6.0",
             "projectReferences": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:SamsFolderforP2/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
 =======
 <<<<<<<< HEAD:SamsFolderforP2/APILayer/obj/APILayer.csproj.nuget.dgspec.json
 >>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+=======
+<<<<<<<< HEAD:SamsFolderforP2/APILayer/obj/APILayer.csproj.nuget.dgspec.json
+>>>>>>> main
               "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\ModelsLayer\\ModelsLayer.csproj": {
                 "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\ModelsLayer\\ModelsLayer.csproj"
 ========
               "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\Sams Folder for P2\\ModelsLayer\\ModelsLayer.csproj": {
                 "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\Sams Folder for P2\\ModelsLayer\\ModelsLayer.csproj"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>> main:Sams Folder for P2/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
 =======
 >>>>>>>> main:Sams Folder for P2/APILayer/obj/APILayer.csproj.nuget.dgspec.json
 >>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+=======
+>>>>>>>> main:Sams Folder for P2/APILayer/obj/APILayer.csproj.nuget.dgspec.json
+>>>>>>> main
               }
             }
           }
@@ -656,7 +696,10 @@
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503:SamsFolderforP2/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
 =======
 >>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+=======
+>>>>>>> main
 }

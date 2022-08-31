@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:SamsFolderforP2/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
 {
   "format": 1,
@@ -22,6 +23,23 @@
         "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\APILayer\\APILayer.csproj",
         "packagesPath": "C:\\Users\\sobuj\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\APILayer\\obj\\",
+=======
+<<<<<<<< HEAD:P2_Mominur/Ecomproject/obj/Ecomproject.csproj.nuget.dgspec.json
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\Ecomproject\\Ecomproject.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\BusinessLayer\\BusinessLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\BusinessLayer\\BusinessLayer.csproj",
+        "projectName": "BusinessLayer",
+        "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\BusinessLayer\\BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\sobuj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\BusinessLayer\\obj\\",
+>>>>>>> main
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sobuj\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -38,11 +56,81 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\BusinessLayer\\BusinessLayer.csproj": {
                 "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\BusinessLayer\\BusinessLayer.csproj"
               },
               "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\ModelsLayer\\ModelsLayer.csproj": {
                 "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\ModelsLayer\\ModelsLayer.csproj"
+=======
+              "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\Models\\Models.csproj"
+              },
+              "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\RepositoryAccessLayer\\RepositoryAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\RepositoryAccessLayer\\RepositoryAccessLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\Ecomproject\\Ecomproject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\Ecomproject\\Ecomproject.csproj",
+        "projectName": "Ecomproject",
+        "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\Ecomproject\\Ecomproject.csproj",
+        "packagesPath": "C:\\Users\\sobuj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\Ecomproject\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\sobuj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\BusinessLayer\\BusinessLayer.csproj": {
+                "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\BusinessLayer\\BusinessLayer.csproj"
+              },
+              "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\Models\\Models.csproj"
+>>>>>>> main
               }
             }
           }
@@ -85,6 +173,7 @@
         }
       }
     },
+<<<<<<< HEAD
 >>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
     "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
@@ -156,6 +245,16 @@
         "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\ModelsLayer\\ModelsLayer.csproj",
         "packagesPath": "C:\\Users\\sobuj\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\ModelsLayer\\obj\\",
+=======
+    "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\Models\\Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\Models\\Models.csproj",
+        "projectName": "Models",
+        "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\Models\\Models.csproj",
+        "packagesPath": "C:\\Users\\sobuj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\Models\\obj\\",
+>>>>>>> main
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sobuj\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -203,6 +302,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\RepoLayer\\RepoLayer.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -211,6 +311,16 @@
         "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\RepoLayer\\RepoLayer.csproj",
         "packagesPath": "C:\\Users\\sobuj\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\RepoLayer\\obj\\",
+=======
+    "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\RepositoryAccessLayer\\RepositoryAccessLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\RepositoryAccessLayer\\RepositoryAccessLayer.csproj",
+        "projectName": "RepositoryAccessLayer",
+        "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\RepositoryAccessLayer\\RepositoryAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\sobuj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\RepositoryAccessLayer\\obj\\",
+>>>>>>> main
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sobuj\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -227,8 +337,13 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\ModelsLayer\\ModelsLayer.csproj": {
                 "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\ModelsLayer\\ModelsLayer.csproj"
+=======
+              "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\Models\\Models.csproj"
+>>>>>>> main
               }
             }
           }
@@ -274,11 +389,14 @@
   "format": 1,
   "restore": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:SamsFolderforP2/RepoLayer/obj/RepoLayer.csproj.nuget.dgspec.json
     "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\RepoLayer\\RepoLayer.csproj": {}
   },
   "projects": {
 =======
+=======
+>>>>>>> main
 <<<<<<<< HEAD:SamsFolderforP2/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
     "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\BusinessLayer\\BusinessLayer.csproj": {}
   },
@@ -367,7 +485,10 @@
       }
     },
 <<<<<<<< HEAD:SamsFolderforP2/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
+<<<<<<< HEAD
 >>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+=======
+>>>>>>> main
     "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\ModelsLayer\\ModelsLayer.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -378,11 +499,14 @@
         "outputPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\ModelsLayer\\obj\\",
 ========
 <<<<<<< HEAD
+<<<<<<< HEAD
     "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\Sams Folder for P2\\RepoLayer\\RepoLayer.csproj": {}
   },
   "projects": {
 =======
 >>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+=======
+>>>>>>> main
     "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\Sams Folder for P2\\ModelsLayer\\ModelsLayer.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -392,10 +516,14 @@
         "packagesPath": "C:\\Users\\samba\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\Sams Folder for P2\\ModelsLayer\\obj\\",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>> main:Sams Folder for P2/RepoLayer/obj/RepoLayer.csproj.nuget.dgspec.json
 =======
 >>>>>>>> main:Sams Folder for P2/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
 >>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+=======
+>>>>>>>> main:Sams Folder for P2/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
+>>>>>>> main
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\samba\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -444,10 +572,14 @@
       }
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:SamsFolderforP2/RepoLayer/obj/RepoLayer.csproj.nuget.dgspec.json
 =======
 <<<<<<<< HEAD:SamsFolderforP2/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
 >>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+=======
+<<<<<<<< HEAD:SamsFolderforP2/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
+>>>>>>> main
     "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\RepoLayer\\RepoLayer.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -466,10 +598,14 @@
         "packagesPath": "C:\\Users\\samba\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\Sams Folder for P2\\RepoLayer\\obj\\",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>> main:Sams Folder for P2/RepoLayer/obj/RepoLayer.csproj.nuget.dgspec.json
 =======
 >>>>>>>> main:Sams Folder for P2/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
 >>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+=======
+>>>>>>>> main:Sams Folder for P2/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
+>>>>>>> main
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\samba\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -487,20 +623,28 @@
             "targetAlias": "net6.0",
             "projectReferences": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:SamsFolderforP2/RepoLayer/obj/RepoLayer.csproj.nuget.dgspec.json
 =======
 <<<<<<<< HEAD:SamsFolderforP2/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
 >>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+=======
+<<<<<<<< HEAD:SamsFolderforP2/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
+>>>>>>> main
               "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\ModelsLayer\\ModelsLayer.csproj": {
                 "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\SamsFolderforP2\\ModelsLayer\\ModelsLayer.csproj"
 ========
               "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\Sams Folder for P2\\ModelsLayer\\ModelsLayer.csproj": {
                 "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\Sams Folder for P2\\ModelsLayer\\ModelsLayer.csproj"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>> main:Sams Folder for P2/RepoLayer/obj/RepoLayer.csproj.nuget.dgspec.json
 =======
 >>>>>>>> main:Sams Folder for P2/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
 >>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+=======
+>>>>>>>> main:Sams Folder for P2/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
+>>>>>>> main
               }
             }
           }
@@ -542,8 +686,12 @@
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503:SamsFolderforP2/RepoLayer/obj/RepoLayer.csproj.nuget.dgspec.json
 =======
 >>>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503:SamsFolderforP2/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
 >>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
+=======
+>>>>>>>> main:SamsFolderforP2/BusinessLayer/obj/BusinessLayer.csproj.nuget.dgspec.json
+>>>>>>> main
 }
