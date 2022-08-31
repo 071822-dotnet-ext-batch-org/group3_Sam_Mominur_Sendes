@@ -1,0 +1,73 @@
+CREATE TABLE Users
+(
+    UserID UNIQUEIDENTIFIER PRIMARY KEY NOT NULL,
+    UserName NVARCHAR(25) NOT NULL,
+    FirstName NVARCHAR(25),
+    LastName NVARCHAR(25) NOT NULL,
+    Password NVARCHAR(25) NOT NULL,
+	Email NVARCHAR(25) NOT NULL,
+	Role BIT NOT NULL
+);
+
+INSERT INTO [dbo].[Users] VALUES ('76703d11-5f10-4ab2-8f93-202e7658a91e','mk','Mark','Moore','mk12','mk@m.com',0);
+INSERT INTO [dbo].[Users] VALUES ('ac582595-078a-4d89-8b9b-08b24ca81fa6','jd','John','Doe','jd12','jd@m.com',0);
+INSERT INTO [dbo].[Users] VALUES ('3ad15da0-ed8c-43ca-ac7b-770593cbeb62','sb','Sam','Bayaraa','sb12','sb@m.com',0);
+INSERT INTO [dbo].[Users] VALUES ('ee3f5b27-6930-4c43-84bf-a23aba8fb333','sd','Sendes','DHaiti','sd12','sd@m.com',0);
+INSERT INTO [dbo].[Users] VALUES ('eecf97d1-46fb-4643-b2d7-4ca5d06cfa8b','mi','Mominur','Islam','mi12','mi@m.com',0);
+
+-- Create PRODUCT table
+CREATE TABLE Products
+(
+    ProductID UNIQUEIDENTIFIER PRIMARY KEY NOT NULL,
+    FK_UserID UNIQUEIDENTIFIER FOREIGN KEY REFERENCES Users(UserID) NOT NULL,
+    ProductName NVARCHAR(50) NOT NULL,
+    ProductDetails NVARCHAR(125) NOT NULL,
+	ProductPrice MONEY NOT NULL,
+	ProductInventory INT NOT NULL,
+);
+
+-- dropping the table
+DROP TABLE IF EXISTS [dbo].[Products]; 
+
+
+INSERT INTO [dbo].[Products] VALUES ('8859bae7-fc86-4dbb-84d0-169ae123a4ff','76703d11-5f10-4ab2-8f93-202e7658a91e','How to tie your shoes','Teaching how to tie a shoe',4.99,5);
+INSERT INTO [dbo].[Products] VALUES ('fec2ccd5-9c6d-4dca-9df9-85be56cf4557','ac582595-078a-4d89-8b9b-08b24ca81fa6','Dance Music','Grandpa teaches how to dance',100,100);
+INSERT INTO [dbo].[Products] VALUES ('bcd5364b-431d-4426-8e29-d7ac4e263193','3ad15da0-ed8c-43ca-ac7b-770593cbeb62','Hello World','Guy says hello from the moon',0.95,4);
+INSERT INTO [dbo].[Products] VALUES ('3cc308ca-799d-47cc-a8a5-973ecfee5422','ee3f5b27-6930-4c43-84bf-a23aba8fb333','Cute puppies','Puppies!!!',3,7);
+INSERT INTO [dbo].[Products] VALUES ('77067788-05b8-42eb-8c0e-62967a0d42ba','eecf97d1-46fb-4643-b2d7-4ca5d06cfa8b','Cute kittens','Kittens???',6.99,2);
+
+-- Create JUNCTION USER PRODUCT ORDERS table
+CREATE TABLE UserProductOrders
+(
+    UserOrderID UNIQUEIDENTIFIER PRIMARY KEY NOT NULL,
+    FK_UserID UNIQUEIDENTIFIER FOREIGN KEY REFERENCES Users(UserID) NOT NULL,
+	FK_ProductID UNIQUEIDENTIFIER FOREIGN KEY REFERENCES Products(ProductID) NOT NULL,
+	OrderPrice MONEY NOT NULL,
+	OrderDate DATETIME DEFAULT CURRENT_TIMESTAMP,
+);
+
+
+INSERT INTO [dbo].[UserProductOrders] VALUES ('1a53ef94-790e-409f-8bf6-3d7b7bb7977c','76703d11-5f10-4ab2-8f93-202e7658a91e','8859bae7-fc86-4dbb-84d0-169ae123a4ff',4.99,getdate());
+INSERT INTO [dbo].[UserProductOrders] VALUES ('ff97465c-ece7-4432-8279-e7fe14c91cef','ac582595-078a-4d89-8b9b-08b24ca81fa6','fec2ccd5-9c6d-4dca-9df9-85be56cf4557',100,getdate());
+INSERT INTO [dbo].[UserProductOrders] VALUES ('4a8df772-3509-480c-a545-45d3ea2e22f3','3ad15da0-ed8c-43ca-ac7b-770593cbeb62','bcd5364b-431d-4426-8e29-d7ac4e263193',0.95,getdate());
+INSERT INTO [dbo].[UserProductOrders] VALUES ('474c8932-12dc-4e60-8c79-ebd8e99ba576','ee3f5b27-6930-4c43-84bf-a23aba8fb333','3cc308ca-799d-47cc-a8a5-973ecfee5422',3,getdate());
+INSERT INTO [dbo].[UserProductOrders] VALUES ('cca66d94-a894-4372-9b1f-cdd548f49699','eecf97d1-46fb-4643-b2d7-4ca5d06cfa8b','77067788-05b8-42eb-8c0e-62967a0d42ba',6.99,getdate());
+
+-- Create GUEST PRODUCT ORDERS table
+CREATE TABLE GuestProductOrders
+(
+    GuestOrderID UNIQUEIDENTIFIER PRIMARY KEY NOT NULL,
+	FK_ProductID UNIQUEIDENTIFIER FOREIGN KEY REFERENCES Products(ProductID) NOT NULL,
+	FirstName NVARCHAR(25),
+	LastName NVARCHAR(25),
+	Email NVARCHAR(25),
+	OrderPrice MONEY NOT NULL,
+	OrderDate DATETIME DEFAULT CURRENT_TIMESTAMP,
+);
+--inserting data to Guest Product Junction tables
+INSERT INTO [dbo].[GuestProductOrders] VALUES ('2eca7708-4236-4d3d-9b72-b937d5574e0e','8859bae7-fc86-4dbb-84d0-169ae123a4ff','Nick','Carter','nc@gmail.com',4.99,getdate());
+INSERT INTO [dbo].[GuestProductOrders] VALUES ('8ec285d3-2bee-4460-ad70-d728c30f449c','fec2ccd5-9c6d-4dca-9df9-85be56cf4557','Aaron','Carter','ac@gmail.com',100,getdate());
+INSERT INTO [dbo].[GuestProductOrders] VALUES ('d8118559-ae01-42a4-b71b-2385f3657465','bcd5364b-431d-4426-8e29-d7ac4e263193','Micheal','Jordan','mj@gmail.com',0.95,getdate());
+INSERT INTO [dbo].[GuestProductOrders] VALUES ('9525db2a-1d42-4857-a5f5-579522cf78ac','3cc308ca-799d-47cc-a8a5-973ecfee5422','Idniana','Jones','ij@gmail,com',3,getdate());
+INSERT INTO [dbo].[GuestProductOrders] VALUES ('7ec410c8-f430-42cc-a0f3-81119dc98466','77067788-05b8-42eb-8c0e-62967a0d42ba','Will','Smith','ws@gmail.com',6.99,getdate());
+

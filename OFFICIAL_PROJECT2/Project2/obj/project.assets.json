@@ -1,0 +1,133 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "BusinessLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ModelsLayer": "1.0.0",
+          "RepoLayer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BusinessLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BusinessLayer.dll": {}
+        }
+      },
+      "ModelsLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ModelsLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ModelsLayer.dll": {}
+        }
+      },
+      "RepoLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ModelsLayer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RepoLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RepoLayer.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BusinessLayer/1.0.0": {
+      "type": "project",
+      "path": "../Business Layer/BusinessLayer.csproj",
+      "msbuildProject": "../Business Layer/BusinessLayer.csproj"
+    },
+    "ModelsLayer/1.0.0": {
+      "type": "project",
+      "path": "../Models/ModelsLayer.csproj",
+      "msbuildProject": "../Models/ModelsLayer.csproj"
+    },
+    "RepoLayer/1.0.0": {
+      "type": "project",
+      "path": "../ClassLibrary1/RepoLayer.csproj",
+      "msbuildProject": "../ClassLibrary1/RepoLayer.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "BusinessLayer >= 1.0.0",
+      "ModelsLayer >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/sendes/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/Project2/Project2.csproj",
+      "projectName": "Project2",
+      "projectPath": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/Project2/Project2.csproj",
+      "packagesPath": "/Users/sendes/.nuget/packages/",
+      "outputPath": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/Project2/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/sendes/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/Business Layer/BusinessLayer.csproj": {
+              "projectPath": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/Business Layer/BusinessLayer.csproj"
+            },
+            "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/Models/ModelsLayer.csproj": {
+              "projectPath": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/Models/ModelsLayer.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

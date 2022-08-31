@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\ProjectTwo\ModelsLayer\bin\Debug\net6.0\ModelsLayer.deps.json
 C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\ProjectTwo\ModelsLayer\bin\Debug\net6.0\ModelsLayer.dll
 C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\ProjectTwo\ModelsLayer\bin\Debug\net6.0\ModelsLayer.pdb
@@ -22,3 +23,41 @@ C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\S
 C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\SamsFolderforP2\ModelsLayer\obj\Debug\net6.0\refint\ModelsLayer.dll
 C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\SamsFolderforP2\ModelsLayer\obj\Debug\net6.0\ModelsLayer.pdb
 C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\SamsFolderforP2\ModelsLayer\obj\Debug\net6.0\ref\ModelsLayer.dll
+=======
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\ProjectTwo\ModelsLayer\bin\Debug\net6.0\ModelsLayer.deps.json
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\ProjectTwo\ModelsLayer\bin\Debug\net6.0\ModelsLayer.dll
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\ProjectTwo\ModelsLayer\bin\Debug\net6.0\ModelsLayer.pdb
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\ProjectTwo\ModelsLayer\obj\Debug\net6.0\ModelsLayer.csproj.AssemblyReference.cache
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\ProjectTwo\ModelsLayer\obj\Debug\net6.0\ModelsLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\ProjectTwo\ModelsLayer\obj\Debug\net6.0\ModelsLayer.AssemblyInfoInputs.cache
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\ProjectTwo\ModelsLayer\obj\Debug\net6.0\ModelsLayer.AssemblyInfo.cs
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\ProjectTwo\ModelsLayer\obj\Debug\net6.0\ModelsLayer.csproj.CoreCompileInputs.cache
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\ProjectTwo\ModelsLayer\obj\Debug\net6.0\ModelsLayer.dll
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\ProjectTwo\ModelsLayer\obj\Debug\net6.0\refint\ModelsLayer.dll
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\ProjectTwo\ModelsLayer\obj\Debug\net6.0\ModelsLayer.pdb
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\ProjectTwo\ModelsLayer\obj\Debug\net6.0\ref\ModelsLayer.dll
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\ModelsLayer\bin\Debug\net6.0\ModelsLayer.deps.json
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\ModelsLayer\bin\Debug\net6.0\ModelsLayer.dll
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\ModelsLayer\bin\Debug\net6.0\ModelsLayer.pdb
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\ModelsLayer\obj\Debug\net6.0\ModelsLayer.csproj.AssemblyReference.cache
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\ModelsLayer\obj\Debug\net6.0\ModelsLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\ModelsLayer\obj\Debug\net6.0\ModelsLayer.AssemblyInfoInputs.cache
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\ModelsLayer\obj\Debug\net6.0\ModelsLayer.AssemblyInfo.cs
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\ModelsLayer\obj\Debug\net6.0\ModelsLayer.csproj.CoreCompileInputs.cache
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\ModelsLayer\obj\Debug\net6.0\ModelsLayer.dll
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\ModelsLayer\obj\Debug\net6.0\refint\ModelsLayer.dll
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\ModelsLayer\obj\Debug\net6.0\ModelsLayer.pdb
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\Sams Folder for P2\ModelsLayer\obj\Debug\net6.0\ref\ModelsLayer.dll
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderforP2\ModelsLayer\bin\Debug\net6.0\ModelsLayer.deps.json
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderforP2\ModelsLayer\bin\Debug\net6.0\ModelsLayer.dll
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderforP2\ModelsLayer\bin\Debug\net6.0\ModelsLayer.pdb
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderforP2\ModelsLayer\obj\Debug\net6.0\ModelsLayer.csproj.AssemblyReference.cache
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderforP2\ModelsLayer\obj\Debug\net6.0\ModelsLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderforP2\ModelsLayer\obj\Debug\net6.0\ModelsLayer.AssemblyInfoInputs.cache
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderforP2\ModelsLayer\obj\Debug\net6.0\ModelsLayer.AssemblyInfo.cs
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderforP2\ModelsLayer\obj\Debug\net6.0\ModelsLayer.csproj.CoreCompileInputs.cache
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderforP2\ModelsLayer\obj\Debug\net6.0\ModelsLayer.dll
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderforP2\ModelsLayer\obj\Debug\net6.0\refint\ModelsLayer.dll
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderforP2\ModelsLayer\obj\Debug\net6.0\ModelsLayer.pdb
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderforP2\ModelsLayer\obj\Debug\net6.0\ref\ModelsLayer.dll
+>>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503

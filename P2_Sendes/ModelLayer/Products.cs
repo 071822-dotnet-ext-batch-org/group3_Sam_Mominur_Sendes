@@ -12,6 +12,8 @@ namespace ModelLayer
         private string description {get;set;}
         private decimal price {get;set;}
         private int inventory {get;set;}
+        //TODO Add user ID foreign key
+        //public Guid FK_UserID { get; set; }
 
         public Guid PK_ProductID{
             get{

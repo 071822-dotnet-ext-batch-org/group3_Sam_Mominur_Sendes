@@ -6,15 +6,25 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
+<<<<<<< HEAD
       "ModelsLayer/1.0.0": {
         "runtime": {
           "ModelsLayer.dll": {}
+=======
+      "Models/1.0.0": {
+        "runtime": {
+          "Models.dll": {}
+>>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
         }
       }
     }
   },
   "libraries": {
+<<<<<<< HEAD
     "ModelsLayer/1.0.0": {
+=======
+    "Models/1.0.0": {
+>>>>>>> 9a3e91418be897413d1a5f1391dbb1b78ae56503
       "type": "project",
       "serviceable": false,
       "sha512": ""
