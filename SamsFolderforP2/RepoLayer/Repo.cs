@@ -63,9 +63,10 @@ namespace RepoLayer
 
         }
 
-
-
-
+        /// <summary>
+        /// #3 Display Products
+        /// </summary>
+        /// <returns></returns>
         public async Task<List<DisplayDto>> ProductDisplayAsync()
         {
             // made a connection wusing Sql connection class

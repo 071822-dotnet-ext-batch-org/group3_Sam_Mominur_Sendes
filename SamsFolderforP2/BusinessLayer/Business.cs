@@ -35,10 +35,10 @@ namespace BusinessLayer
             return user;
         }
         
+       
         /// <summary>
-        /// #3 Display Products
+        /// #3 Display products
         /// </summary>
-        /// <param name="displayDto"></param>
         /// <returns></returns>
         public async Task<List<DisplayDto>> ProductDisplayAsync()
         {

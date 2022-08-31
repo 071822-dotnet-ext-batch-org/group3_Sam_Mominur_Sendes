@@ -49,19 +49,19 @@ namespace APILayer.Controllers
         }
 
         /// <summary>
-        /// #3 Display Products
+        /// #3 Display products
         /// </summary>
-        /// <param name="displayDto"></param>
         /// <returns></returns>
         [HttpGet("Display Products")] //get all of a type request
         public async Task<ActionResult<List<DisplayDto>>> ProductDisplayAsync()
         {
             List<DisplayDto> productDisplayList = await this._businessLayer.ProductDisplayAsync(); //its in the bussiness Layer, because BusinessLayer deals with all the logics. Due to seperation concern, leave minimum logic as possible
-            return Ok(productDisplayList); //returns 200
-            //return null;
-            //0=pending, 1=Aprroved, 2=Denied
-
+            return Ok(productDisplayList); //returns 200          
         }
+        
+        // #4 Cart
+        //[HttpPut("Cart")] 
+        //public async Task
 
     }
 }
