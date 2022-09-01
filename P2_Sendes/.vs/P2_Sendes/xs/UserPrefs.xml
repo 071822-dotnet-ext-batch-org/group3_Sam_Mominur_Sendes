@@ -1,13 +1,19 @@
 ﻿<Properties StartupConfiguration="{D6FDB08C-F7E8-458E-96EC-1717D4EEFCCE}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="RepoLayer/ADO_Access.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ApiLayer/HTML_CSS/Login.html">
     <Files>
-      <File FileName="BusinessLayer/VerifyAnswers.cs" Line="446" Column="52" />
-      <File FileName="ModelLayer/Products.cs" Line="1" Column="1" />
-      <File FileName="RepoLayer/IADO_Access.cs" Line="8" Column="20" />
-      <File FileName="RepoLayer/ADO_Access.cs" Line="84" Column="17" />
-      <File FileName="BusinessLayer/UserAuthentication.cs" Line="116" Column="57" />
-      <File FileName="ApiLayer/Controllers/UserAuthController.cs" Line="40" Column="69" />
-      <File FileName="BusinessLayer/IUserAuthentication.cs" Line="11" Column="20" />
+      <File FileName="ApiLayer/Controllers/UserAuthController.cs" Line="78" Column="93" IsPinned="True" />
+      <File FileName="BusinessLayer/UserAuthentication.cs" Line="141" Column="29" IsPinned="True" />
+      <File FileName="BusinessLayer/UserProfileBL.cs" Line="31" Column="62" />
+      <File FileName="ApiLayer/Controllers/UserProfileController.cs" Line="31" Column="20" />
+      <File FileName="ModelLayer/Products.cs" Line="100" Column="16" />
+      <File FileName="RepoLayer/ADO_Access.cs" Line="85" Column="35" />
+      <File FileName="ApiLayer/Program.cs" Line="29" Column="1" />
+      <File FileName="ModelLayer/ProductDTO.cs" Line="24" Column="10" />
+      <File FileName="ModelLayer/UserDTO.cs" Line="26" Column="1" />
+      <File FileName="ModelLayer/UserProfileDTO.cs" Line="15" Column="23" />
+      <File FileName="BusinessLayer/VerifyAnswers.cs" Line="22" Column="20" />
+      <File FileName="ApiLayer/HTML_CSS/Login.html" Line="73" Column="81" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,8 +22,10 @@
             <Node name="ApiLayer" expanded="True">
               <Node name="Controllers" expanded="True" />
             </Node>
-            <Node name="BusinessLayer" expanded="True" />
-            <Node name="RepoLayer" expanded="True" />
+            <Node name="ModelLayer" expanded="True" />
+            <Node name="RepoLayer" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
@@ -26,11 +34,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.ApiLayer PreferredExecutionTarget="/Applications/Firefox.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ApiLayer PreferredExecutionTarget="/Applications/Firefox.app" />
 </Properties>
