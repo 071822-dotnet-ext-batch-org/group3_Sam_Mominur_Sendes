@@ -13,6 +13,13 @@ namespace BusinessLayer
             this._repoLayer = repoLayer;
         }
 
+        /// <summary>
+        /// This method creates a User profile
+        /// --Returns a dynamic (UserProfileDTO, false, or error message)
+        /// --False
+        /// </summary>
+        /// <param name="profile"></param>
+        /// <returns></returns>
         public async Task<dynamic> User_CreateProfile(UserProfileDTO profile)
         {
             VerifyAnswers verify = new VerifyAnswers();
@@ -39,17 +46,11 @@ namespace BusinessLayer
             }
 
 
-            UserProfile newUserProfile = new UserProfile()
-            {
-                FK_UserID = Guid.NewGuid(),
-                Username = profile.Username,
-                About = profile.About
-
-            };
-            bool verifiedResult = await _repoLayer.Create_UserProfile(newUserProfile);
-            if (verifiedResult == true)//If the user was  saved
+            UserProfile newUserProfile = new UserProfile(Guid.NewGuid(), profile.Username, profile.About);
+            UserProfileDTO? verifiedResult = await _repoLayer.Create_UserProfile(newUserProfile);
+            if (verifiedResult != null)//If the user was saved
             {//return true
-                return true;
+                return verifiedResult;
             }
 
             return false;//If user was not saved returrn false
@@ -57,7 +58,7 @@ namespace BusinessLayer
 
         }
 
-        public async Task<List<UserProfile>?> User_GetProfiles(string username)
+        public async Task<List<UserProfile>?> User_GetProfiles()
         {
             //List<UserProfile> pList = new List<UserProfileDTO>();
             List<UserProfile>? loadedProfileList = await this._repoLayer.Get_UserProfiles();

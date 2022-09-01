@@ -15,4 +15,12 @@
     <ProjectReference Include="..\ModelLayer\ModelLayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="HTML_CSS\" />
+    <None Remove="HTML_CSS\CSS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="HTML_CSS\" />
+    <Folder Include="HTML_CSS\CSS\" />
+  </ItemGroup>
 </Project>

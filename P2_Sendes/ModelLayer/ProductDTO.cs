@@ -12,25 +12,16 @@ namespace ModelLayer
         public string Description {get;set;}
         public decimal Price {get;set;}
         public int Inventory {get;set;}
+        
         /// <summary>
         /// This is a default Product 
         /// </summary>
-        public ProductDTO(){
+        public ProductDTO(string title, string desc, decimal price, int inventory){
             // PK_ProductID = Guid.NewGuid();
-            Title = "Product Name";
-            Description = "Product Description";
-            Price = 0;
-            Inventory = 0;
-        }
-        /// <summary>
-        /// This is a default Product 
-        /// </summary>
-        public ProductDTO(Product product){
-            // PK_ProductID = Guid.NewGuid();
-            Title = product.Title;
-            Description = product.Description;
-            Price = product.Price;
-            Inventory = product.Inventory;
+            this.Title = title;
+            this.Description = desc;
+            this.Price = price;
+            this.Inventory = inventory;
         }
     }
 }
