@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/sendes/Desktop/Revature_Files/Group3/P2_Sendes/Tests.Project2/Tests.Project2.csproj": {}
+    "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/Tests.Project2/Tests.Project2.csproj": {}
   },
   "projects": {
-    "/Users/sendes/Desktop/Revature_Files/Group3/P2_Sendes/Tests.Project2/Tests.Project2.csproj": {
+    "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/Tests.Project2/Tests.Project2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sendes/Desktop/Revature_Files/Group3/P2_Sendes/Tests.Project2/Tests.Project2.csproj",
+        "projectUniqueName": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/Tests.Project2/Tests.Project2.csproj",
         "projectName": "Tests.Project2",
-        "projectPath": "/Users/sendes/Desktop/Revature_Files/Group3/P2_Sendes/Tests.Project2/Tests.Project2.csproj",
+        "projectPath": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/Tests.Project2/Tests.Project2.csproj",
         "packagesPath": "/Users/sendes/.nuget/packages/",
-        "outputPath": "/Users/sendes/Desktop/Revature_Files/Group3/P2_Sendes/Tests.Project2/obj/",
+        "outputPath": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/Tests.Project2/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/sendes/.nuget/NuGet/NuGet.Config"

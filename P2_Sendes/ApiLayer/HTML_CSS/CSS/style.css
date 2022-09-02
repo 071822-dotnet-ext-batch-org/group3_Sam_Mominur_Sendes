@@ -1,0 +1,50 @@
+﻿body {
+    left: 10px;
+    right:10px;
+    background-color: blanchedalmond;
+}
+
+#loginFormFields{
+    /* text-align: center; */
+    border: solid black 10px;
+    /* align-items: center; */
+    color: red;
+    
+}
+#loginFormFields > form{
+    /* text-align: center; */
+    border: solid white 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /* align-items: center; */
+    color: red;
+    
+}
+#loginFormUsername {
+    color: black;
+    
+}
+
+
+/* #loginFormFields > form > label {
+    text-align: left;
+    align-items: left;
+    color: red;
+    
+}*/
+
+#loginFormFields > form > button {
+    text-align: center;
+    align-items: center;
+    color: red;
+    
+}
+
+#imageForm{
+    align-items: center;
+    text-align: center;
+}
