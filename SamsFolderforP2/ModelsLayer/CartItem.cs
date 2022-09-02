@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ModelsLayer
 {
-    public class ShoppingCart
+    public class CartItem
     {
 
     }
