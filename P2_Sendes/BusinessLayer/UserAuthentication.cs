@@ -168,11 +168,7 @@ namespace BusinessLayer
                 }
                 return 1;
             }
-
-
-
-
-        }
+        }//End of User LOGIN
 
         /// <summary>
         /// Checks if the User exists
