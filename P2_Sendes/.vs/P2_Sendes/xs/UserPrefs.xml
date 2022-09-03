@@ -18,15 +18,7 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="P2_Sendes" expanded="True">
-            <Node name="ApiLayer" expanded="True">
-              <Node name="Controllers" expanded="True" />
-            </Node>
-            <Node name="ModelLayer" expanded="True" />
-            <Node name="RepoLayer" expanded="True">
-              <Node name="Dependencies" expanded="True" />
-            </Node>
-          </Node>
+          <Node name="P2_Sendes" expanded="True" />
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
@@ -38,6 +30,7 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Tests.Project2 FirstBuild="True" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.ApiLayer PreferredExecutionTarget="/Applications/Firefox.app" />
 </Properties>

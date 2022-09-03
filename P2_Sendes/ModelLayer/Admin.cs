@@ -1,16 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.NetworkInformation;
-using System.Threading.Tasks;
+﻿using System;
+using System.Xml.Linq;
 
 namespace ModelLayer
 {
 
-    public class User : UserBase
+    public class Admin : UserBase
     {
-        //This is the User class
-        //All the data we'll need to SAVE only will be mapped from here
         private Guid pk_UserID { get; set; }
         private string username { get; set; } = string.Empty;
         private string password { get; set; } = string.Empty;
@@ -73,16 +68,16 @@ namespace ModelLayer
                 this.signupDate = value;
             }
         }
-        public User() : base() { }
-        //public User(string fname, string lname, string email, Status role) : base(fname, lname, email, role)
-        //{
+        public Admin() : base() { }
+        //public Admin(string fname, string lname, string email, Status role) : base(fname, lname, email, role) {
         //    this.First = fname;
         //    this.Last = lname;
         //    this.Email = email;
         //    this.Role = role;
         //}
-        //User that gets loaded from DB
-        public User(Guid ID, string username, string password, string fname, string lname, string email, Status role, DateTime registerDate) : base(fname, lname, email)
+
+        //The arguments passed to the base class are the repeating ones
+        public Admin(Guid ID, string username, string password, string fname, string lname, string email, Status role, DateTime registerDate) : base(fname, lname, email)
         {
             this.PK_UserID = ID;
             this.Username = username;
@@ -90,8 +85,9 @@ namespace ModelLayer
             this.First = fname;
             this.Last = lname;
             this.Email = email;
-            this.Role = Status.User;
+            this.Role = Status.Admin;
             this.SignupDate = registerDate;
+
         }
     }
 }
