@@ -17,7 +17,7 @@ namespace ApiLayer.Controllers
     public class UserAuthController : ControllerBase
     {
         private readonly IUserAuthentication _userAuth_BL;
-        private readonly TextInfo _stringManipulation;//For Capital letters in string
+        //private readonly TextInfo _stringManipulation;//For Capital letters in string
         //private TextInfo() { }
         //private readonly IADO_Access _adoAccess_RL;
         public UserAuthController(IUserAuthentication UserAuthinterface)
@@ -38,15 +38,12 @@ namespace ApiLayer.Controllers
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        [HttpPost("Register/")]
-        public async Task<ActionResult<string>> User_Register([FromForm] UserRegisterDTO user)
+        [HttpPost("Register")]
+        public async Task<ActionResult<dynamic>> User_Register([FromBody] UserRegisterDTO user)
         {
             if (ModelState.IsValid)
             {
                 //TODO WHy did this return null reference?
-                //this._stringManipulation.ToTitleCase(user.Username) 
-                Console.WriteLine($"\n\n\t\tCurrent User is: {user.Username}\n\n\n");
-                //_stringManipulation = new TextInfo();
                 bool checkIfExists = await this._userAuth_BL.CheckIf_UserExists(user.Username);
                 if (checkIfExists == true)//If check says it found a user already with that username
                 {
@@ -56,71 +53,49 @@ namespace ApiLayer.Controllers
                 else//If the check says no present username matches
                 {
                     //username is free to be added
-                    dynamic checkIfRegistered = await this._userAuth_BL.User_Register(user);
-                    if (checkIfRegistered.GetType() == typeof(bool))//If the check is a boolean, it was saved successfully
+                    dynamic? checkIfRegistered = await this._userAuth_BL.User_Register(user);
+                    if (checkIfRegistered != null)//If the check is a boolean, it was saved successfully
                     {
-                        if (checkIfRegistered == true)
-                        {
-                            //User profile was saved
-                            //return ;
-                            return Ok(checkIfRegistered);
-                        }
-                        else
-                        {
-                            //User profile not saved
-                            //return ;
-                            return Conflict("\n\t\tYour account was not saved!\n");
-                        }
+                        return Created("MyAccount/", checkIfRegistered);
                     }
                     else//If the check wasnt a boolen
                     {
-                        return checkIfRegistered;//return the error message that was returned
+                        return Conflict("There was a conflict in your response");//return the error message that was returned
                     }
                 }
 
             }
             else
             {
-                return Conflict("\n\t\tYour account was not saved due to an invalid input!!!\n");
+                return BadRequest("\n\t\tYour account was not saved due to an invalid input!!!\n");
             }
         }//End of User Register
 
 
         //[HttpGet("Login/")]//UserName={username}&Password={password}/")]
-
+        //[HttpGet("Login/{Username}/{Password}")]
         [HttpGet("Login/{Username}/{Password}")]
-        public async Task<ActionResult<dynamic>> User_Login(UserLoginDTO username)
+        public async Task<ActionResult<dynamic>> User_Login([FromRoute] UserLoginDTO user)//returns user 
         {
             if (ModelState.IsValid)
             {
-                dynamic isLoggedIn = await this._userAuth_BL.User_Login(username.Username, username.Password);
-                if (isLoggedIn.GetType() == typeof(int)) //if verification was a success boolean
+                Console.WriteLine($"{user.Username} will be checked first - API LAYER ");
+                bool check = await this._userAuth_BL.CheckIf_UserExists(user.Username);
+                if (check == true)
                 {
-                    Console.WriteLine($"\n\t\tCheck was not an immediate error, returning an int response: {isLoggedIn}\n");
-                    if (isLoggedIn == 0)//Both username and password are incorrect
+                    dynamic? isLoggedIn = await this._userAuth_BL.User_Login(user);
+                    if (isLoggedIn != null)
                     {
-                        return Conflict($"\n\t\tThe username matching '{username.Username}' and/or password was incorrect\n");
-                    }
-                    else if (isLoggedIn == 1)//The password ONLY was incorrect
-                    {
-                        return Conflict($"\n\t\tThe password matching '{username}' was incorrect.\n\n\t\t\tTRY AGAIN!!\n");
+                        return Ok(isLoggedIn);
                     }
                     else
                     {
-                        return BadRequest("\n\n\t\t\tUh-oh...Something went wrong!!!\n");
+                        return Conflict($"The password used for '{user.Username}' did not match your response");
                     }
                 }
-                else if (isLoggedIn.GetType() == typeof(User))//The username and password are correct
+                else
                 {
-                    return Ok(isLoggedIn);
-                }
-                else if (isLoggedIn.GetType() == typeof(Admin))//The username and password are correct
-                {
-                    return Ok(isLoggedIn);
-                }
-                else// if the verification was not a int but an error string
-                {
-                    return isLoggedIn; //return the string error message
+                    return NotFound($"The user '{user.Username}' was not found");
                 }
             }
             else

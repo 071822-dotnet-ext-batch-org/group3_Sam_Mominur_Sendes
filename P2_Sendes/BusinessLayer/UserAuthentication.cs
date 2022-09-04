@@ -25,63 +25,11 @@ namespace BusinessLayer
         /// </summary>
         /// <param name="userDTO"></param>
         /// <returns></returns>
-        public async Task<dynamic> User_Register(UserRegisterDTO user)
+        public async Task<dynamic?> User_Register(UserRegisterDTO user)
         {
             //Console.WriteLine($"\n\n\n\t\t\tYou are the current user: {username} -- UserAuth Class\n");
-            VerifyAnswers verify = new VerifyAnswers();
-
-            //Check if form data is good by validating data
-            dynamic verified = verify.Verify_API_Form_Data__USERNAME(user.Username, 3, 30);
-            if (verified.GetType() == typeof(bool)) //if verification was a success boolean
-            {
-                Console.WriteLine($"\n\t\tCheck was successful: {verified}\n");
-            }
-            else// if the verification was not a bool but an error string
-            {
-                return verified; //return the string error message
-            }
-
-            verified = verify.Verify_API_Form_Data__PASSWORD(user.Password, 5, 50);
-            if (verified.GetType() == typeof(bool)) //if verification was a success boolean
-            {
-                Console.WriteLine($"\n\t\tCheck was successful: {verified}\n");
-            }
-            else// if the verification was not a bool but an error string
-            {
-                return verified; //return the string error message
-            }
-
-            verified = verify.Verify_API_Form_Data__EMAILS(user.Email, 5, 30);
-            if (verified.GetType() == typeof(bool)) //if verification was a success boolean
-            {
-                Console.WriteLine($"\n\t\tCheck was successful: {verified}\n");
-            }
-            else// if the verification was not a bool but an error string
-            {
-                return verified; //return the string error message
-            }
-
-            verified = verify.Verify_API_Form_Data__StringsONLY(user.First, 0, 30);
-            if (verified.GetType() == typeof(bool)) //if verification was a success boolean
-            {
-                Console.WriteLine($"\n\t\tCheck was successful: {verified}\n");
-            }
-            else// if the verification was not a bool but an error string
-            {
-                return verified; //return the string error message
-            }
-
-            verified = verify.Verify_API_Form_Data__StringsONLY(user.Last, 0, 30);
-            if (verified.GetType() == typeof(bool)) //if verification was a success boolean
-            {
-                Console.WriteLine($"\n\t\tCheck was successful: {verified}\n");
-            }
-            else// if the verification was not a bool but an error string
-            {
-                return verified; //return the string error message
-            }
             dynamic? newUser = null;
-            if (user.Role.ToString() == "User")
+            if (user.Role == Status.User)
             {
                 newUser = new User(
                    Guid.NewGuid(),
@@ -94,7 +42,7 @@ namespace BusinessLayer
                    DateTime.Now
                    );
             }
-            else
+            else if(user.Role == Status.Admin)
             {
                 newUser = new Admin(
                    Guid.NewGuid(),
@@ -107,13 +55,19 @@ namespace BusinessLayer
                    DateTime.Now
                    );
             }
-            bool verifiedResult = await _repoLayer.Register_User(newUser);
-            if (verifiedResult == true)//If the user was  saved
-            {//return true
-                return true;
+            else
+            {
+                return null;
             }
-
-            return false;//If user was not saved returrn false
+            dynamic? verifiedResult = await _repoLayer.Register_User(newUser);
+            if (verifiedResult != null)//If the user was  saved
+            {//return true
+                return verifiedResult;
+            }
+            else
+            {
+                return null;
+            }
 
 
 
@@ -127,46 +81,38 @@ namespace BusinessLayer
         /// <param name="username"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        public async Task<dynamic> User_Login(string username, string password)
+        public async Task<dynamic?> User_Login(UserLoginDTO user)
         {
             //validate username and password to make sure there are no inccoreect entrees
             VerifyAnswers verify = new VerifyAnswers();
-            dynamic validater = verify.Verify_API_Form_Data__USERNAME(username, 3, 30);
+            dynamic validater = verify.Verify_API_Form_Data__USERNAME(user.Username, 3, 30);
             if (validater.GetType() == typeof(bool)) //if verification was a success boolean
             {
                 Console.WriteLine($"\n\t\tCheck was successful: {validater}\n");
             }
             else// if the verification was not a bool but an error string
             {
-                return validater; //return the string error message
+                return null; //return the string error message
             }
 
-            validater = verify.Verify_API_Form_Data__PASSWORD(password, 5, 30);
+            validater = verify.Verify_API_Form_Data__PASSWORD(user.Password, 5, 50);
             if (validater.GetType() == typeof(bool)) //if verification was a success boolean
             {
                 Console.WriteLine($"\n\t\tCheck was successful: {validater}\n");
             }
             else// if the verification was not a bool but an error string
             {
-                return validater; //return the string error message
+                return null; //return the string error message
             }
-
-
-
-
-            bool verifiedResult = await CheckIf_UserExists(username);
-            if (verifiedResult == false)//If the user does not exist
-            {//return 0 | username or pass DNE
-                return 0;
+            //going to return a User or a Admin
+            dynamic? loggedUser = await this._repoLayer.Login_User(user);
+            if (loggedUser != null)
+            {
+                return loggedUser;
             }
-            else//the username exists 
-            {//try to log in now
-                dynamic? loggedUser = await this._repoLayer.Login_User(username, password);
-                if (loggedUser != null)//If the username and password matched and the user was gotten
-                {
-                    return loggedUser;
-                }
-                return 1;
+            else
+            {
+                return null;
             }
         }//End of User LOGIN
 

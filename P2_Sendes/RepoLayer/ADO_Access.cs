@@ -2,6 +2,7 @@
 using ModelLayer;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 
 public class ADO_Access : IADO_Access
@@ -15,7 +16,7 @@ public class ADO_Access : IADO_Access
     /// </summary>
     /// <param name="user"></param>
     /// <returns></returns>
-    public async Task<bool> Register_User(dynamic user)
+    public async Task<dynamic?> Register_User(dynamic user)
     {
         SqlConnection conn = new SqlConnection(myconnection);
         using (SqlCommand command = new SqlCommand("INSERT INTO Users " +
@@ -52,17 +53,17 @@ public class ADO_Access : IADO_Access
 
             int save = await command.ExecuteNonQueryAsync();
 
-            if (save >= 1)
+            if (save > 0)
             {
                 Console.WriteLine($"Connection is now closed");
                 conn.Close();
-                return true;
+                return user;
             }
             else
             {
                 Console.WriteLine($"Connection is now closed");
                 conn.Close();
-                return false;
+                return null;
 
             }
 
@@ -77,7 +78,7 @@ public class ADO_Access : IADO_Access
     /// <returns></returns>
     public async Task<bool> CheckFor_User(string username)
     {
-        Console.WriteLine($"\n\n\t\t\t{username} --- Check FOr User If Exists - ADO\n\n");
+        Console.WriteLine($"\n\n\t\t\tTesting for {username} - ADO\n\n");
         SqlConnection conn = new SqlConnection(myconnection);
         using (SqlCommand command = new SqlCommand("SELECT UserName from Users WHERE UserName=@UN", conn))
         {
@@ -95,17 +96,25 @@ public class ADO_Access : IADO_Access
                 conn.Close();
                 conn.Open();
             }
-            int check = await command.ExecuteNonQueryAsync();
-            Console.WriteLine($"{check} --- check result - If Exists -- ADO ");
+            SqlDataReader check = await command.ExecuteReaderAsync();
+            List<string>? name = new List<string>();
+            //while (check.Read())
+            //{
+            //    Console.WriteLine($"\n\n\t{check.GetString(0)} is read during the check - ADO \n");
 
-            if (check > 0)
+            //    name.Add(check.GetString(0));
+            //}
+            if (check.Read())
             {
+
                 //check successfully found the account with username
+                Console.WriteLine($"{username} Already exists after the check - ADO ");
                 conn.Close();
                 return true;
             }
             else
             {
+                Console.WriteLine($"{username} Does Not Exists after the check - ADO ");
                 conn.Close();
                 return false;
 
@@ -139,81 +148,80 @@ public class ADO_Access : IADO_Access
 
             while (check.Read())
             {
-                if (check.GetString(5) == Status.User.ToString())
+                if (check.GetString(5) == "User")
                 {
-                    userData.Add(check.GetGuid(0));
-                    userData.Add(check.GetString(7));
-                    userData.Add(check.GetString(3));
-                    userData.Add(check.GetString(1));
-                    userData.Add(check.GetString(2));
-                    userData.Add(check.GetString(4));
-                    userData.Add(Status.User);
-                    userData.Add(check.GetDateTime(6));
+                    userData.Add(check.GetGuid(0));//id
+                    userData.Add(check.GetString(1));//first
+                    userData.Add(check.GetString(2));//last
+                    userData.Add(check.GetString(3));//pass
+                    userData.Add(check.GetString(4));//email
+                    userData.Add(Status.User);//role
+                    userData.Add(check.GetDateTime(6));//created
+                    userData.Add(check.GetString(7));//username
                 }
                 else
                 {
                     userData.Add(check.GetGuid(0));
-                    userData.Add(check.GetString(7));
-                    userData.Add(check.GetString(3));
                     userData.Add(check.GetString(1));
                     userData.Add(check.GetString(2));
+                    userData.Add(check.GetString(3));
                     userData.Add(check.GetString(4));
                     userData.Add(Status.Admin);
                     userData.Add(check.GetDateTime(6));
+                    userData.Add(check.GetString(7));
                 }
             }
 
-            if (userData == null)
+            if (userData != null)
             {
-                conn.Close();
-                return null;
-            }
-            //If the userData was not an empty list 
-            if (userData[6] == "User")
-            {
-                User user = new User(
-                    userData[0],
-                    userData[1],
-                    userData[2],
-                    userData[3],
-                    userData[4],
-                    userData[5],
-                    userData[6],
-                    userData[7]
-                    );
+                //TODO add if statement of (if user or admin)
+                if (userData[5] == Status.User)
+                {
+                    User loadedUser = new User(
+                        userData[0],//id
+                        userData[7],//username
+                        userData[3],//pass
+                        userData[1],//first
+                        userData[2],//last
+                        userData[4],//email
+                        userData[5],//role
+                        userData[6]//date
+                        );
+                    conn.Close();
+                    return loadedUser;
+                }
+                else
+                {
+                    Admin loadedUser = new Admin(
+                        userData[0],//id
+                        userData[7],//username
+                        userData[3],//pass
+                        userData[1],//first
+                        userData[2],//last
+                        userData[4],//email
+                        userData[5],//role
+                        userData[6]//date
+                        );
+                    conn.Close();
+                    return loadedUser;
+                }
                 //check did not find a user that matched both credentials
-                conn.Close();
-                return user;
             }
             else
             {
-                Admin user = new Admin(
-                    userData[0],
-                    userData[1],
-                    userData[2],
-                    userData[3],
-                    userData[4],
-                    userData[5],
-                    userData[6],
-                    userData[7]
-                    );
-                conn.Close();
-                return user;
-
+                return null;
             }
-
-
         }
     }//End of GET User 
 
 
-    public async Task<dynamic?> Login_User(string username, string password)
+    public async Task<dynamic?> Login_User(UserLoginDTO user)
     {
         SqlConnection conn = new SqlConnection(myconnection);
         using (SqlCommand command = new SqlCommand("SELECT UserID, FirstName, LastName, Password, Email, Role, RegisterDate, UserName from Users WHERE UserName=@UN AND Password=@UP", conn))
         {
-            command.Parameters.AddWithValue("@UN", username);
-            command.Parameters.AddWithValue("@UP", password);
+            command.Parameters.AddWithValue("@UN", user.Username);
+            command.Parameters.AddWithValue("@UP", user.Password);
             //int passedCheck = 0;
 
             if (conn.State == ConnectionState.Closed)
@@ -233,67 +241,68 @@ public class ADO_Access : IADO_Access
 
             while (check.Read())
             {
-                if (check.GetString(5) == Status.User.ToString())
+                if(check.GetString(5) == "User")
                 {
-                    userData.Add(check.GetGuid(0));
-                    userData.Add(check.GetString(7));
-                    userData.Add(check.GetString(3));
-                    userData.Add(check.GetString(1));
-                    userData.Add(check.GetString(2));
-                    userData.Add(check.GetString(4));
-                    userData.Add(Status.User);
-                    userData.Add(check.GetDateTime(6));
+                    userData.Add(check.GetGuid(0));//id
+                    userData.Add(check.GetString(1));//first
+                    userData.Add(check.GetString(2));//last
+                    userData.Add(check.GetString(3));//pass
+                    userData.Add(check.GetString(4));//email
+                    userData.Add(Status.User);//role
+                    userData.Add(check.GetDateTime(6));//created
+                    userData.Add(check.GetString(7));//username
                 }
                 else
                 {
                     userData.Add(check.GetGuid(0));
-                    userData.Add(check.GetString(7));
-                    userData.Add(check.GetString(3));
                     userData.Add(check.GetString(1));
                     userData.Add(check.GetString(2));
+                    userData.Add(check.GetString(3));
                     userData.Add(check.GetString(4));
                     userData.Add(Status.Admin);
                     userData.Add(check.GetDateTime(6));
+                    userData.Add(check.GetString(7));
                 }
             }
 
-            if (userData == null)
+            if (userData != null)
             {
-                conn.Close();
-                return null;
-            }
-            //If the userData was not an empty list 
-            if (userData[6] == "User")
-            {
-                User user = new User(
-                    userData[0],
-                    userData[1],
-                    userData[2],
-                    userData[3],
-                    userData[4],
-                    userData[5],
-                    userData[6],
-                    userData[7]
-                    );
+                //TODO add if statement of (if user or admin)
+                if (userData[5] == Status.User)
+                {
+                    User loadedUser = new User(
+                        userData[0],//id
+                        userData[7],//username
+                        userData[3],//pass
+                        userData[1],//first
+                        userData[2],//last
+                        userData[4],//email
+                        userData[5],//role
+                        userData[6]//date
+                        );
+                    conn.Close();
+                    return loadedUser;
+                }
+                else
+                {
+                    Admin loadedUser = new Admin(
+                        userData[0],//id
+                        userData[7],//username
+                        userData[3],//pass
+                        userData[1],//first
+                        userData[2],//last
+                        userData[4],//email
+                        userData[5],//role
+                        userData[6]//date
+                        );
+                    conn.Close();
+                    return loadedUser;
+                }
                 //check did not find a user that matched both credentials
-                conn.Close();
-                return user;
             }
             else
             {
-                Admin user = new Admin(
-                    userData[0],
-                    userData[1],
-                    userData[2],
-                    userData[3],
-                    userData[4],
-                    userData[5],
-                    userData[6],
-                    userData[7]
-                    );
-                conn.Close();
-                return user;
-
+                return null;
             }
         }
     }//End of User Login
@@ -382,6 +391,109 @@ public class ADO_Access : IADO_Access
             conn.Close();
             return profilesList;
         }
-    }//End of GET User Profile 
+    }//End of GET User Profile
+
+
+    public async Task<List<Product>?> Get_Products()
+    {
+        SqlConnection conn = new SqlConnection(myconnection);
+        using (SqlCommand command = new SqlCommand("SELECT ProductID, Title, Description, Price, Inventory, DateAdded, FK_UserID FROM Products", conn))
+        {
+            //command.Parameters.AddWithValue("@UN", username);
+            //int passedCheck = 0;
+
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+                //Console.WriteLine($"Connection was closed and now open");
+            }
+            else
+            {
+                //Console.WriteLine($"Connection was open and now closed and open");
+                conn.Close();
+                conn.Open();
+            }
+            Console.WriteLine("\n\n\t\tAbout to read for Products\n\n");
+            SqlDataReader check = await command.ExecuteReaderAsync();
+            List<Product>? productsList = new List<Product>();
+            while (check.Read())
+            {
+                Product loadedproduct = new Product(
+                    check.GetGuid(0),//id
+                    check.GetString(1),//title
+                    check.GetString(2),//desc
+                    check.GetDecimal(3),//price
+                    check.GetInt32(4),//inventory
+                    check.GetDateTime(5),//created
+                    check.GetGuid(6)//userID
+
+                    //PK_ProductID = id;
+                    //Title = title;
+                    //Description = description;
+                    //Price = price;
+                    //Inventory = inventory;
+                    //DateCreated = dateCreated;
+                    //fk_UserID = userID;
+
+                    );
+                productsList.Add(loadedproduct);
+            }
+
+            conn.Close();
+            return productsList;
+        }
+    }//End of GET Products
+
+
+    public async Task<bool> Add_Product(Product product)
+    {
+        SqlConnection conn = new SqlConnection(myconnection);
+        using (SqlCommand command = new SqlCommand("INSERT INTO Products " +
+            "VALUES(@ID, @Title, @Descr, @Inv, @Created, @FK, @Price)", conn))
+        {
+            //-------------------------Commands Section
+            command.Parameters.AddWithValue("@ID", product.PK_ProductID);
+            command.Parameters.AddWithValue("@Title", product.Title);
+            command.Parameters.AddWithValue("@Descr", product.Description);
+            command.Parameters.AddWithValue("@Inv", product.Inventory);
+            command.Parameters.AddWithValue("@Created", product.DateCreated);
+            command.Parameters.AddWithValue("@FK", product.fk_UserID);
+            command.Parameters.AddWithValue("@Price", product.Price);
+            //command.Parameters.AddWithValue("@UFK_ID", user.PK_EmployeeID);
+
+            //int passedSave = 0;
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+                Console.WriteLine($"Connection was closed and now open");
+            }
+            else
+            {
+                Console.WriteLine($"Connection was open and now closed and open");
+                conn.Close();
+                conn.Open();
+            }
+
+            int save = await command.ExecuteNonQueryAsync();
+
+            if (save > 0)//If the save was successful
+            {
+                Console.WriteLine($"Connection is now closed - true - saved");
+                conn.Close();
+                //UserProfileDTO newProfile = new UserProfileDTO(profile.Username, profile.About);
+                return true;
+            }
+            else
+            {
+                Console.WriteLine($"Connection is now closed - false - not saved");
+                conn.Close();
+                return false;
+            }
+
+        }
+    }//End Create User Profile
+
+
+
 
 }
