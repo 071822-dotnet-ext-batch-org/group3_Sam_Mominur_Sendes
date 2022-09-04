@@ -12,6 +12,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUserAuthentication, UserAuthentication>();
 builder.Services.AddScoped<IADO_Access, ADO_Access>();
 builder.Services.AddScoped<IUserProfileBL, UserProfileBL>();
+builder.Services.AddScoped<IProduct_BusinessLayer, Product_BusinessLayer>();
 
 var app = builder.Build();
 

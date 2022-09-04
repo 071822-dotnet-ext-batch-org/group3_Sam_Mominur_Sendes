@@ -1,28 +1,50 @@
 ﻿<Properties StartupConfiguration="{D6FDB08C-F7E8-458E-96EC-1717D4EEFCCE}|Default">
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ApiLayer/HTML_CSS/Login.html">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ApiLayer/Controllers/ProductsController.cs">
     <Files>
-      <File FileName="ApiLayer/Controllers/UserAuthController.cs" Line="78" Column="93" IsPinned="True" />
-      <File FileName="BusinessLayer/UserAuthentication.cs" Line="141" Column="29" IsPinned="True" />
-      <File FileName="BusinessLayer/UserProfileBL.cs" Line="31" Column="62" />
-      <File FileName="ApiLayer/Controllers/UserProfileController.cs" Line="31" Column="20" />
-      <File FileName="ModelLayer/Products.cs" Line="100" Column="16" />
-      <File FileName="RepoLayer/ADO_Access.cs" Line="85" Column="35" />
-      <File FileName="ApiLayer/Program.cs" Line="29" Column="1" />
-      <File FileName="ModelLayer/ProductDTO.cs" Line="24" Column="10" />
-      <File FileName="ModelLayer/UserDTO.cs" Line="26" Column="1" />
-      <File FileName="ModelLayer/UserProfileDTO.cs" Line="15" Column="23" />
-      <File FileName="BusinessLayer/VerifyAnswers.cs" Line="22" Column="20" />
-      <File FileName="ApiLayer/HTML_CSS/Login.html" Line="73" Column="81" />
+      <File FileName="ApiLayer/Controllers/ValuesController.cs" Line="25" Column="22" IsPinned="True" />
+      <File FileName="ModelLayer/ProductDTO.cs" Line="22" Column="23" IsPinned="True" />
+      <File FileName="BusinessLayer/Product_BusinessLayer.cs" Line="26" Column="22" IsPinned="True" />
+      <File FileName="ModelLayer/Products.cs" Line="90" Column="31" IsPinned="True" />
+      <File FileName="ApiLayer/Controllers/UserAuthController.cs" Line="47" Column="88" />
+      <File FileName="BusinessLayer/UserAuthentication.cs" Line="29" Column="10" />
+      <File FileName="Tests.Project2/UnitTest1.cs" Line="10" Column="22" />
+      <File FileName="BusinessLayer/UserAuthentication.cs" Line="29" Column="10" />
+      <File FileName="ApiLayer/Controllers/WeatherForecastController.cs" Line="16" Column="80" />
+      <File FileName="RepoLayer/IADO_Access.cs" Line="8" Column="52" />
+      <File FileName="RepoLayer/ADO_Access.cs" Line="113" Column="23" />
+      <File FileName="BusinessLayer/IProduct_BusinessLayer.cs" Line="8" Column="59" />
+      <File FileName="ApiLayer/Program.cs" Line="30" Column="1" />
+      <File FileName="ModelLayer/UserDTO.cs" Line="6" Column="1" />
+      <File FileName="ModelLayer/UserDTOs.cs" Line="90" Column="30" />
+      <File FileName="BusinessLayer/IUserAuthentication.cs" Line="12" Column="60" />
+      <File FileName="ModelLayer/User.cs" Line="93" Column="36" />
+      <File FileName="ModelLayer/UserBase.cs" Line="30" Column="1" />
+      <File FileName="ModelLayer/Admin.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="P2_Sendes" expanded="True" />
+          <Node name="P2_Sendes" expanded="True">
+            <Node name="ApiLayer" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="ProductsController.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="BusinessLayer" expanded="True" />
+            <Node name="ModelLayer" expanded="True" />
+            <Node name="RepoLayer" expanded="True" />
+            <Node name="Tests.Project2" expanded="True" />
+          </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State />
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="P2_Sendes" expanded="True" selected="True" />
+        </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

@@ -25,22 +25,22 @@ namespace ModelLayer
         [Required(ErrorMessage = "An email is required!!!")]
         public string Email { get; set; } = string.Empty;
 
-        //[Required(ErrorMessage = "An email is required!!!")]
-        public Status Role { get; set; } = Status.Guest;
+        [Required(ErrorMessage = "You must have a role!!!")]
+        public Status Role { get; set; } = Status.User;
 
         public UserBase()
         {
             this.First = string.Empty;
             this.Last = string.Empty;
             this.Email = string.Empty;
-            //this.Role = Status.Guest;
+            this.Role = Status.User;
         }
         public UserBase(string firstname, string lastname, string email)
         {
             this.First = firstname;
             this.Last = lastname;
             this.Email = email;
-            //this.Role = Status.Guest;
+            this.Role = Status.User;
         }
     }
 }

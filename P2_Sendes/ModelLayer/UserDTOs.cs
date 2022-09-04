@@ -22,7 +22,7 @@ namespace ModelLayer
         // public string Role {get;set;}
         // public DateTime SignupDate {get;set;}
         // public DateTime LastSignInDate {get;set;}
-
+        public UserLoginDTO() { }
         public UserLoginDTO(string username, string password)
         {
             this.Username = username;
@@ -87,6 +87,7 @@ namespace ModelLayer
             this.First = firstname;
             this.Last = lastname;
             this.Email = email;
+            this.Role = role;
         }
 
 
