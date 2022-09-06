@@ -138,31 +138,34 @@
         <section id="cart"></section>
     </main>    
     <script>
+        // local storage exists in local computer
         const CART = {
-            KEY: 'P2 ShoppingCart',
-            contents: [],
-            init(){
+            KEY: 'P2ShoppingCart', //this can be API key 
+            contents: [], // empty ray, stores items that increses, decreases 
+            init(){ // 1) INIT is calling objects inside the cart
+                    // everytime new page loads it calls the objects/items
                 //check localStorage and initialize the contents of CART.contents
-                let _contents = localStorage.getItem(CART.KEY);
-                if(_contents){
+                let _contents = localStorage.getItem(CART.KEY); //contents from the local storage
+                if(_contents){ //IF its bringing nothing then use below hard coded itmes
                     CART.contents = JSON.parse(_contents);
                 }else{
                     //dummy test data
-                    CART.contents = [
-                        {id:1, title:'Apple', qty:5, itemPrice: 0.85},
+                    //checks if anything inside the cart, if not this can be be used
+                    CART.contents = [ //cart is calling contents
+                        {id:1, title:'Apple', qty:5, itemPrice: 0.85}, // THIS HAS TO BE EMPTY DURING THE PRODUCTION
                         {id:2, title:'Banana', qty:3, itemPrice: 0.35},
                         {id:3, title:'Cherry', qty:8, itemPrice: 0.05}
                     ];
                     CART.sync();
                 }
             },
-            async sync(){
+            async sync(){ // IF anything changes in the cart: increase, decrease, etc. Then this will ASYNC - updates
                 let _cart = JSON.stringify(CART.contents);
-                await localStorage.setItem(CART.KEY, _cart);
+                await localStorage.setItem(CART.KEY, _cart); //stringifying contents and putting them into the cart, using the KEY defined above
             },
             find(id){
                 //find an item in the cart by it's id
-                let match = CART.contents.filter(item=>{
+                let match = CART.contents.filter(item=>{ //using filter method CART.contents is an ARRAY
                     if(item.id == id)
                         return true;
                 });
@@ -171,11 +174,10 @@
             },
             add(id){
                 //add a new item to the cart
-                //check that it is not in the cart already
-                if(CART.find(id)){
-                    CART.increase(id, 1);
+                if(CART.find(id)){ //check that it is not in the cart already
+                    CART.increase(id, 1); //if there is something than use 'increase' method
                 }else{
-                    let arr = PRODUCTS.filter(product=>{
+                    let arr = PRODUCTS.filter(product=>{ // PRODUCTS is product list, data came from the server
                         if(product.id == id){
                             return true;
                         }
@@ -186,7 +188,10 @@
                             title: arr[0].title,
                             qty: 1,
                             itemPrice: arr[0].price
+                            //desc: arr[0].desc
+                            //image: arr[].image
                         };
+                        //if something chnages in array, it pushes the update to the array
                         CART.contents.push(obj);
                         //update localStorage
                         CART.sync();
@@ -198,9 +203,9 @@
             },
             increase(id, qty=1){
                 //increase the quantity of an item in the cart
-                CART.contents = CART.contents.map(item=>{
-                    if(item.id === id)
-                        item.qty = item.qty + qty;
+                CART.contents = CART.contents.map(item=>{ //using 'map' loop through all of them
+                    if(item.id === id) // if find a matching ID
+                        item.qty = item.qty + qty; // increment item by 1
                     return item;
                 });
                 //update localStorage
@@ -214,8 +219,8 @@
                     return item;
                 });
                 CART.contents.forEach(async item=>{
-                    if(item.id === id && item.qty === 0)
-                        await CART.remove(id);
+                    if(item.id === id && item.qty === 0) //quantity is 0, call remove 'method'
+                        CART.remove(id); // making sure there is no 0, or - negative quantity in the cart
                 });
                 //update localStorage
                 CART.sync()
@@ -226,16 +231,17 @@
                     if(item.id !== id)
                         return true;
                 });
-                //update localStorage
+                //update localStorage/ 
                 CART.sync()
             },
             empty(){
                 //empty whole cart
+                // everytime talk to local storage = asynchronus call 
                 CART.contents = [];
                 //update localStorage
                 CART.sync()
             },
-            sort(field='title'){
+            sort(field='title'){ //taking the ray and passing sort "title", it can be anything
                 //sort by field - title, price
                 //return a sorted shallow copy of the CART.contents array
                 let sorted = CART.contents.sort( (a, b)=>{
@@ -251,26 +257,26 @@
                 //NO impact on localStorage
             },
             logContents(prefix){
-                console.log(prefix, CART.contents)
+                console.log(prefix, CART.contents) // its here but we need to write it out inside the function
             }
         };
         
-        let PRODUCTS = [];
+        let PRODUCTS = []; //showing list of products
         
         document.addEventListener('DOMContentLoaded', ()=>{
             //when the page is ready
             getProducts( showProducts, errorMessage );
-            //get the cart items from localStorage
+            //get the cart items from localStorage/ getting contents of the cart
             CART.init();
-            //load the cart items
+            //load the cart items/showing the cart
             showCart();
         });
         
         function showCart(){
             let cartSection = document.getElementById('cart');
-            cart.innerHTML = '';
+            cartSection.innerHTML = '';
             let s = CART.sort('qty');
-            s.forEach( item =>{
+            s.forEach( item =>{ //sorting the cart 
                 let cartitem = document.createElement('div');
                 cartitem.className = 'cart-item';
                 
@@ -283,7 +289,7 @@
                 controls.className = 'controls';
                 cartitem.appendChild(controls);
                 
-                let plus = document.createElement('span');
+                let plus = document.createElement('span'); //this is the button
                 plus.textContent = '+';
                 plus.setAttribute('data-id', item.id)
                 controls.appendChild(plus);
@@ -302,7 +308,7 @@
                 let price = document.createElement('div');
                 price.className = 'price';
                 let cost = new Intl.NumberFormat('en-CA', 
-                                {style: 'currency', currency:'CAD'}).format(item.qty * item.itemPrice);
+                {style: 'currency', currency:'CAD'}).format(item.qty * item.itemPrice);
                 price.textContent = cost;
                 cartitem.appendChild(price);
                 
@@ -323,10 +329,11 @@
                 document.getElementById('cart').removeChild(controls.parentElement);
             }
         }
+        CART.sync
         
         function decrementCart(ev){
             ev.preventDefault();
-            let id = parseInt(ev.target.getAttribute('data-id'));
+            let id = parseInt(ev.target.getAttribute('data-id')); //find the id
             CART.reduce(id, 1);
             let controls = ev.target.parentElement;
             let qty = controls.querySelector('span:nth-child(2)');
@@ -334,31 +341,30 @@
             if(item){
                 qty.textContent = item.qty;
             }else{
-                document.getElementById('cart').removeChild(controls.parentElement);
+                document.getElementById('cart').removeChild(controls.parentElement); //if the quantity gets 0, remove the itmes
             }
         }
+        CART.sync
         
         function getProducts(success, failure){
             //request the list of products from the "server"
             const URL = "https://prof3ssorst3v3.github.io/media-sample-files/products.json?";
-            fetch(URL, {
+            fetch(URL, { //getting the data from the server
                 method: 'GET',
-                mode: 'cors'
+                mode: 'cors' //to make sure I can use the data/does not get rejected
             })
-            .then(response=>response.json())
-            .then(showProducts)
-            .catch(err=>{
-                errorMessage(err.message);
-            });
+            .then(response=>response.json()) //calling jason convert to response back into json file. Becasue it comes just a string object
+            .then(success)
+            .catch(failure);
         }
         
-        function showProducts( products ){
-            PRODUCTS = products;
+        function showProducts( products ){ //taking back from products that json sent back
+            PRODUCTS = products; //<PRODUCT> global file/ this gets used to check if there is a match
             //take data.products and display inside <section id="products">
-            let imgPath = '../video-pages/img/';
+            let imgPath = '../video-pages/img/'; //image server goes here
             let productSection = document.getElementById('products');
             productSection.innerHTML = "";
-            products.forEach(product=>{
+            products.forEach(product=>{ //looping through product array/ 'product' represents each item/product
                 let card = document.createElement('div');
                 card.className = 'card';
                 //add the image to the card
@@ -369,15 +375,15 @@
                 //add the price
                 let price = document.createElement('p');
                 let cost = new Intl.NumberFormat('en-CA', 
-                                        {style:'currency', currency:'CAD'}).format(product.price);
+                                        {style:'currency', currency:'CAD'}).format(product.price); //this converts int value to currency value with currency symbol
                 price.textContent = cost;
                 price.className = 'price';
                 card.appendChild(price);
                 
                 //add the title to the card
-                let title = document.createElement('h2');
-                title.textContent = product.title;
-                card.appendChild(title);
+                let title = document.createElement('h2'); //create an element
+                title.textContent = product.title;        // set the text
+                card.appendChild(title);                // add it to the card
                 //add the description to the card
                 let desc = document.createElement('p');
                 desc.textContent = product.desc;
@@ -386,7 +392,7 @@
                 let btn = document.createElement('button');
                 btn.className = 'btn';
                 btn.textContent = 'Add Item';
-                btn.setAttribute('data-id', product.id);
+                btn.setAttribute('data-id', product.id); //take id from an item and puting it into button
                 btn.addEventListener('click', addItem);
                 card.appendChild(btn);
                 //add the card to the section
@@ -399,7 +405,7 @@
             let id = parseInt(ev.target.getAttribute('data-id'));
             console.log('add to cart item', id);
             CART.add(id, 1);
-            showCart();
+            showCart(); //calling it multiple times 
         }
         
         function errorMessage(err){
