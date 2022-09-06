@@ -21,7 +21,7 @@ namespace APILayer.Controllers
         /// </summary>
         /// <param name="login"></param>
         /// <returns></returns>
-        [HttpPost("Login")]
+        [HttpPost("api/[login]")]
         public async Task<ActionResult<List<LoginDto>>> LoginAsync(LoginDto login)
         {
             if (ModelState.IsValid)
@@ -37,7 +37,7 @@ namespace APILayer.Controllers
         /// </summary>
         /// <param name="newUser"></param>
         /// <returns></returns>
-        [HttpPost("Register a New Account")]
+        [HttpPost("api/[register]")]
         public async Task<ActionResult<List<User>>> NewUserAsync(User newUser)
         {
             if (ModelState.IsValid)
@@ -52,11 +52,17 @@ namespace APILayer.Controllers
         /// #3 Display products
         /// </summary>
         /// <returns></returns>
-        [HttpGet("Display Products")] //get all of a type request
+        [HttpGet("api/[products]")] //get all of a type request
         public async Task<ActionResult<List<DisplayDto>>> ProductDisplayAsync()
         {
             List<DisplayDto> productDisplayList = await this._businessLayer.ProductDisplayAsync(); //its in the bussiness Layer, because BusinessLayer deals with all the logics. Due to seperation concern, leave minimum logic as possible
             return Ok(productDisplayList); //returns 200          
+        }
+
+        [HttpGet("Single product")]
+        public string GetProducts()
+        {
+            return "single product";
         }
         
         // #4 Cart
