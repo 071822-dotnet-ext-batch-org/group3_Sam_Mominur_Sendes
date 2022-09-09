@@ -8,7 +8,7 @@ namespace RepoLayer
 {
     public class Repo : IRepo
     {
-        private readonly IConfiguration _dbconnection; //creating IConfiguration type 
+        private readonly IConfiguration _dbconnection; //creating IConfiguration type. '_' use identify private field 
         public Repo(IConfiguration x)                      // injecting 
         {
             this._dbconnection = x;
