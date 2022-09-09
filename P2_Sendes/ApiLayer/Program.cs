@@ -13,6 +13,14 @@ builder.Services.AddScoped<IUserAuthentication, UserAuthentication>();
 builder.Services.AddScoped<IADO_Access, ADO_Access>();
 builder.Services.AddScoped<IUserProfileBL, UserProfileBL>();
 builder.Services.AddScoped<IProduct_BusinessLayer, Product_BusinessLayer>();
+builder.Services.AddCors((options) =>
+{
+    options.AddPolicy(name: "allowALL", policy1 =>
+    {
+        policy1.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();//For the policy, allow ANY of these things
+    });
+});
+
 
 var app = builder.Build();
 
@@ -24,8 +32,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseCors();//Cors must be within Route/Redirection and Authorization
 app.UseAuthorization();
+
 
 app.MapControllers();
 

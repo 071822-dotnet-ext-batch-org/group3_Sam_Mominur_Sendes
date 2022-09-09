@@ -85,7 +85,7 @@ namespace BusinessLayer
         {
             //validate username and password to make sure there are no inccoreect entrees
             VerifyAnswers verify = new VerifyAnswers();
-            dynamic validater = verify.Verify_API_Form_Data__USERNAME(user.Username, 3, 30);
+            dynamic validater = verify.Verify_API_Form_Data__USERNAME(user.Email, 3, 30);
             if (validater.GetType() == typeof(bool)) //if verification was a success boolean
             {
                 Console.WriteLine($"\n\t\tCheck was successful: {validater}\n");
@@ -123,19 +123,19 @@ namespace BusinessLayer
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public async Task<bool> CheckIf_UserExists(string username)
+        public async Task<bool> CheckIf_UserExists(string Email)
         {
-            bool check = await this._repoLayer.CheckFor_User(username);
+            bool check = await this._repoLayer.CheckFor_User(Email);
             if (check == true)
             {
                 //its true that the user exists already
-                Console.WriteLine($"\n\n\t\t{username} already exists -- Check if Exists -- UserAuth - BL\n");
+                Console.WriteLine($"\n\n\t\t{Email} already exists -- Check if Exists -- UserAuth - BL\n");
                 return true;
             }
             else
             {
                 //the user does not exists
-                Console.WriteLine($"\n\n\t\t{username} does not exist -- Check If Exists -- UserAuth - BL\n");
+                Console.WriteLine($"\n\n\t\t{Email} does not exist -- Check If Exists -- UserAuth - BL\n");
                 return false;
             }
         }

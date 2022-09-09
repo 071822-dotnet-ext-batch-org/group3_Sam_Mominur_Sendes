@@ -44,11 +44,11 @@ namespace ApiLayer.Controllers
             if (ModelState.IsValid)
             {
                 //TODO WHy did this return null reference?
-                bool checkIfExists = await this._userAuth_BL.CheckIf_UserExists(user.Username);
+                bool checkIfExists = await this._userAuth_BL.CheckIf_UserExists(user.Email);
                 if (checkIfExists == true)//If check says it found a user already with that username
                 {
                     //return this error message
-                    return $"\n\t\tThe user named {user.Username} is registered already.\n\n\t\t\tTRY ANOTHER NAME!!!\n";
+                    return $"\n\t\tThe user with the email {user.Email} is registered already.\n\n\t\t\tTRY ANOTHER NAME!!!\n";
                 }
                 else//If the check says no present username matches
                 {
@@ -74,13 +74,13 @@ namespace ApiLayer.Controllers
 
         //[HttpGet("Login/")]//UserName={username}&Password={password}/")]
         //[HttpGet("Login/{Username}/{Password}")]
-        [HttpGet("Login/{Username}/{Password}")]
+        [HttpGet("Login/{Email}/{Password}")]
         public async Task<ActionResult<dynamic>> User_Login([FromRoute] UserLoginDTO user)//returns user 
         {
             if (ModelState.IsValid)
             {
-                Console.WriteLine($"{user.Username} will be checked first - API LAYER ");
-                bool check = await this._userAuth_BL.CheckIf_UserExists(user.Username);
+                Console.WriteLine($"{user.Email} will be checked first - API LAYER ");
+                bool check = await this._userAuth_BL.CheckIf_UserExists(user.Email);
                 if (check == true)
                 {
                     dynamic? isLoggedIn = await this._userAuth_BL.User_Login(user);
@@ -90,12 +90,12 @@ namespace ApiLayer.Controllers
                     }
                     else
                     {
-                        return Conflict($"The password used for '{user.Username}' did not match your response");
+                        return Conflict($"The password used for email '{user.Email}' did not match your response");
                     }
                 }
                 else
                 {
-                    return NotFound($"The user '{user.Username}' was not found");
+                    return NotFound($"The user with email '{user.Email}' was not found");
                 }
             }
             else
