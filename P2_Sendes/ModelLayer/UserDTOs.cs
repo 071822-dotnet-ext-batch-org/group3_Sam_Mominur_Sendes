@@ -12,8 +12,8 @@ namespace ModelLayer
     public class UserLoginDTO
     {
         [StringLength(30, MinimumLength = 3, ErrorMessage = "Your username must be within 3-30 characters")]
-        [Required(ErrorMessage = "Your username is required!!!")]//This tag gives front-end form element a required message if something isnt filled
-        public string Username { get; set; } = string.Empty;
+        [Required(ErrorMessage = "Your email is required!!!")]//This tag gives front-end form element a required message if something isnt filled
+        public string Email { get; set; } = string.Empty;
 
         [StringLength(50, MinimumLength = 5, ErrorMessage = "Your password must be within 5-50 characters")]
         [Required(ErrorMessage = "A password must be provided!!!")]
@@ -23,13 +23,28 @@ namespace ModelLayer
         // public DateTime SignupDate {get;set;}
         // public DateTime LastSignInDate {get;set;}
         public UserLoginDTO() { }
-        public UserLoginDTO(string username, string password)
+        public UserLoginDTO(string Email, string password)
         {
-            this.Username = username;
+            this.Email = Email;
             this.Password = password;
         }
 
     }//End of Login DTO
+
+    //public class UserOrderDetailsDTO : UserBase
+    //{
+    //    //public List<Product>? orderedProducts { get; set; }
+    //    public UserOrderDetailsDTO(){}
+
+    //    public UserOrderDetailsDTO(string first, string last, string email) : base(first, last, email)
+    //    {
+    //        this.First = first;
+    //        this.Last = last;
+    //        this.Email = email;
+    //        this.Role = Status.User;
+    //        //this.orderedProducts = new List<Product>();
+    //    }
+    //}
 
 
 
