@@ -4,12 +4,12 @@ using System.Net.Sockets;
 
 namespace BusinessLayer
 {
-    public class Business
+    public class Business : IBusiness
     {
-        private readonly Repo _repoLayer;
-        public Business()
+        private readonly IRepo _repoLayer;
+        public Business(IRepo repo)
         {
-            this._repoLayer = new Repo();
+            this._repoLayer = repo;
         }
 
 
@@ -34,8 +34,8 @@ namespace BusinessLayer
             User user = await this._repoLayer.NewUserAsync(newUser);
             return user;
         }
-        
-       
+
+
         /// <summary>
         /// #3 Display products
         /// </summary>

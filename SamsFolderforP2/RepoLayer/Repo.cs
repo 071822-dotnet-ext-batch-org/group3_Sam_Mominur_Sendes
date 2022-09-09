@@ -1,11 +1,18 @@
-﻿using ModelsLayer;
+﻿using Microsoft.Extensions.Configuration;
+using ModelsLayer;
 using System.Data.SqlClient;
 using System.Net.Sockets;
 
+
 namespace RepoLayer
 {
-    public class Repo
+    public class Repo : IRepo
     {
+        private readonly IConfiguration _dbconnection; //creating IConfiguration type 
+        public Repo(IConfiguration x)                      // injecting 
+        {
+            this._dbconnection = x;
+        }
         /// <summary>
         /// #1 Login
         /// </summary>
@@ -13,7 +20,7 @@ namespace RepoLayer
         /// <returns></returns>
         public async Task<LoginDto> LoginAsync(LoginDto login)
         {
-            SqlConnection conn1 = new SqlConnection("Server=tcp:p2group3.database.windows.net,1433;Initial Catalog=P2Group3;Persist Security Info=False;User ID=p2group3;Password=project2groupthree!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            SqlConnection conn1 = new SqlConnection(_dbconnection["ConnectionStrings:DefaultConnection"]);
             using (SqlCommand command = new SqlCommand($"SELECT UserName, Password FROM Users WHERE UserName = @username AND Password = @password", conn1))
             {
                 command.Parameters.AddWithValue("@username", login.UserName);
@@ -38,7 +45,7 @@ namespace RepoLayer
         /// <returns></returns>
         public async Task<User> NewUserAsync(User newUser)
         {
-            SqlConnection conn1 = new SqlConnection("Server=tcp:p2group3.database.windows.net,1433;Initial Catalog=P2Group3;Persist Security Info=False;User ID=p2group3;Password=project2groupthree!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            SqlConnection conn1 = new SqlConnection(_dbconnection["ConnectionStrings:DefaultConnection"]);
             using (SqlCommand command = new SqlCommand($"UPDATE Users SET UserID = @id, UserName = @un, FirstName = @fn, LastName = @ln, Password = @pw, Email = @em, Role = @rl WHERE UserName = @un IF @@ROWCOUNT = 0 INSERT INTO Users (UserID, UserName, FirstName, LastName, Password, Email, Role) VALUES (@id, @un, @fn, @ln, @pw, @em, @rl)", conn1))
             {
                 command.Parameters.AddWithValue("@id", newUser.UserID);
@@ -70,7 +77,7 @@ namespace RepoLayer
         public async Task<List<DisplayDto>> ProductDisplayAsync()
         {
             // made a connection wusing Sql connection class
-            SqlConnection conn1 = new SqlConnection("Server=tcp:p2group3.database.windows.net,1433;Initial Catalog=P2Group3;Persist Security Info=False;User ID=p2group3;Password=project2groupthree!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            SqlConnection conn1 = new SqlConnection(_dbconnection["ConnectionStrings:DefaultConnection"]);
             using (SqlCommand command = new SqlCommand($"SELECT ProductId, ProductName, ProductDetails, ProductPrice, ProductInventory FROM Products", conn1)) //created a command using the query and the connection string,
             {
                 //I gave parameter to the command

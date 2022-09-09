@@ -153,3 +153,6 @@ C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderfor
 C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderforP2\APILayer\obj\Debug\net6.0\APILayer.csproj.CopyComplete
 C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderforP2\APILayer\obj\Debug\net6.0\APILayer.genruntimeconfig.cache
 C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderforP2\APILayer\obj\Debug\net6.0\ref\APILayer.dll
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderforP2\APILayer\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderforP2\APILayer\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderforP2\APILayer\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll

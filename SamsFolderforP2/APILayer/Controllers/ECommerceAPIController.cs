@@ -10,10 +10,10 @@ namespace APILayer.Controllers
     [ApiController]
     public class ECommerceAPIController : ControllerBase
     {
-        private readonly Business _businessLayer;
-        public ECommerceAPIController()
+        private readonly IBusiness _businessLayer;
+        public ECommerceAPIController(IBusiness business)
         {
-            this._businessLayer = new Business();
+            this._businessLayer = business;
         }
         
         /// <summary>
@@ -21,7 +21,7 @@ namespace APILayer.Controllers
         /// </summary>
         /// <param name="login"></param>
         /// <returns></returns>
-        [HttpPost("api/[login]")]
+        [HttpPost("login")]
         public async Task<ActionResult<List<LoginDto>>> LoginAsync(LoginDto login)
         {
             if (ModelState.IsValid)
@@ -37,7 +37,7 @@ namespace APILayer.Controllers
         /// </summary>
         /// <param name="newUser"></param>
         /// <returns></returns>
-        [HttpPost("api/[register]")]
+        [HttpPost("register")]
         public async Task<ActionResult<List<User>>> NewUserAsync(User newUser)
         {
             if (ModelState.IsValid)
@@ -52,18 +52,18 @@ namespace APILayer.Controllers
         /// #3 Display products
         /// </summary>
         /// <returns></returns>
-        [HttpGet("api/[products]")] //get all of a type request
+        [HttpGet("products")] //get all of a type request
         public async Task<ActionResult<List<DisplayDto>>> ProductDisplayAsync()
         {
             List<DisplayDto> productDisplayList = await this._businessLayer.ProductDisplayAsync(); //its in the bussiness Layer, because BusinessLayer deals with all the logics. Due to seperation concern, leave minimum logic as possible
             return Ok(productDisplayList); //returns 200          
         }
 
-        [HttpGet("Single product")]
-        public string GetProducts()
-        {
-            return "single product";
-        }
+        //[HttpGet("Single product")]
+        //public string GetProducts()
+        //{
+          //  return "single product";
+        //}
         
         // #4 Cart
         //[HttpPut("Cart")] 
