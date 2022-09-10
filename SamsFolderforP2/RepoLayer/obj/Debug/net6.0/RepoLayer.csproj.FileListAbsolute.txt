@@ -43,3 +43,5 @@ C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderfor
 C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderforP2\RepoLayer\obj\Debug\net6.0\refint\RepoLayer.dll
 C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderforP2\RepoLayer\obj\Debug\net6.0\RepoLayer.pdb
 C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderforP2\RepoLayer\obj\Debug\net6.0\ref\RepoLayer.dll
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderforP2\RepoLayer\bin\Debug\net6.0\RepoLayer.runtimeconfig.json
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\SamsFolderforP2\RepoLayer\obj\Debug\net6.0\RepoLayer.genruntimeconfig.cache
