@@ -25,41 +25,21 @@ namespace BusinessLayer
         /// </summary>
         /// <param name="userDTO"></param>
         /// <returns></returns>
-        public async Task<dynamic?> User_Register(UserRegisterDTO user)
+        public async Task<User?> User_Register(UserRegisterDTO user)
         {
             //Console.WriteLine($"\n\n\n\t\t\tYou are the current user: {username} -- UserAuth Class\n");
-            dynamic? newUser = null;
-            if (user.Role == Status.User)
-            {
-                newUser = new User(
-                   Guid.NewGuid(),
-                   user.Username,
-                   user.Password,
-                   user.First,
-                   user.Last,
-                   user.Email,
-                   user.Role,
-                   DateTime.Now
-                   );
-            }
-            else if(user.Role == Status.Admin)
-            {
-                newUser = new Admin(
-                   Guid.NewGuid(),
-                   user.Username,
-                   user.Password,
-                   user.First,
-                   user.Last,
-                   user.Email,
-                   user.Role,
-                   DateTime.Now
-                   );
-            }
-            else
-            {
-                return null;
-            }
-            dynamic? verifiedResult = await _repoLayer.Register_User(newUser);
+            
+            User newUser = new User(
+                Guid.NewGuid(),
+                user.Username,
+                user.Password,
+                user.First,
+                user.Last,
+                user.Email,
+                Status.User,
+                DateTime.Now
+                );
+            User? verifiedResult = await _repoLayer.Register_User(newUser);
             if (verifiedResult != null)//If the user was  saved
             {//return true
                 return verifiedResult;
@@ -68,9 +48,6 @@ namespace BusinessLayer
             {
                 return null;
             }
-
-
-
         }//End of USER REGISTER
 
 
@@ -83,28 +60,6 @@ namespace BusinessLayer
         /// <returns></returns>
         public async Task<dynamic?> User_Login(UserLoginDTO user)
         {
-            //validate username and password to make sure there are no inccoreect entrees
-            VerifyAnswers verify = new VerifyAnswers();
-            dynamic validater = verify.Verify_API_Form_Data__USERNAME(user.Email, 3, 30);
-            if (validater.GetType() == typeof(bool)) //if verification was a success boolean
-            {
-                Console.WriteLine($"\n\t\tCheck was successful: {validater}\n");
-            }
-            else// if the verification was not a bool but an error string
-            {
-                return null; //return the string error message
-            }
-
-            validater = verify.Verify_API_Form_Data__PASSWORD(user.Password, 5, 50);
-            if (validater.GetType() == typeof(bool)) //if verification was a success boolean
-            {
-                Console.WriteLine($"\n\t\tCheck was successful: {validater}\n");
-            }
-            else// if the verification was not a bool but an error string
-            {
-                return null; //return the string error message
-            }
-            //going to return a User or a Admin
             dynamic? loggedUser = await this._repoLayer.Login_User(user);
             if (loggedUser != null)
             {
@@ -139,5 +94,23 @@ namespace BusinessLayer
                 return false;
             }
         }
+
+        public async Task<bool> CheckIf_UserExists_W_USERNAME(string Username)
+        {
+            bool check = await this._repoLayer.CheckFor_User_W_USERNAME(Username);
+            if (check == true)
+            {
+                //its true that the user exists already
+                Console.WriteLine($"\n\n\t\t{Username} already exists -- Check if Exists -- UserAuth - BL\n");
+                return true;
+            }
+            else
+            {
+                //the user does not exists
+                Console.WriteLine($"\n\n\t\t{Username} does not exist -- Check If Exists -- UserAuth - BL\n");
+                return false;
+            }
+        }
+
     }
 }

@@ -31,20 +31,6 @@ namespace ModelLayer
 
     }//End of Login DTO
 
-    //public class UserOrderDetailsDTO : UserBase
-    //{
-    //    //public List<Product>? orderedProducts { get; set; }
-    //    public UserOrderDetailsDTO(){}
-
-    //    public UserOrderDetailsDTO(string first, string last, string email) : base(first, last, email)
-    //    {
-    //        this.First = first;
-    //        this.Last = last;
-    //        this.Email = email;
-    //        this.Role = Status.User;
-    //        //this.orderedProducts = new List<Product>();
-    //    }
-    //}
 
 
 
@@ -95,14 +81,13 @@ namespace ModelLayer
         /// </summary>
         /// <param name="username"></param>
         /// <param name="password"></param>
-        public UserRegisterDTO(string username, string password, string firstname, string lastname, string email, Status role) : base(firstname, lastname, email)
+        public UserRegisterDTO(string username, string password, string firstname, string lastname, string email) : base(firstname, lastname, email)
         {
             this.Username = username;
             this.Password = password;
             this.First = firstname;
             this.Last = lastname;
             this.Email = email;
-            this.Role = role;
         }
 
 

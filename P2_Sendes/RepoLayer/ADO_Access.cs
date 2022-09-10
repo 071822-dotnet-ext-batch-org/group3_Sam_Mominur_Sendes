@@ -3,12 +3,19 @@ using ModelLayer;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using Microsoft.Extensions.Configuration;
 
 
 public class ADO_Access : IADO_Access
 {
     //private readonly string connection = $"Server=tcp:revature.database.windows.net,1433;Initial Catalog=Group3Project2;Persist Security Info=False;User ID=samRevature;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-    private string myconnection = "Server=tcp:sendesdhaiti-revature-server.database.windows.net,1433;Initial Catalog=sendesdhaiti-revature-server;Persist Security Info=False;User ID=SendesD;Password=@Arcade30;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+    private readonly IConfiguration _dbString;
+
+    public ADO_Access(IConfiguration config)
+    {
+        this._dbString = config;
+    }
+
 
     /// <summary>
     /// Returns TRUE is saved
@@ -16,9 +23,9 @@ public class ADO_Access : IADO_Access
     /// </summary>
     /// <param name="user"></param>
     /// <returns></returns>
-    public async Task<dynamic?> Register_User(dynamic user)
+    public async Task<User?> Register_User(User user)
     {
-        SqlConnection conn = new SqlConnection(myconnection);
+        SqlConnection conn = new SqlConnection(this._dbString["ConnectionStrings: EcomProjectAPIDB"]);
         using (SqlCommand command = new SqlCommand("INSERT INTO Users " +
             "VALUES(@ID, @UF, @UL, @UP, @UE, @UR, @USD, @UN)", conn))
         {
@@ -30,14 +37,7 @@ public class ADO_Access : IADO_Access
             command.Parameters.AddWithValue("@UP", user.Password);
             command.Parameters.AddWithValue("@UE", user.Email);
             command.Parameters.AddWithValue("@USD", user.SignupDate);
-            if (user.Role == Status.User)
-            {
-                command.Parameters.AddWithValue("@UR", Status.User.ToString());
-            }
-            else if (user.Role == Status.Admin)
-            {
-                command.Parameters.AddWithValue("@UR", Status.Admin.ToString());
-            }
+            command.Parameters.AddWithValue("@UR", user.Role.ToString());
             //int passedSave = 0;
             if (conn.State == ConnectionState.Closed)
             {
@@ -70,61 +70,10 @@ public class ADO_Access : IADO_Access
         }
     }//--------------------End of the User Register
 
-    /// <summary>
-    /// Returns TRUE if username exists already
-    /// False if not
-    /// </summary>
-    /// <param name="user"></param>
-    /// <returns></returns>
-    public async Task<bool> CheckFor_User(string Email)
-    {
-        Console.WriteLine($"\n\n\t\t\tTesting for {Email} - ADO\n\n");
-        SqlConnection conn = new SqlConnection(myconnection);
-        using (SqlCommand command = new SqlCommand("SELECT Email from Users WHERE Email=@Email", conn))
-        {
-            command.Parameters.AddWithValue("@Email", Email);
-            //int passedCheck = 0;
-
-            if (conn.State == ConnectionState.Closed)
-            {
-                conn.Open();
-                Console.WriteLine($"Connection was closed and now open");
-            }
-            else
-            {
-                Console.WriteLine($"Connection was open and now closed and open");
-                conn.Close();
-                conn.Open();
-            }
-            SqlDataReader check = await command.ExecuteReaderAsync();
-            List<string>? name = new List<string>();
-            //while (check.Read())
-            //{
-            //    Console.WriteLine($"\n\n\t{check.GetString(0)} is read during the check - ADO \n");
-
-            //    name.Add(check.GetString(0));
-            //}
-            if (check.Read())
-            {
-
-                //check successfully found the account with username
-                Console.WriteLine($"{Email} Already exists after the check - ADO ");
-                conn.Close();
-                return true;
-            }
-            else
-            {
-                Console.WriteLine($"{Email} Does Not Exists after the check - ADO ");
-                conn.Close();
-                return false;
-
-            }
-        }
-    }//End Check if User Exists by Username
 
     public async Task<dynamic?> Get_User(string Email)
     {
-        SqlConnection conn = new SqlConnection(myconnection);
+        SqlConnection conn = new SqlConnection(this._dbString["ConnectionStrings: EcomProjectAPIDB"]);
         using (SqlCommand command = new SqlCommand("SELECT UserID, FirstName, LastName, Password, Email, Role, RegisterDate, UserName from Users WHERE Email=@Email", conn))
         {
             command.Parameters.AddWithValue("@Email", Email);
@@ -217,7 +166,7 @@ public class ADO_Access : IADO_Access
 
     public async Task<dynamic?> Login_User(UserLoginDTO user)
     {
-        SqlConnection conn = new SqlConnection(myconnection);
+        SqlConnection conn = new SqlConnection(this._dbString["ConnectionStrings: EcomProjectAPIDB"]);
         using (SqlCommand command = new SqlCommand("SELECT UserID, FirstName, LastName, Password, Email, Role, RegisterDate, UserName from Users WHERE Email=@Email AND Password=@UP", conn))
         {
             command.Parameters.AddWithValue("@Email", user.Email);
@@ -302,6 +251,7 @@ public class ADO_Access : IADO_Access
             }
             else
             {
+                conn.Close();
                 return null;
             }
         }
@@ -309,9 +259,9 @@ public class ADO_Access : IADO_Access
 
 
 
-    public async Task<UserProfileDTO?> Create_UserProfile(UserProfile profile)
+    public async Task<UserProfile?> Create_UserProfile(UserProfile profile)
     {
-        SqlConnection conn = new SqlConnection(myconnection);
+        SqlConnection conn = new SqlConnection(this._dbString["ConnectionStrings: EcomProjectAPIDB"]);
         using (SqlCommand command = new SqlCommand("INSERT INTO UserProfiles " +
             "VALUES(@ID, @UN, @UABOUT)", conn))
         {
@@ -339,14 +289,13 @@ public class ADO_Access : IADO_Access
 
             if (save > 0)//If the save was successful
             {
-                Console.WriteLine($"Connection is now closed");
+                Console.WriteLine($"Connection is now closed - Saved");
                 conn.Close();
-                UserProfileDTO newProfile = new UserProfileDTO(profile.Username, profile.About);
-                return newProfile;
+                return profile;
             }
             else
             {
-                Console.WriteLine($"Connection is now closed");
+                Console.WriteLine($"Connection is now closed - Not Saved");
                 conn.Close();
                 return null;
             }
@@ -358,7 +307,7 @@ public class ADO_Access : IADO_Access
 
     public async Task<List<UserProfile>?> Get_UserProfiles()
     {
-        SqlConnection conn = new SqlConnection(myconnection);
+        SqlConnection conn = new SqlConnection(this._dbString["ConnectionStrings: EcomProjectAPIDB"]);
         using (SqlCommand command = new SqlCommand("SELECT * FROM UserProfiles", conn))
         {
             //command.Parameters.AddWithValue("@UN", username);
@@ -393,23 +342,63 @@ public class ADO_Access : IADO_Access
         }
     }//End of GET User Profile
 
-
-    public async Task<List<Product>?> Get_Products()
+    public async Task<bool> Edit_UserProfile(UserProfileDTO profile)
     {
-        SqlConnection conn = new SqlConnection(myconnection);
-        using (SqlCommand command = new SqlCommand("SELECT ProductID, Title, Description, Price, Inventory, DateAdded, FK_UserID FROM Products", conn))
+        SqlConnection conn = new SqlConnection(this._dbString["ConnectionStrings: EcomProjectAPIDB"]);
+        using (SqlCommand command = new SqlCommand("Update UserProfiles " +
+            "Set About=@UABOUT" +
+            "Where Username=@Username", conn))
         {
-            //command.Parameters.AddWithValue("@UN", username);
-            //int passedCheck = 0;
+            //-------------------------Commands Section
+            command.Parameters.AddWithValue("@UABOUT", profile.About);
+            command.Parameters.AddWithValue("@Username", profile.Username);
 
+            //int passedSave = 0;
             if (conn.State == ConnectionState.Closed)
             {
                 conn.Open();
-                //Console.WriteLine($"Connection was closed and now open");
+                Console.WriteLine($"Connection was closed and now open");
             }
             else
             {
-                //Console.WriteLine($"Connection was open and now closed and open");
+                Console.WriteLine($"Connection was open and now closed and open");
+                conn.Close();
+                conn.Open();
+            }
+
+            int save = await command.ExecuteNonQueryAsync();
+
+            if (save > 0)//If the save was successful
+            {
+                Console.WriteLine($"Connection is now closed - Saved");
+                conn.Close();
+                return true;
+            }
+            else
+            {
+                Console.WriteLine($"Connection is now closed - Not Saved");
+                conn.Close();
+                return false;
+            }
+
+        }
+
+    }
+
+
+    public async Task<List<Product>?> Get_Products()
+    {
+        SqlConnection conn = new SqlConnection(this._dbString["ConnectionStrings: EcomProjectAPIDB"]);
+        using (SqlCommand command = new SqlCommand("SELECT ProductID, Title, Description, Price, Inventory, DateAdded, FK_UserID FROM Products", conn))
+        {
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+                Console.WriteLine($"Connection was closed and now open");
+            }
+            else
+            {
+                Console.WriteLine($"Connection was open and now closed and open");
                 conn.Close();
                 conn.Open();
             }
@@ -447,7 +436,7 @@ public class ADO_Access : IADO_Access
 
     public async Task<bool> Add_Product(Product product)
     {
-        SqlConnection conn = new SqlConnection(myconnection);
+        SqlConnection conn = new SqlConnection(this._dbString["ConnectionStrings: EcomProjectAPIDB"]);
         using (SqlCommand command = new SqlCommand("INSERT INTO Products " +
             "VALUES(@ID, @Title, @Descr, @Inv, @Created, @FK, @Price)", conn))
         {
@@ -502,7 +491,7 @@ public class ADO_Access : IADO_Access
     /// <returns></returns>
     public async Task<bool> Add_Product_ToCart(Guid ProductID, string Email, int Quantity)
     {
-        SqlConnection conn = new SqlConnection(myconnection);
+        SqlConnection conn = new SqlConnection(this._dbString["ConnectionStrings: EcomProjectAPIDB"]);
         using (SqlCommand command = new SqlCommand("INSERT INTO Cart " +
             "VALUES(@CartID ,@ProductID, @CartUserEmail, @ProdQuantity)", conn))
         {
@@ -547,7 +536,7 @@ public class ADO_Access : IADO_Access
 
     public async Task<bool> Remove_Product_From_Cart(Guid ProductID, string Email)
     {
-        SqlConnection conn = new SqlConnection(myconnection);
+        SqlConnection conn = new SqlConnection(this._dbString["ConnectionStrings: EcomProjectAPIDB"]);
         using (SqlCommand command = new SqlCommand("DELETE * " +
             "FROM Cart Where " +
             "FK_Cart_Email=@CartUserEmail AND FK_ProductID=@ProductID", conn))
@@ -591,7 +580,7 @@ public class ADO_Access : IADO_Access
 
     public async Task<bool> Remove_ALL_Products_From_Cart(string Email)
     {
-        SqlConnection conn = new SqlConnection(myconnection);
+        SqlConnection conn = new SqlConnection(this._dbString["ConnectionStrings: EcomProjectAPIDB"]);
         using (SqlCommand command = new SqlCommand("DELETE FROM Cart Where FK_Cart_Email=@Email", conn))
         {
             //-------------------------Commands Section
@@ -636,7 +625,7 @@ public class ADO_Access : IADO_Access
     /// <returns></returns>
     public async Task<List<Cart>?> Get_myCarts(string Email)
     {
-        SqlConnection conn = new SqlConnection(myconnection);
+        SqlConnection conn = new SqlConnection(this._dbString["ConnectionStrings: EcomProjectAPIDB"]);
         using (SqlCommand command = new SqlCommand("SELECT CartID, FK_ProductID, FK_Cart_Email, Quantity FROM Cart WHERE FK_Cart_Email=@Email", conn))
         {
             command.Parameters.AddWithValue("@Email", Email);
@@ -700,7 +689,7 @@ public class ADO_Access : IADO_Access
 
     public async Task<bool> Checkout_Order(Order order)
     {
-        SqlConnection conn = new SqlConnection(myconnection);
+        SqlConnection conn = new SqlConnection(this._dbString["ConnectionStrings: EcomProjectAPIDB"]);
         using (SqlCommand command = new SqlCommand("INSERT INTO Orders " +
             "VALUES(@OrderID, @Firstname, @Lastname, @Email, @Role, @Total, @DatePurchased)", conn))
         {
@@ -748,7 +737,7 @@ public class ADO_Access : IADO_Access
 
     public async Task<bool> Save_Order_Products_w_OrderID(Guid OrderID, Guid ProductID)
     {
-        SqlConnection conn = new SqlConnection(myconnection);
+        SqlConnection conn = new SqlConnection(this._dbString["ConnectionStrings: EcomProjectAPIDB"]);
         using (SqlCommand command = new SqlCommand("INSERT INTO Orders " +
             "VALUES( @JuncID, @FK_OrderID, @FK_ProductID)", conn))
         {
@@ -790,6 +779,82 @@ public class ADO_Access : IADO_Access
         }
     }
 
+    /// <summary>
+    /// Returns TRUE if username exists already
+    /// --False if not
+    /// </summary>
+    /// <param name="user"></param>
+    /// <returns></returns>
+    public async Task<bool> CheckFor_User(string Email)
+    {
+        Console.WriteLine($"\n\n\t\t\tTesting for {Email} - ADO\n\n");
+        SqlConnection conn = new SqlConnection(this._dbString["ConnectionStrings: EcomProjectAPIDB"]);
+        using (SqlCommand command = new SqlCommand("SELECT Email from Users WHERE Email=@Email", conn))
+        {
+            command.Parameters.AddWithValue("@Email", Email);
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+                Console.WriteLine($"Connection was closed and now open");
+            }
+            else
+            {
+                Console.WriteLine($"Connection was open and now closed and open");
+                conn.Close();
+                conn.Open();
+            }
+            SqlDataReader check = await command.ExecuteReaderAsync();
+            if (check.Read())
+            {
+                //check successfully found the account with username
+                Console.WriteLine($"{Email} Already exists after the check - ADO ");
+                conn.Close();
+                return true;
+            }
+            else
+            {
+                Console.WriteLine($"{Email} Does Not Exists after the check - ADO ");
+                conn.Close();
+                return false;
+            }
+        }
+    }//End Check if User Exists by Username
+
+
+    public async Task<bool> CheckFor_User_W_USERNAME(string Username)
+    {
+        Console.WriteLine($"\n\n\t\t\tTesting for {Username} - ADO\n\n");
+        SqlConnection conn = new SqlConnection(this._dbString["ConnectionStrings: EcomProjectAPIDB"]);
+        using (SqlCommand command = new SqlCommand("SELECT Username from Users WHERE UserName=@Username", conn))
+        {
+            command.Parameters.AddWithValue("@Username", Username);
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+                Console.WriteLine($"Connection was closed and now open");
+            }
+            else
+            {
+                Console.WriteLine($"Connection was open and now closed and open");
+                conn.Close();
+                conn.Open();
+            }
+            SqlDataReader check = await command.ExecuteReaderAsync();
+            if (check.Read())
+            {
+                //check successfully found the account with username
+                Console.WriteLine($"{Username} Already exists after the check - ADO ");
+                conn.Close();
+                return true;
+            }
+            else
+            {
+                Console.WriteLine($"{Username} Does Not Exists after the check - ADO ");
+                conn.Close();
+                return false;
+            }
+        }
+    }//End Check if User Exists by Username
 
 
 

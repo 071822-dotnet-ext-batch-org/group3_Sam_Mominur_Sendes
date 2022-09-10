@@ -39,7 +39,7 @@ namespace ApiLayer.Controllers
         /// <param name="user"></param>
         /// <returns></returns>
         [HttpPost("Register")]
-        public async Task<ActionResult<dynamic>> User_Register([FromBody] UserRegisterDTO user)
+        public async Task<ActionResult<User>> User_Register([FromBody] UserRegisterDTO user)
         {
             if (ModelState.IsValid)
             {
@@ -48,19 +48,19 @@ namespace ApiLayer.Controllers
                 if (checkIfExists == true)//If check says it found a user already with that username
                 {
                     //return this error message
-                    return $"\n\t\tThe user with the email {user.Email} is registered already.\n\n\t\t\tTRY ANOTHER NAME!!!\n";
+                    return Conflict("This user is registered already");
                 }
                 else//If the check says no present username matches
                 {
                     //username is free to be added
-                    dynamic? checkIfRegistered = await this._userAuth_BL.User_Register(user);
+                    User? checkIfRegistered = await this._userAuth_BL.User_Register(user);
                     if (checkIfRegistered != null)//If the check is a boolean, it was saved successfully
                     {
-                        return Created("MyAccount/", checkIfRegistered);
+                        return Ok(checkIfRegistered);
                     }
                     else//If the check wasnt a boolen
                     {
-                        return Conflict("There was a conflict in your response");//return the error message that was returned
+                        return Conflict("Your account could not be saved");//return the error message that was returned
                     }
                 }
 
@@ -72,8 +72,6 @@ namespace ApiLayer.Controllers
         }//End of User Register
 
 
-        //[HttpGet("Login/")]//UserName={username}&Password={password}/")]
-        //[HttpGet("Login/{Username}/{Password}")]
         [HttpGet("Login/{Email}/{Password}")]
         public async Task<ActionResult<dynamic>> User_Login([FromRoute] UserLoginDTO user)//returns user 
         {
@@ -100,7 +98,7 @@ namespace ApiLayer.Controllers
             }
             else
             {
-                return BadRequest("\n\n\t\t\tUh-nooo...There was a validation!!!\n");
+                return BadRequest("\n\n\t\t\tUh-nooo...Invalid input!!!\n");
             }
 
         }//End of Login
