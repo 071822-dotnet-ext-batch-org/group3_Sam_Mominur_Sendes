@@ -11,10 +11,10 @@ namespace ModelsLayer
     public class Category
     {
         [Key]
-        public int Id { get; set; }
+        public int ProductID { get; set; }
         [Required]
 
-        public string Name { get; set; }
+        public string ProductName { get; set; }
         [DisplayName("Display Order")]
         public int DisplayOrder { get; set; }
         public DateTime GetDateTime { get; set; } = DateTime.Now;
