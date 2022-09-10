@@ -25,18 +25,19 @@ namespace ApiLayer.Controllers
         }
         // GET: /<controller>/
         [HttpPost("CreateProfile")]
-        public async Task<ActionResult<string>> User_CreateProfile(UserProfileDTO profile)
+        public async Task<ActionResult<UserProfile>?> User_CreateProfile([FromForm] UserProfileDTO profile)
         {
             if (ModelState.IsValid)
             {
-                dynamic checkIfRegistered = await this._userProfile_BL.User_CreateProfile(profile);
-                if (checkIfRegistered.GetType() == typeof(bool))//If the check is a boolean, it was saved successfully
+                bool checkIfExists = await this._userAuth.CheckIf_UserExists_W_USERNAME(profile.Username);
+                if (checkIfExists == true)
                 {
-                    if (checkIfRegistered == true)
+                    UserProfile? checkIfRegistered = await this._userProfile_BL.User_CreateProfile(profile);
+                    if (checkIfRegistered != null)
                     {
                         //User profile was saved
                         //return ;
-                        return Created($"\n\t\tYour new profile has been saved {profile.Username}\n", profile);
+                        return Ok(checkIfRegistered);
                     }
                     else
                     {
@@ -44,10 +45,11 @@ namespace ApiLayer.Controllers
                         //return ;
                         return Conflict("\n\t\tYour profile was not saved!\n");
                     }
+
                 }
-                else//If the check wasnt a boolen
+                else
                 {
-                    return checkIfRegistered;//return the error message that was returned
+                    return Conflict($"The username '{profile.Username}' does not exist");
                 }
             }
             else
@@ -57,21 +59,59 @@ namespace ApiLayer.Controllers
         }
 
 
-        [HttpGet("ViewProfiles")]
-        [HttpGet("ViewProfile/{username?}")]
-        public async Task<ActionResult<List<UserProfile>?>> User_ViewAllProfiles(string username = "default")
+        [HttpGet("ViewProfile/{username}")]
+        public async Task<ActionResult<UserProfile?>> User_ViewAllProfiles([FromBody] string username)
         {
             if (ModelState.IsValid)
             {
-                bool check = await _userAuth.CheckIf_UserExists(username);
+                bool check = await _userAuth.CheckIf_UserExists_W_USERNAME(username);
                 if (check == true)
                 {
                     List<UserProfile>? profiles = await this._userProfile_BL.User_GetProfiles();
-                    return profiles;
+                    UserProfile? profile = profiles?.Find(x => x?.Username == username);
+                    
+                    return profile;
 
                 }
                 return BadRequest($"\n\t\tThe user '{username}' does not exist. Was this a error on your part? If so...\n\t\t\tTRY AGAIN!!!\n");
-                //TODO Add a check if the username is correct before its sent to get the profile
+            }
+            else
+            {
+                return BadRequest("\n\t\tYour response was not valid.\n\t\t\tTRY AGAIN!!!\n");
+            }
+        }
+
+
+        [HttpPut("EditProfile/{Username}")]
+        public async Task<ActionResult<UserProfile>?> User_EditProfile([FromForm] UserProfileDTO profile)
+        {
+            if (ModelState.IsValid)
+            {
+                bool checkIfExists = await this._userAuth.CheckIf_UserExists_W_USERNAME(profile.Username);
+                if (checkIfExists == true)
+                {
+                    bool? checkIfProfileEdited = await this._userProfile_BL.User_EditProfile(profile);
+                    if (checkIfProfileEdited == true)
+                    {
+                        List<UserProfile>? profiles = await this._userProfile_BL.User_GetProfiles();
+                        UserProfile? myprofile = profiles?.Find(x => x?.Username == profile.Username);
+
+                        //User profile was saved
+                        //return ;
+                        return Ok(myprofile);
+                    }
+                    else
+                    {
+                        //User profile not saved
+                        //return ;
+                        return Conflict("\n\t\tYour profile was not saved!\n");
+                    }
+
+                }
+                else
+                {
+                    return Conflict($"The username '{profile.Username}' does not exist");
+                }
             }
             else
             {

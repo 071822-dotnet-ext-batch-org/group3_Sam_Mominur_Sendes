@@ -1,7 +1,7 @@
 ﻿using System;
 namespace ModelLayer
 {
-    public class UserProfile
+    public class UserProfile 
     {
         public Guid ProfileID { get; set; }
         public string Username { get; set; }
