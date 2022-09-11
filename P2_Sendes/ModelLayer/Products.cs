@@ -8,12 +8,12 @@ namespace ModelLayer
     public class Product
     {
         private Guid pk_ProductID {get;set;}
-        private string? title {get;set;}
-        private string? description {get;set;}
+        private string title {get;set;} = "User";
+        private string? description {get;set; } 
         private decimal price {get;set;}
         private int inventory {get;set;}
-        public DateTime DateCreated { get; set; }
-        public Guid? fk_UserID { get; set; }
+        private DateTime dateCreated { get; set; }
+        private string createdBy { get; set; } = "User";
         //TODO Add user ID foreign key
         //public Guid FK_UserID { get; set; }
 
@@ -27,7 +27,7 @@ namespace ModelLayer
         }
 
 
-        public string? Title{
+        public string Title{
             get{
                 return title;
             }
@@ -65,6 +65,29 @@ namespace ModelLayer
             }
         }
 
+        public DateTime DateCreated
+        {
+            get
+            {
+                return dateCreated;
+            }
+            set
+            {
+                this.dateCreated = value;
+            }
+        }
+        public string CreatedBy
+        {
+            get
+            {
+                return createdBy;
+            }
+            set
+            {
+                this.createdBy = value;
+            }
+        }
+
         /// <summary>
         /// This is the default product
         /// </summary>
@@ -80,14 +103,14 @@ namespace ModelLayer
         /// <param name="inventory"></param>
         /// <param name="dateCreated"></param>
         /// <param name="userID"></param>
-        public Product(Guid id, string title, string description, decimal price, int inventory, DateTime dateCreated, Guid? userID){
+        public Product(Guid id, string title, string description, decimal price, int inventory, DateTime dateCreated, string createdBy){
             PK_ProductID = id;
             Title = title;
             Description = description;
             Price = price;
             Inventory = inventory;
             DateCreated = dateCreated;
-            fk_UserID = userID;
+            CreatedBy = createdBy;
         }
     }
 

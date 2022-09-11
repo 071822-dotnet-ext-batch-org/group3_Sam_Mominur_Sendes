@@ -11,7 +11,7 @@ namespace ModelLayer
         public string? About { get; set; }
 
 
-
+        public UserProfileDTO() { }
         /// <summary>
         /// When a user creates a new profile
         /// </summary>

@@ -11,9 +11,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Configuration.SetBasePath(
-    Directory.GetCurrentDirectory()).AddJsonFile("secrets.json");
-var ConnString = builder.Configuration["ConnectionString: EcomProjectAPIDB"];
+//builder.Configuration.SetBasePath
+//    (
+//        Directory.GetCurrentDirectory()
+//    ).AddJsonFile("secrets.json").AddUserSecrets<Program>(true);
 
 builder.Services.AddScoped<IUserAuthentication, UserAuthentication>();
 builder.Services.AddScoped<IADO_Access, ADO_Access>();
@@ -23,10 +24,13 @@ builder.Services.AddCors((options) =>//For this options we're gonna have a funct
 {
     options.AddPolicy(name: "allowAll", policy1 =>//in the function, the options adds a policy with a name and policy function
     {
-        policy1.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+        policy1.WithOrigins("https://localhost:7029", "http://localhost:5079", "http://127.0.0.1:5500").AllowAnyHeader().AllowAnyMethod();
         //The function for the policy runs these methods to allow these conditions for each request permission
     });
 });
+
+var ConnString = builder.Configuration["ConnectionString:EcomProjectAPIDB"];
+Console.WriteLine($"\n\n\tThis is a connection string test {ConnString}\n\n");
 
 
 var app = builder.Build();
