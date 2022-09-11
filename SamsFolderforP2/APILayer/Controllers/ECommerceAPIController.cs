@@ -6,6 +6,7 @@ using System.Net.Sockets;
 
 namespace APILayer.Controllers
 {
+    [Area("Customer")]
     [Route("api/[controller]")]
     [ApiController]
     public class ECommerceAPIController : ControllerBase

@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ModelsLayer\ModelsLayer.csproj" />
-    <ProjectReference Include="..\RepoLayer\RepoLayer.csproj" />
+    <ProjectReference Include="..\RepoLayer\DataAccessLayer.csproj" />
   </ItemGroup>
 
 </Project>

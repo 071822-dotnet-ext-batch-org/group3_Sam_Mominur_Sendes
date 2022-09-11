@@ -10,8 +10,16 @@ namespace ModelsLayer
 {
     public class Category
     {
+        public Category(int productId, string productName, int displayOrder, DateTime getDateTime)
+        {
+            ProductId = productId;
+            ProductName = productName;
+            DisplayOrder = displayOrder;
+            GetDateTime = getDateTime;
+        }
+
         [Key]
-        public int ProductID { get; set; }
+        public int ProductId { get; set; }
         [Required]
 
         public string ProductName { get; set; }
