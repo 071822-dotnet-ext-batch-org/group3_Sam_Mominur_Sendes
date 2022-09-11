@@ -12,6 +12,7 @@ namespace BusinessLayer
         Task<bool> CheckIf_UserExists_W_USERNAME(string Username);
         Task<User?> User_Register(UserRegisterDTO user);
         Task<dynamic?> User_Login(UserLoginDTO user);
+        Task<dynamic?> GET_USER_BY_USERNAME(string Username);
 
     }
 }

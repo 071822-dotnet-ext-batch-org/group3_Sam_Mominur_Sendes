@@ -26,7 +26,7 @@ namespace ModelLayer
         public string Email { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "You must have a role!!!")]
-        public Status Role { get; set; } = Status.Guest;
+        public Status Role { get; set; } = Status.User;
 
         public UserBase()
         {

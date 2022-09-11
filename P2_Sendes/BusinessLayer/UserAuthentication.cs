@@ -112,5 +112,18 @@ namespace BusinessLayer
             }
         }
 
+        public async Task<dynamic?> GET_USER_BY_USERNAME(string Username)
+        {
+            dynamic? check = await this._repoLayer.Get_User_w_USERNAME(Username);
+            if(check != null)
+            {
+                return check;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
     }
 }
