@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\SamsFolderforP2",
+    "\\SamsFolderforP2\\Project2",
+    "\\SamsFolderforP2\\RepoLayer"
   ],
-  "SelectedNode": "\\ProjectTwo.sln",
+  "SelectedNode": "\\SamsFolderforP2\\Project2",
   "PreviewInSolutionExplorer": false
 }
