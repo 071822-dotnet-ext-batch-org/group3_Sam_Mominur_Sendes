@@ -99,6 +99,7 @@ namespace ApiLayer.Controllers
         {
             if (ModelState.IsValid)
             {
+                //Get list of profiles before updating
                 List<UserProfile>? profiles = await this._userProfile_BL.User_GetProfiles();
                 if(profiles != null)
                 {
@@ -108,10 +109,11 @@ namespace ApiLayer.Controllers
                         bool? checkIfProfileEdited = await this._userProfile_BL.User_EditProfile(profile);
                         if (checkIfProfileEdited == true)
                         {
+                            //Get updated list of profiles
                             List<UserProfile>? Updatedprofiles = await this._userProfile_BL.User_GetProfiles();
                             if(Updatedprofiles != null)
                             {
-                                UserProfile? myprofile = Updatedprofiles.Find(x => x.Username == x.Username);
+                                UserProfile? myprofile = Updatedprofiles.Find(x => x.Username == profile.Username);
 
                                 //User profile was saved
                                 //return ;
