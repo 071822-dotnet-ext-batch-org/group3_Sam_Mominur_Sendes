@@ -1,13 +1,14 @@
-﻿using Models;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
+using ModelsLayer;
+
 
 namespace RepositoryAccessLayer
 {
     public class EcomRepoLayer
     {
-        public async Task<List<Products>> ProductsAsync(int type)
+public async Task<List<Products>> ProductsAsync(int type)
         {
-            SqlConnection conn = new SqlConnection(" ");
+            SqlConnection conn = new SqlConnection("");
             using (SqlCommand command = new SqlCommand($"SELECT * FROM Products", conn))
             {
 
@@ -30,7 +31,7 @@ namespace RepositoryAccessLayer
         {
         
         
-            SqlConnection conn = new SqlConnection(" ");
+            SqlConnection conn = new SqlConnection("");
             using (SqlCommand command = new SqlCommand($"SELECT Email, Password FROM Users WHERE Email = @email AND Password = @password", conn))
             {
 
@@ -54,7 +55,7 @@ namespace RepositoryAccessLayer
          public async Task<Products>AddProductAsync(Products product)
         {
            
-             SqlConnection conn = new SqlConnection(" ");
+             SqlConnection conn = new SqlConnection("");
             using (SqlCommand command = new SqlCommand($"INSERT INTO Products (ProductID,FK_UserID,ProductName,ProductDetails,ProductPrice,ProductInventory) VALUES(@pid,@fk,@pn,@pd,@pp,@pi);", conn))
 
             {
@@ -83,3 +84,5 @@ namespace RepositoryAccessLayer
 
     }
 }
+   
+ 
