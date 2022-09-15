@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "RepositoryAccessLayer/1.0.0": {
         "dependencies": {
-          "Models": "1.0.0",
+          "ModelsLayer": "1.0.0",
           "System.Data.SqlClient": "4.8.3"
         },
         "runtime": {
@@ -90,9 +90,9 @@
         }
       },
       "System.Security.Principal.Windows/4.7.0": {},
-      "Models/1.0.0": {
+      "ModelsLayer/1.0.0": {
         "runtime": {
-          "Models.dll": {}
+          "ModelsLayer.dll": {}
         }
       }
     }
@@ -166,7 +166,7 @@
       "path": "system.security.principal.windows/4.7.0",
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
     },
-    "Models/1.0.0": {
+    "ModelsLayer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

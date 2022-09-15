@@ -1,11 +1,15 @@
-﻿using Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using ModelsLayer;
 using RepositoryAccessLayer;
 
 namespace BusinessLayer
 {
     public class EcomBusinessLayer
     {
-
+        
         private readonly EcomRepoLayer _repoLayer;
         public EcomBusinessLayer()
         {
@@ -33,4 +37,5 @@ namespace BusinessLayer
 
 
     }
+    
 }

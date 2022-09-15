@@ -1,0 +1,22 @@
+<header>
+    <div class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <div class="navbar-brand align-item-center d-flex">
+           
+            <i class="fa fa-location-arrow" style="font-size:30px"></i>
+            
+      
+            <strong style="font-size: 30px;">Eonline Shoping</strong>
+            <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products">
+            </div>
+     <!-- <span class="fas fa-search search-icon"></span>--> 
+        </div>
+              
+        <button routerLink="cart" class="btn btn-primary">
+            <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+            <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+        </button>
+        <button routerLink="/products" class="btn btn-success mx-2">Products</button>
+        <button routerLink="/login" class="btn btn-success mx-2">Login</button>
+    </div>
+</header>
