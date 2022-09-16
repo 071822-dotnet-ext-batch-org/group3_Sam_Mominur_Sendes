@@ -17,6 +17,65 @@ public class ADO_Access : IADO_Access
     }
 
 
+    public async Task<List<dynamic>?> Get_ALL_USERS()
+    {
+        //Console.WriteLine($"\n\n\tConnection String{_dbString["ConnectionStrings: EcomProjectAPIDB"]}\n\n");
+        SqlConnection conn = new SqlConnection(_dbString["ConnectionStrings:EcomProjectAPIDB"]);
+        using (SqlCommand command = new SqlCommand("SELECT * FROM Users", conn))
+        {
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+                Console.WriteLine($"Connection was closed and now open");
+            }
+            else
+            {
+                Console.WriteLine($"Connection was open and now closed and open");
+                conn.Close();
+                conn.Open();
+            }
+            Console.WriteLine("\n\n\t\tAbout to read for all Users\n\n");
+            SqlDataReader check = await command.ExecuteReaderAsync();
+            List<dynamic>? Users = new List<dynamic>();
+            while (check.Read())
+            {
+                if (check.GetString(6) == "User")
+                {
+                    User user = new User(
+                        
+                    );
+                    user.PK_UserID = check.GetGuid(0);
+                    user.Username = check.GetString(1);
+                    user.Password = check.GetString(2);
+                    user.First = check.GetString(3);
+                    user.Last = check.GetString(4);
+                    user.Email = check.GetString(5);
+                    user.Role = Status.User;
+                    user.SignupDate = check.GetDateTime(7);
+                    Users.Add(user);
+                }
+                else
+                {
+                    Admin user = new Admin(
+                        
+                    );
+                    user.PK_UserID = check.GetGuid(0);
+                    user.Username = check.GetString(1);
+                    user.Password = check.GetString(2);
+                    user.First = check.GetString(3);
+                    user.Last = check.GetString(4);
+                    user.Email = check.GetString(5);
+                    user.Role = Status.Admin;
+                    user.SignupDate = check.GetDateTime(7);  
+                    Users.Add(user);              
+                }
+            }
+
+            conn.Close();
+            return Users;
+        }
+    }//End of GET ALL USERS
+
     /// <summary>
     /// Returns TRUE is saved
     /// Returns False if not saved
@@ -581,303 +640,6 @@ public class ADO_Access : IADO_Access
 
         }
     }//End Create a New Product
-
-    /// <summary>
-    /// Adds the current user's product to their cart by username
-    /// </summary>
-    /// <param name="ProductID"></param>
-    /// <param name="Username"></param>
-    /// <param name="Quantity"></param>
-    /// <returns></returns>
-    //public async Task<bool> Add_Product_ToCart(Guid ProductID, string Email, int Quantity)
-    //{
-    //    SqlConnection conn = new SqlConnection(this._dbString["ConnectionStrings: EcomProjectAPIDB"]);
-    //    using (SqlCommand command = new SqlCommand("INSERT INTO Cart " +
-    //        "VALUES(@CartID ,@ProductID, @CartUserEmail, @ProdQuantity)", conn))
-    //    {
-    //        //-------------------------Commands Section
-    //        command.Parameters.AddWithValue("@CartID", Guid.NewGuid());
-    //        command.Parameters.AddWithValue("@ProductID", ProductID);
-    //        command.Parameters.AddWithValue("@CartUserEmail", Email);
-    //        command.Parameters.AddWithValue("@ProdQuantity", Quantity);
-    //        //command.Parameters.AddWithValue("@UFK_ID", user.PK_EmployeeID);
-
-    //        //int passedSave = 0;
-    //        if (conn.State == ConnectionState.Closed)
-    //        {
-    //            conn.Open();
-    //            Console.WriteLine($"Connection was closed and now open");
-    //        }
-    //        else
-    //        {
-    //            Console.WriteLine($"Connection was open and now closed and open");
-    //            conn.Close();
-    //            conn.Open();
-    //        }
-
-    //        int save = await command.ExecuteNonQueryAsync();
-
-    //        if (save > 0)//If the save was successful
-    //        {
-    //            Console.WriteLine($"Connection is now closed - true - saved");
-    //            conn.Close();
-    //            //UserProfileDTO newProfile = new UserProfileDTO(profile.Username, profile.About);
-    //            return true;
-    //        }
-    //        else
-    //        {
-    //            Console.WriteLine($"Connection is now closed - false - not saved");
-    //            conn.Close();
-    //            return false;
-    //        }
-
-    //    }
-    //}//End of Add Product to Cart
-
-    //public async Task<bool> Remove_Product_From_Cart(Guid ProductID, string Email)
-    //{
-    //    SqlConnection conn = new SqlConnection(this._dbString["ConnectionStrings: EcomProjectAPIDB"]);
-    //    using (SqlCommand command = new SqlCommand("DELETE * " +
-    //        "FROM Cart Where " +
-    //        "FK_Cart_Email=@CartUserEmail AND FK_ProductID=@ProductID", conn))
-    //    {
-    //        //-------------------------Commands Section
-    //        command.Parameters.AddWithValue("@CartUserEmail", Email);
-    //        command.Parameters.AddWithValue("@ProductID", ProductID);
-    //        //command.Parameters.AddWithValue("@UFK_ID", user.PK_EmployeeID);
-
-    //        //int passedSave = 0;
-    //        if (conn.State == ConnectionState.Closed)
-    //        {
-    //            conn.Open();
-    //            Console.WriteLine($"Connection was closed and now open");
-    //        }
-    //        else
-    //        {
-    //            Console.WriteLine($"Connection was open and now closed and open");
-    //            conn.Close();
-    //            conn.Open();
-    //        }
-
-    //        int save = await command.ExecuteNonQueryAsync();
-
-    //        if (save > 0)//If the save was successful
-    //        {
-    //            Console.WriteLine($"Connection is now closed - true - DELETED");
-    //            conn.Close();
-    //            //UserProfileDTO newProfile = new UserProfileDTO(profile.Username, profile.About);
-    //            return true;
-    //        }
-    //        else
-    //        {
-    //            Console.WriteLine($"Connection is now closed - false - not DELETED");
-    //            conn.Close();
-    //            return false;
-    //        }
-    //    }
-    //}//End of Remove Product from Cart
-
-
-    //public async Task<bool> Remove_ALL_Products_From_Cart(string Email)
-    //{
-    //    SqlConnection conn = new SqlConnection(this._dbString["ConnectionStrings: EcomProjectAPIDB"]);
-    //    using (SqlCommand command = new SqlCommand("DELETE FROM Cart Where FK_Cart_Email=@Email", conn))
-    //    {
-    //        //-------------------------Commands Section
-    //        command.Parameters.AddWithValue("@Email", Email);
-    //        //command.Parameters.AddWithValue("@UFK_ID", user.PK_EmployeeID);
-
-    //        //int passedSave = 0;
-    //        if (conn.State == ConnectionState.Closed)
-    //        {
-    //            conn.Open();
-    //            Console.WriteLine($"Connection was closed and now open");
-    //        }
-    //        else
-    //        {
-    //            Console.WriteLine($"Connection was open and now closed and open");
-    //            conn.Close();
-    //            conn.Open();
-    //        }
-
-    //        int save = await command.ExecuteNonQueryAsync();
-
-    //        if (save > 0)//If the save was successful
-    //        {
-    //            Console.WriteLine($"Connection is now closed - true - DELETED");
-    //            conn.Close();
-    //            //UserProfileDTO newProfile = new UserProfileDTO(profile.Username, profile.About);
-    //            return true;
-    //        }
-    //        else
-    //        {
-    //            Console.WriteLine($"Connection is now closed - false - not DELETED");
-    //            conn.Close();
-    //            return false;
-    //        }
-    //    }
-    //}//End of Remove Product from Cart
-
-    ///// <summary>
-    ///// Get the User's cart by username
-    ///// </summary>
-    ///// <param name="Username"></param>
-    ///// <returns></returns>
-    //public async Task<List<Cart>?> Get_myCarts(string Email)
-    //{
-    //    SqlConnection conn = new SqlConnection(this._dbString["ConnectionStrings: EcomProjectAPIDB"]);
-    //    using (SqlCommand command = new SqlCommand("SELECT CartID, FK_ProductID, FK_Cart_Email, Quantity FROM Cart WHERE FK_Cart_Email=@Email", conn))
-    //    {
-    //        command.Parameters.AddWithValue("@Email", Email);
-    //        //int passedCheck = 0;
-
-    //        if (conn.State == ConnectionState.Closed)
-    //        {
-    //            conn.Open();
-    //            //Console.WriteLine($"Connection was closed and now open");
-    //        }
-    //        else
-    //        {
-    //            //Console.WriteLine($"Connection was open and now closed and open");
-    //            conn.Close();
-    //            conn.Open();
-    //        }
-    //        Console.WriteLine("\n\n\t\tAbout to read for Products\n\n");
-    //        SqlDataReader check = await command.ExecuteReaderAsync();
-    //        List<Cart>? Allcarts = new List<Cart>();
-    //        while (check.Read())
-    //        {
-    //            Console.WriteLine($"\n\n\tThis cart's Id: {check.GetGuid(0)}");
-    //            Cart cart = new Cart(
-    //                check.GetGuid(0),
-    //                check.GetGuid(1),
-    //                check.GetString(2),
-    //                check.GetInt32(3)
-    //                );
-    //            Console.WriteLine($"\n\t\tbelongs to: {check.GetString(2)}\n\n");
-    //            Allcarts.Add(cart);
-    //        }
-
-    //        //List<Product>? cartProducts = new List<Product>();
-    //        if (Allcarts != null)
-    //        {
-    //            //Extract the product id from each cart if the list contains carts
-    //            //Use the product ID to find all products to add to the List of Cart Products
-    //            //List<Product>? allProducts = await Get_Products();
-    //            //foreach(Cart i in Allcarts)
-    //            //{
-    //            //    //Find the product of each product in cart
-    //            //    //Product product = (Product)allProducts.Where(x => x.PK_ProductID == i.FK_Product);
-    //            //    Product? product = allProducts.Find(x => x.PK_ProductID == i.FK_Product);
-    //            //    cartProducts.Add(product);
-    //            //}
-
-
-    //            //Return the list of carts that user owns
-
-    //            conn.Close();
-    //            return Allcarts;
-    //        }
-    //        else
-    //        {
-    //            conn.Close();
-    //            return null;
-    //        }
-
-    //    }
-    //}//End of Get the User's Cart by Username
-
-    //public async Task<bool> Checkout_Order(Order order)
-    //{
-    //    SqlConnection conn = new SqlConnection(this._dbString["ConnectionStrings: EcomProjectAPIDB"]);
-    //    using (SqlCommand command = new SqlCommand("INSERT INTO Orders " +
-    //        "VALUES(@OrderID, @Firstname, @Lastname, @Email, @Role, @Total, @DatePurchased)", conn))
-    //    {
-    //        //-------------------------Commands Section
-    //        command.Parameters.AddWithValue("@OrderID", order.OrderID);
-    //        command.Parameters.AddWithValue("@Fname", order.First);
-    //        command.Parameters.AddWithValue("@Lname", order.Last);
-    //        command.Parameters.AddWithValue("@Email", order.Email);
-    //        command.Parameters.AddWithValue("@Role", order.Role);
-    //        command.Parameters.AddWithValue("@Total", order.Total);
-    //        command.Parameters.AddWithValue("@DatePurchased", order.DatePurchased);
-    //        //command.Parameters.AddWithValue("@UFK_ID", user.PK_EmployeeID);
-
-    //        //int passedSave = 0;
-    //        if (conn.State == ConnectionState.Closed)
-    //        {
-    //            conn.Open();
-    //            Console.WriteLine($"Connection was closed and now open");
-    //        }
-    //        else
-    //        {
-    //            Console.WriteLine($"Connection was open and now closed and open");
-    //            conn.Close();
-    //            conn.Open();
-    //        }
-
-    //        int save = await command.ExecuteNonQueryAsync();
-
-    //        if (save > 0)//If the save was successful
-    //        {
-    //            Console.WriteLine($"Connection is now closed - true - Order Created");
-    //            conn.Close();
-    //            //UserProfileDTO newProfile = new UserProfileDTO(profile.Username, profile.About);
-    //            return true;
-    //        }
-    //        else
-    //        {
-    //            Console.WriteLine($"Connection is now closed - false - no Order was Created");
-    //            conn.Close();
-    //            return false;
-    //        }
-
-    //    }
-    //}//End of Checkout Order
-
-    //public async Task<bool> Save_Order_Products_w_OrderID(Guid OrderID, Guid ProductID)
-    //{
-    //    SqlConnection conn = new SqlConnection(this._dbString["ConnectionStrings: EcomProjectAPIDB"]);
-    //    using (SqlCommand command = new SqlCommand("INSERT INTO Orders " +
-    //        "VALUES( @JuncID, @FK_OrderID, @FK_ProductID)", conn))
-    //    {
-    //        //-------------------------Commands Section
-    //        command.Parameters.AddWithValue("@JuncID", Guid.NewGuid());
-    //        command.Parameters.AddWithValue("@FK_OrderID", OrderID);
-    //        command.Parameters.AddWithValue("@FK_ProductID", ProductID);
-    //        //command.Parameters.AddWithValue("@UFK_ID", user.PK_EmployeeID);
-
-    //        //int passedSave = 0;
-    //        if (conn.State == ConnectionState.Closed)
-    //        {
-    //            conn.Open();
-    //            Console.WriteLine($"Connection was closed and now open");
-    //        }
-    //        else
-    //        {
-    //            Console.WriteLine($"Connection was open and now closed and open");
-    //            conn.Close();
-    //            conn.Open();
-    //        }
-
-    //        int save = await command.ExecuteNonQueryAsync();
-
-    //        if (save > 0)//If the save was successful
-    //        {
-    //            Console.WriteLine($"Connection is now closed - true - Order Created");
-    //            conn.Close();
-    //            //UserProfileDTO newProfile = new UserProfileDTO(profile.Username, profile.About);
-    //            return true;
-    //        }
-    //        else
-    //        {
-    //            Console.WriteLine($"Connection is now closed - false - no Order was Created");
-    //            conn.Close();
-    //            return false;
-    //        }
-
-    //    }
-    //}
 
     /// <summary>
     /// Returns TRUE if username exists already

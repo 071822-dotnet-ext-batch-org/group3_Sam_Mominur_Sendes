@@ -5,24 +5,24 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.Tests.Project2 FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ApiLayer/Controllers/UserProfileController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ApiLayer/Program.cs">
     <Files>
       <File FileName="ModelLayer/ProductDTO.cs" Line="22" Column="23" IsPinned="True" />
       <File FileName="BusinessLayer/Product_BusinessLayer.cs" Line="29" Column="70" IsPinned="True" />
       <File FileName="ModelLayer/Products.cs" Line="10" Column="34" IsPinned="True" />
-      <File FileName="ApiLayer/Controllers/ProductsController.cs" Line="22" Column="1" IsPinned="True" />
+      <File FileName="ApiLayer/Controllers/ProductsController.cs" Line="23" Column="1" IsPinned="True" />
       <File FileName="ModelLayer/Cart.cs" Line="17" Column="30" IsPinned="True" />
-      <File FileName="RepoLayer/IADO_Access.cs" Line="13" Column="40" />
-      <File FileName="RepoLayer/ADO_Access.cs" Line="433" Column="38" />
+      <File FileName="RepoLayer/IADO_Access.cs" Line="14" Column="40" />
+      <File FileName="RepoLayer/ADO_Access.cs" Line="492" Column="38" />
       <File FileName="ModelLayer/Orders.cs" Line="36" Column="47" />
-      <File FileName="ApiLayer/Program.cs" Line="48" Column="10" />
+      <File FileName="ApiLayer/Program.cs" Line="4" Column="53" />
       <File FileName="ModelLayer/User.cs" Line="1" Column="1" />
       <File FileName="BusinessLayer/IProduct_BusinessLayer.cs" Line="13" Column="83" />
       <File FileName="../../../../../.microsoft/usersecrets/788dc3c3-6561-40f4-86a1-23480dd17f08/secrets.json" Line="4" Column="173" />
       <File FileName="ModelLayer/UserBase.cs" Line="29" Column="56" />
       <File FileName="ApiLayer/Controllers/UserAuthController.cs" Line="1" Column="1" />
       <File FileName="BusinessLayer/UserAuthentication.cs" Line="7" Column="44" />
-      <File FileName="BusinessLayer/IUserAuthentication.cs" Line="15" Column="62" />
+      <File FileName="BusinessLayer/IUserAuthentication.cs" Line="16" Column="62" />
       <File FileName="ModelLayer/UserDTOs.cs" Line="1" Column="1" />
       <File FileName="ModelLayer/UserProfileDTO.cs" Line="6" Column="18" />
       <File FileName="ApiLayer/Controllers/UserProfileController.cs" Line="112" Column="59" />
