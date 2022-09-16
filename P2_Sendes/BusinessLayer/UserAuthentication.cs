@@ -123,7 +123,12 @@ namespace BusinessLayer
             {
                 return null;
             }
-        }
+        }//End of Check if exists with Username
 
-    }
+        public async Task<List<dynamic>?> GetAll_Users()
+        {
+            return await this._repoLayer.Get_ALL_USERS();
+        }//End get all users
+    }//End class
+
 }

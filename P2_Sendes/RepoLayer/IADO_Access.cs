@@ -8,6 +8,7 @@ namespace RepoLayer
         Task<User?> Register_User(User user);
         Task<dynamic?> Login_User(UserLoginDTO user);
 
+        Task<List<dynamic>?> Get_ALL_USERS();
         Task<bool> CheckFor_User(string Email);
         Task<bool> CheckFor_User_W_USERNAME(string Username);
         Task<dynamic?> Get_User_w_EMAIL(string Email);

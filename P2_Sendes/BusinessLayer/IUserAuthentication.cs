@@ -8,6 +8,7 @@ namespace BusinessLayer
 {
     public interface IUserAuthentication
     {
+        Task<List<dynamic>?> GetAll_Users();
         Task<bool> CheckIf_UserExists(string username);
         Task<bool> CheckIf_UserExists_W_USERNAME(string Username);
         Task<User?> User_Register(UserRegisterDTO user);

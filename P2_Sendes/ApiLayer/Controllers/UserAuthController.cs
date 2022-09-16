@@ -31,6 +31,8 @@ namespace ApiLayer.Controllers
 
 
 
+
+
         /// <summary>
         /// This method will check if a username exists and register the user if it doesnt
         ///
@@ -72,8 +74,8 @@ namespace ApiLayer.Controllers
         }//End of User Register
 
 
-        [HttpGet("Login/{Email}/{Password}")]
-        public async Task<ActionResult<dynamic>> User_Login([FromRoute] UserLoginDTO user)//returns user 
+        [HttpGet("Login")]
+        public async Task<ActionResult<dynamic>> User_Login([FromForm] UserLoginDTO user)//returns user 
         {
             if (ModelState.IsValid)
             {
@@ -102,5 +104,23 @@ namespace ApiLayer.Controllers
             }
 
         }//End of Login
+
+        [HttpGet("Users")]
+        public async Task<ActionResult<List<dynamic>>> GetUsers()
+        {
+            var responGetAll = await this._userAuth_BL.GetAll_Users();
+            return Ok(responGetAll);
+        }
+        [HttpGet("Users/{id}")]
+        public async Task<ActionResult<dynamic>> GetUsers(Guid id)
+        {
+            var responGetAll = await this._userAuth_BL.GetAll_Users();
+            if(responGetAll == null){
+                return Conflict(responGetAll);
+            }
+            var user = responGetAll.Find(user => user.PK_UserID = id);
+            return Ok(user);
+        }
+
     }
 }

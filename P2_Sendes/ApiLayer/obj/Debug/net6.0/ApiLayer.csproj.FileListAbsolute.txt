@@ -37,3 +37,10 @@
 /Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ApiLayer/obj/Debug/net6.0/ApiLayer.pdb
 /Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ApiLayer/obj/Debug/net6.0/ApiLayer.genruntimeconfig.cache
 /Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ApiLayer/obj/Debug/net6.0/ref/ApiLayer.dll
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ApiLayer/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ApiLayer/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ApiLayer/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ApiLayer/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ApiLayer/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ApiLayer/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ApiLayer/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll
