@@ -38,8 +38,8 @@ namespace ApiLayer.Controllers
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        [HttpPost("Register")]
-        public async Task<ActionResult<User>> User_Register([FromBody] UserRegisterDTO user)
+        [HttpPost("Register/")]
+        public async Task<ActionResult<User>> User_Register([FromForm] UserRegisterDTO user)
         {
             if (ModelState.IsValid)
             {

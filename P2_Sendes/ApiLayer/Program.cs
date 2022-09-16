@@ -1,6 +1,7 @@
 using BusinessLayer;
 using RepoLayer;
 using System.Data.SqlClient;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";// gotten from Microsoft Docs to allow cors to all origins with a url
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,24 @@ builder.Services.AddCors(options =>
                       });
 });
 // Add services to the container.
+//Add authentication
+builder.Services.AddAuthentication(options =>
+{
+    //Needs APS.Core JWTBearer Package
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
+{
+    options.Authority = builder.Configuration["Auth0:Domain"];
+    options.Audience = builder.Configuration["Auth0: Audience"];
+});
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("weatherforcast: read-write", p =>
+    p.RequireAuthenticatedUser()
+    .RequireClaim("permission", "weatherforecast : read-write"));
+});
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
