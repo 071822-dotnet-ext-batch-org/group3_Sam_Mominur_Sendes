@@ -6,12 +6,15 @@ using Microsoft.AspNetCore.Mvc;
 using BusinessLayer;
 using ModelLayer;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Authorization;
 
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace ApiLayer.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class UserProfileController : Controller
     {
         private readonly IUserProfileBL _userProfile_BL;
@@ -24,6 +27,7 @@ namespace ApiLayer.Controllers
             //this._adoAccess_RL = ADOInterface;
         }
         // GET: /<controller>/
+        [Authorize]
         [HttpPost("CreateProfile")]
         public async Task<ActionResult<UserProfile>?> User_CreateProfile([FromForm] UserProfileDTO profile)
         {
@@ -60,6 +64,7 @@ namespace ApiLayer.Controllers
 
 
         [HttpGet("ViewProfile/{username?}")]
+        [Authorize]
         public async Task<ActionResult<List<UserProfile>?>> User_ViewAllProfiles([FromRoute] string? username = "default")
         {
             if (ModelState.IsValid)
@@ -95,6 +100,7 @@ namespace ApiLayer.Controllers
 
 
         [HttpPut("EditProfile")]
+        [Authorize]
         public async Task<ActionResult<UserProfile>?> User_EditProfile([FromForm] UserProfileDTO profile)
         {
             if (ModelState.IsValid)

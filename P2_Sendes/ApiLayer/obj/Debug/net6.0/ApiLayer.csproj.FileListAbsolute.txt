@@ -44,3 +44,5 @@
 /Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ApiLayer/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 /Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ApiLayer/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll
 /Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ApiLayer/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ApiLayer/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/P2_Sendes/ApiLayer/bin/Debug/net6.0/System.Security.Permissions.dll
