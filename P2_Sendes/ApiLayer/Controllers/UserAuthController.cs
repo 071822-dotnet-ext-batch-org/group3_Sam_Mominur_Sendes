@@ -7,6 +7,7 @@ using BusinessLayer;
 using ModelLayer;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
+using Microsoft.AspNetCore.Authorization;
 //using RepoLayer;
 
 
@@ -74,8 +75,8 @@ namespace ApiLayer.Controllers
         }//End of User Register
 
 
-        [HttpGet("Login")]
-        public async Task<ActionResult<dynamic>> User_Login([FromForm] UserLoginDTO user)//returns user 
+        [HttpGet("Login/{Email}/{Password}")]
+        public async Task<ActionResult<dynamic>> User_Login( [FromRoute]UserLoginDTO user)//returns user 
         {
             if (ModelState.IsValid)
             {
@@ -106,20 +107,34 @@ namespace ApiLayer.Controllers
         }//End of Login
 
         [HttpGet("Users")]
+        [Authorize("read:user")]
         public async Task<ActionResult<List<dynamic>>> GetUsers()
         {
             var responGetAll = await this._userAuth_BL.GetAll_Users();
             return Ok(responGetAll);
         }
-        [HttpGet("Users/{id}")]
-        public async Task<ActionResult<dynamic>> GetUsers(Guid id)
+        [HttpGet("Users/{Email}")]
+        public async Task<ActionResult<dynamic>> GetUsers([FromRoute]string Email)
         {
             var responGetAll = await this._userAuth_BL.GetAll_Users();
+            Console.WriteLine($"\n\n\n\t\t{responGetAll}\n\n\n");
+            
+
             if(responGetAll == null){
-                return Conflict(responGetAll);
+                return NotFound(responGetAll);
             }
-            var user = responGetAll.Find(user => user.PK_UserID = id);
-            return Ok(user);
+            
+            foreach(dynamic user1 in responGetAll){
+                Console.WriteLine($"\n\n\n\t\t{user1.Email} : vs : {Email}\n\n\n");
+                // user.Email
+                if(user1.Email == Email)
+                {
+                    Console.WriteLine($"\n\n\n\t\t{user1}\n\n\n");
+                    return Ok(user1);
+                }
+                // return NotFound(responGetAll);
+            }
+            return Ok(responGetAll);
         }
 
     }

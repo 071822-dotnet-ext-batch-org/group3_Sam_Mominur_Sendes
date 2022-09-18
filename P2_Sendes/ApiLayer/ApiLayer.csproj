@@ -10,6 +10,8 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.9" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.9" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,4 +19,8 @@
     <ProjectReference Include="..\ModelLayer\ModelLayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Microsoft.AspNetCore.Authentication.Cookies" />
+    <None Remove="Microsoft.AspNetCore.Authentication.OpenIdConnect" />
+  </ItemGroup>
 </Project>
