@@ -491,11 +491,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\MainFolder\\group3_Sam_Mominur_Sendes\\P2_Mominur\\RepositoryAccessLayer\\RepositoryAccessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\EshopingSite\\group3_Sam_Mominur_Sendes\\P2_Mominur\\RepositoryAccessLayer\\RepositoryAccessLayer.csproj",
       "projectName": "RepositoryAccessLayer",
-      "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\MainFolder\\group3_Sam_Mominur_Sendes\\P2_Mominur\\RepositoryAccessLayer\\RepositoryAccessLayer.csproj",
+      "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\EshopingSite\\group3_Sam_Mominur_Sendes\\P2_Mominur\\RepositoryAccessLayer\\RepositoryAccessLayer.csproj",
       "packagesPath": "C:\\Users\\sobuj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\MainFolder\\group3_Sam_Mominur_Sendes\\P2_Mominur\\RepositoryAccessLayer\\obj\\",
+      "outputPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\EshopingSite\\group3_Sam_Mominur_Sendes\\P2_Mominur\\RepositoryAccessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sobuj\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -512,8 +512,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\MainFolder\\group3_Sam_Mominur_Sendes\\P2_Mominur\\ModelsLayer\\ModelsLayer.csproj": {
-              "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\MainFolder\\group3_Sam_Mominur_Sendes\\P2_Mominur\\ModelsLayer\\ModelsLayer.csproj"
+            "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\EshopingSite\\group3_Sam_Mominur_Sendes\\P2_Mominur\\ModelsLayer\\ModelsLayer.csproj": {
+              "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\EshopingSite\\group3_Sam_Mominur_Sendes\\P2_Mominur\\ModelsLayer\\ModelsLayer.csproj"
             }
           }
         }

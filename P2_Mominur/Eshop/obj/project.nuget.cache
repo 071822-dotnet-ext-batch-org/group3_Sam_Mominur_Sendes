@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Q9nC5O4bRCiqTUA41f1qkQyl/wXz+AFVRHgGPZl75Jv0sLqUNRfaZmohpCCR8sw+39P8OWmWie+ZCab0gI5NAA==",
+  "dgSpecHash": "iPSl7rRmYb4pvZ3RHkdvvhSGSS5MQBsF+85FpS364etMTiD1qlbfmXTlNFFKekfc9Ern9sT534zgzGf/uUX8cg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\MainFolder\\group3_Sam_Mominur_Sendes\\P2_Mominur\\Eshop\\Eshop.csproj",
+  "projectFilePath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\EshopingSite\\group3_Sam_Mominur_Sendes\\P2_Mominur\\Eshop\\Eshop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sobuj\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\sobuj\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
