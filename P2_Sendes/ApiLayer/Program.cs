@@ -1,8 +1,8 @@
 using BusinessLayer;
 using RepoLayer;
 using System.Data.SqlClient;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 

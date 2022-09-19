@@ -1,12 +1,33 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
+﻿using System;
 namespace BusinessLayer
 {
-    public class VerifyAnswers
+
+    public class VerifyAnswers : IVerifyAnswers
     {
+        /// <summary>
+        /// This verifys the email with System.Net.Mail.MailAddress
+        /// </summary>
+        /// <param name="Email"></param>
+        /// <returns></returns>
+        public bool Veryify_EMAIL(string Email)
+        {
+            var trimmedEmail = Email.Trim();
+
+            if (trimmedEmail.EndsWith("."))
+            {
+                return false; // suggested by @TK-421 - StackOverflow
+            }
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(Email);
+                return addr.Address == trimmedEmail;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
         /// <summary>
         /// This method is to verify usernames
         ///
@@ -544,3 +565,4 @@ namespace BusinessLayer
     }
 
 }
+
