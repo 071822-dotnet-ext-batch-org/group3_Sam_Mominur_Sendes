@@ -47,6 +47,39 @@ builder.Services.AddScoped<IVerifyAnswers, VerifyAnswers>();
 //END OF INTERFACE DEPENDENCIES
 
 
+//Adding Authentication-----------------
+builder.Services.AddAuthentication(options =>
+{
+    //Needs APS.Core JWTBearer Package
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters()
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = builder.Configuration["_AppSecrets:Auth0Domain"],
+        ValidAudience = builder.Configuration["_AppSecrets:Auth0Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["_AppSecrets:Auth0SecretKey"]))
+    };
+});
+
+//Adding Authorization-----------------
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("read:user", p =>
+    p.RequireAuthenticatedUser()
+    .RequireClaim("permission", "read:user"));
+});
+
+
+//END OF AUTHORIZATION
+
+
+
 
 
 
@@ -70,6 +103,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseCors(MyAllowSpecificOrigins);//CORS ADDED HERE
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

@@ -1,0 +1,22 @@
+<!-- <button (click)="displayProducts()">Display products</button> -->
+
+
+<ul id="screen" *ngIf="allProducts != null">
+    <li *ngFor="let product of allProducts" >
+            <table id="ProductTable">
+                <div>
+                    <tr><th [ngModel]="product.title">{{product.title}}</th></tr>
+                    <img src="https://source.unsplash.com/random/200x200?sig=incrementingIdentifier" alt="">
+                </div>
+                <div>
+                    <tr><td [ngModel]="product.id">Id: {{product.id}}</td></tr>
+                    <tr><td>Description: {{product.description}}</td></tr>
+                    <tr><td>Price: {{product.price}}</td></tr>
+                    <tr><td>{{product.inventory}} left in stock</td></tr>
+                    <tr><td>{{product.dateCreated}} left in stock</td></tr>
+                </div>
+                <tr><td><button (click)="addToCart(product.id)">Add to Cart</button></td></tr>
+            </table>
+    </li>
+</ul>
+

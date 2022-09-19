@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="containter" *ngIf="auth.isLoading$ | async; else loaded">
+    <!-- <app-loading></app-loading> -->
+    
+  </div>
+
+  <ng-template #loaded>
+    <app-nav-bar></app-nav-bar>
+    <router-outlet></router-outlet>
+    
+  </ng-template>
+  
+</body>
+</html>

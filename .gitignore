@@ -4,9 +4,9 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # P2 Individual folders to ignore when pushing to repo files
-P2_Sendes/
-P2_Mominur/
-SamsFolderforP2/
+#P2_Sendes/
+#P2_Mominur/
+#SamsFolderforP2/
 
 # User-specific files
 *.rsuser

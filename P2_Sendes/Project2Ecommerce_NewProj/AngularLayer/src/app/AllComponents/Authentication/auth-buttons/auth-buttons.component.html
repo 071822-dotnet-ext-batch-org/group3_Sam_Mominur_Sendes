@@ -1,0 +1,10 @@
+<!-- <li> -->
+    <span *ngIf="(auth.isAuthenticated$ | async) == false">
+        <!-- {{username}} -->
+        <app-login ></app-login>
+        <app-register></app-register>
+    </span>
+    <span *ngIf="(auth.isAuthenticated$ | async ) == true">
+        <app-logout ></app-logout>
+
+    </span>
