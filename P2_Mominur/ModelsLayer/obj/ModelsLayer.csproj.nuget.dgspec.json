@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\MainFolder\\group3_Sam_Mominur_Sendes\\P2_Mominur\\ModelsLayer\\ModelsLayer.csproj": {}
+    "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\ModelsLayer\\ModelsLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\MainFolder\\group3_Sam_Mominur_Sendes\\P2_Mominur\\ModelsLayer\\ModelsLayer.csproj": {
+    "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\ModelsLayer\\ModelsLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\MainFolder\\group3_Sam_Mominur_Sendes\\P2_Mominur\\ModelsLayer\\ModelsLayer.csproj",
+        "projectUniqueName": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\ModelsLayer\\ModelsLayer.csproj",
         "projectName": "ModelsLayer",
-        "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\MainFolder\\group3_Sam_Mominur_Sendes\\P2_Mominur\\ModelsLayer\\ModelsLayer.csproj",
+        "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\ModelsLayer\\ModelsLayer.csproj",
         "packagesPath": "C:\\Users\\sobuj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\MainFolder\\group3_Sam_Mominur_Sendes\\P2_Mominur\\ModelsLayer\\obj\\",
+        "outputPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\ModelsLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sobuj\\AppData\\Roaming\\NuGet\\NuGet.Config",
