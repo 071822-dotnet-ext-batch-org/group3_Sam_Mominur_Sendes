@@ -1,0 +1,15 @@
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\OFFICIAL_PROJECT2\Final_Project\RepoLayer\bin\Debug\net6.0\RepoLayer.deps.json
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\OFFICIAL_PROJECT2\Final_Project\RepoLayer\bin\Debug\net6.0\RepoLayer.dll
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\OFFICIAL_PROJECT2\Final_Project\RepoLayer\bin\Debug\net6.0\RepoLayer.pdb
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\OFFICIAL_PROJECT2\Final_Project\RepoLayer\bin\Debug\net6.0\ModelLayer.dll
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\OFFICIAL_PROJECT2\Final_Project\RepoLayer\bin\Debug\net6.0\ModelLayer.pdb
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\OFFICIAL_PROJECT2\Final_Project\RepoLayer\obj\Debug\net6.0\RepoLayer.csproj.AssemblyReference.cache
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\OFFICIAL_PROJECT2\Final_Project\RepoLayer\obj\Debug\net6.0\RepoLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\OFFICIAL_PROJECT2\Final_Project\RepoLayer\obj\Debug\net6.0\RepoLayer.AssemblyInfoInputs.cache
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\OFFICIAL_PROJECT2\Final_Project\RepoLayer\obj\Debug\net6.0\RepoLayer.AssemblyInfo.cs
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\OFFICIAL_PROJECT2\Final_Project\RepoLayer\obj\Debug\net6.0\RepoLayer.csproj.CoreCompileInputs.cache
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\OFFICIAL_PROJECT2\Final_Project\RepoLayer\obj\Debug\net6.0\RepoLayer.csproj.CopyComplete
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\OFFICIAL_PROJECT2\Final_Project\RepoLayer\obj\Debug\net6.0\RepoLayer.dll
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\OFFICIAL_PROJECT2\Final_Project\RepoLayer\obj\Debug\net6.0\refint\RepoLayer.dll
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\OFFICIAL_PROJECT2\Final_Project\RepoLayer\obj\Debug\net6.0\RepoLayer.pdb
+C:\Users\samba\OneDrive\Desktop\Revature\group3_Sam_Mominur_Sendes\OFFICIAL_PROJECT2\Final_Project\RepoLayer\obj\Debug\net6.0\ref\RepoLayer.dll
