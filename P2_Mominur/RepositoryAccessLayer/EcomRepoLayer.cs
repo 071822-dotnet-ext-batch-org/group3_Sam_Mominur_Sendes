@@ -55,7 +55,7 @@ public async Task<List<Products>> ProductsAsync(int type)
          public async Task<Products>AddProductAsync(Products product)
         {
            
-             SqlConnection conn = new SqlConnection("");
+             SqlConnection conn = new SqlConnection(" ");
             using (SqlCommand command = new SqlCommand($"INSERT INTO Products (ProductID,FK_UserID,ProductName,ProductDetails,ProductPrice,ProductInventory) VALUES(@pid,@fk,@pn,@pd,@pp,@pi);", conn))
 
             {

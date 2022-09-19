@@ -13,6 +13,7 @@ C:\Users\sobuj\Documents\RevatureClassTeamGit\MainFolder\group3_Sam_Mominur_Send
 C:\Users\sobuj\Documents\RevatureClassTeamGit\MainFolder\group3_Sam_Mominur_Sendes\P2_Mominur\RepositoryAccessLayer\obj\Debug\net6.0\refint\RepositoryAccessLayer.dll
 C:\Users\sobuj\Documents\RevatureClassTeamGit\MainFolder\group3_Sam_Mominur_Sendes\P2_Mominur\RepositoryAccessLayer\obj\Debug\net6.0\RepositoryAccessLayer.pdb
 C:\Users\sobuj\Documents\RevatureClassTeamGit\MainFolder\group3_Sam_Mominur_Sendes\P2_Mominur\RepositoryAccessLayer\obj\Debug\net6.0\ref\RepositoryAccessLayer.dll
+<<<<<<< HEAD
 C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\RepositoryAccessLayer\bin\Debug\net6.0\RepositoryAccessLayer.deps.json
 C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\RepositoryAccessLayer\bin\Debug\net6.0\RepositoryAccessLayer.dll
 C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\RepositoryAccessLayer\bin\Debug\net6.0\RepositoryAccessLayer.pdb
@@ -28,3 +29,20 @@ C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P
 C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\RepositoryAccessLayer\obj\Debug\net6.0\refint\RepositoryAccessLayer.dll
 C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\RepositoryAccessLayer\obj\Debug\net6.0\RepositoryAccessLayer.pdb
 C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\RepositoryAccessLayer\obj\Debug\net6.0\ref\RepositoryAccessLayer.dll
+=======
+C:\Users\sobuj\Documents\RevatureClassTeamGit\EshopingSite\group3_Sam_Mominur_Sendes\P2_Mominur\RepositoryAccessLayer\bin\Debug\net6.0\RepositoryAccessLayer.deps.json
+C:\Users\sobuj\Documents\RevatureClassTeamGit\EshopingSite\group3_Sam_Mominur_Sendes\P2_Mominur\RepositoryAccessLayer\bin\Debug\net6.0\RepositoryAccessLayer.dll
+C:\Users\sobuj\Documents\RevatureClassTeamGit\EshopingSite\group3_Sam_Mominur_Sendes\P2_Mominur\RepositoryAccessLayer\bin\Debug\net6.0\RepositoryAccessLayer.pdb
+C:\Users\sobuj\Documents\RevatureClassTeamGit\EshopingSite\group3_Sam_Mominur_Sendes\P2_Mominur\RepositoryAccessLayer\bin\Debug\net6.0\ModelsLayer.dll
+C:\Users\sobuj\Documents\RevatureClassTeamGit\EshopingSite\group3_Sam_Mominur_Sendes\P2_Mominur\RepositoryAccessLayer\bin\Debug\net6.0\ModelsLayer.pdb
+C:\Users\sobuj\Documents\RevatureClassTeamGit\EshopingSite\group3_Sam_Mominur_Sendes\P2_Mominur\RepositoryAccessLayer\obj\Debug\net6.0\RepositoryAccessLayer.csproj.AssemblyReference.cache
+C:\Users\sobuj\Documents\RevatureClassTeamGit\EshopingSite\group3_Sam_Mominur_Sendes\P2_Mominur\RepositoryAccessLayer\obj\Debug\net6.0\RepositoryAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sobuj\Documents\RevatureClassTeamGit\EshopingSite\group3_Sam_Mominur_Sendes\P2_Mominur\RepositoryAccessLayer\obj\Debug\net6.0\RepositoryAccessLayer.AssemblyInfoInputs.cache
+C:\Users\sobuj\Documents\RevatureClassTeamGit\EshopingSite\group3_Sam_Mominur_Sendes\P2_Mominur\RepositoryAccessLayer\obj\Debug\net6.0\RepositoryAccessLayer.AssemblyInfo.cs
+C:\Users\sobuj\Documents\RevatureClassTeamGit\EshopingSite\group3_Sam_Mominur_Sendes\P2_Mominur\RepositoryAccessLayer\obj\Debug\net6.0\RepositoryAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\sobuj\Documents\RevatureClassTeamGit\EshopingSite\group3_Sam_Mominur_Sendes\P2_Mominur\RepositoryAccessLayer\obj\Debug\net6.0\RepositoryAccessLayer.csproj.CopyComplete
+C:\Users\sobuj\Documents\RevatureClassTeamGit\EshopingSite\group3_Sam_Mominur_Sendes\P2_Mominur\RepositoryAccessLayer\obj\Debug\net6.0\RepositoryAccessLayer.dll
+C:\Users\sobuj\Documents\RevatureClassTeamGit\EshopingSite\group3_Sam_Mominur_Sendes\P2_Mominur\RepositoryAccessLayer\obj\Debug\net6.0\refint\RepositoryAccessLayer.dll
+C:\Users\sobuj\Documents\RevatureClassTeamGit\EshopingSite\group3_Sam_Mominur_Sendes\P2_Mominur\RepositoryAccessLayer\obj\Debug\net6.0\RepositoryAccessLayer.pdb
+C:\Users\sobuj\Documents\RevatureClassTeamGit\EshopingSite\group3_Sam_Mominur_Sendes\P2_Mominur\RepositoryAccessLayer\obj\Debug\net6.0\ref\RepositoryAccessLayer.dll
+>>>>>>> main

@@ -1,36 +1,38 @@
 {
   "format": 1,
   "restore": {
-    "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/Business Layer/BusinessLayer.csproj": {}
+    "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\Business Layer\\BusinessLayer.csproj": {}
   },
   "projects": {
-    "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/Business Layer/BusinessLayer.csproj": {
+    "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\Business Layer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/Business Layer/BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\Business Layer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/Business Layer/BusinessLayer.csproj",
-        "packagesPath": "/Users/sendes/.nuget/packages/",
-        "outputPath": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/Business Layer/obj/",
+        "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\Business Layer\\BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\samba\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\Business Layer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/sendes/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\samba\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/ClassLibrary1/RepoLayer.csproj": {
-                "projectPath": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/ClassLibrary1/RepoLayer.csproj"
+              "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\ClassLibrary1\\RepoLayer.csproj": {
+                "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\ClassLibrary1\\RepoLayer.csproj"
               },
-              "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/Models/ModelsLayer.csproj": {
-                "projectPath": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/Models/ModelsLayer.csproj"
+              "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\Models\\ModelsLayer.csproj": {
+                "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\Models\\ModelsLayer.csproj"
               }
             }
           }
@@ -60,34 +62,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/ClassLibrary1/RepoLayer.csproj": {
+    "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\ClassLibrary1\\RepoLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/ClassLibrary1/RepoLayer.csproj",
+        "projectUniqueName": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\ClassLibrary1\\RepoLayer.csproj",
         "projectName": "RepoLayer",
-        "projectPath": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/ClassLibrary1/RepoLayer.csproj",
-        "packagesPath": "/Users/sendes/.nuget/packages/",
-        "outputPath": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/ClassLibrary1/obj/",
+        "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\ClassLibrary1\\RepoLayer.csproj",
+        "packagesPath": "C:\\Users\\samba\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\ClassLibrary1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/sendes/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\samba\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/Models/ModelsLayer.csproj": {
-                "projectPath": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/Models/ModelsLayer.csproj"
+              "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\Models\\ModelsLayer.csproj": {
+                "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\Models\\ModelsLayer.csproj"
               }
             }
           }
@@ -117,26 +121,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/Models/ModelsLayer.csproj": {
+    "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\Models\\ModelsLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/Models/ModelsLayer.csproj",
+        "projectUniqueName": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\Models\\ModelsLayer.csproj",
         "projectName": "ModelsLayer",
-        "projectPath": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/Models/ModelsLayer.csproj",
-        "packagesPath": "/Users/sendes/.nuget/packages/",
-        "outputPath": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/Project2/Models/obj/",
+        "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\Models\\ModelsLayer.csproj",
+        "packagesPath": "C:\\Users\\samba\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/sendes/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\samba\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -170,7 +176,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

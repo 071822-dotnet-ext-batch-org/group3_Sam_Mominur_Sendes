@@ -7,4 +7,8 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BusinessLayer
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\
+=======
+build_property.ProjectDir = C:\Users\sobuj\Documents\RevatureClassTeamGit\EshopingSite\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\
+>>>>>>> main

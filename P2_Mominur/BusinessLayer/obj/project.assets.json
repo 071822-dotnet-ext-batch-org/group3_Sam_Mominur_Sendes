@@ -510,11 +510,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\BusinessLayer\\BusinessLayer.csproj",
       "projectName": "BusinessLayer",
       "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\BusinessLayer\\BusinessLayer.csproj",
       "packagesPath": "C:\\Users\\sobuj\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\BusinessLayer\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\EshopingSite\\group3_Sam_Mominur_Sendes\\P2_Mominur\\BusinessLayer\\BusinessLayer.csproj",
+      "projectName": "BusinessLayer",
+      "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\EshopingSite\\group3_Sam_Mominur_Sendes\\P2_Mominur\\BusinessLayer\\BusinessLayer.csproj",
+      "packagesPath": "C:\\Users\\sobuj\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\EshopingSite\\group3_Sam_Mominur_Sendes\\P2_Mominur\\BusinessLayer\\obj\\",
+>>>>>>> main
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sobuj\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -531,11 +539,19 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\ModelsLayer\\ModelsLayer.csproj": {
               "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\ModelsLayer\\ModelsLayer.csproj"
             },
             "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\RepositoryAccessLayer\\RepositoryAccessLayer.csproj": {
               "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\RepositoryAccessLayer\\RepositoryAccessLayer.csproj"
+=======
+            "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\EshopingSite\\group3_Sam_Mominur_Sendes\\P2_Mominur\\ModelsLayer\\ModelsLayer.csproj": {
+              "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\EshopingSite\\group3_Sam_Mominur_Sendes\\P2_Mominur\\ModelsLayer\\ModelsLayer.csproj"
+            },
+            "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\EshopingSite\\group3_Sam_Mominur_Sendes\\P2_Mominur\\RepositoryAccessLayer\\RepositoryAccessLayer.csproj": {
+              "projectPath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\EshopingSite\\group3_Sam_Mominur_Sendes\\P2_Mominur\\RepositoryAccessLayer\\RepositoryAccessLayer.csproj"
+>>>>>>> main
             }
           }
         }

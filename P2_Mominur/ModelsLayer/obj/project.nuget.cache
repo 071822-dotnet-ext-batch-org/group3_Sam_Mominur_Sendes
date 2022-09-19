@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "wSERCVhIy0u/qDlBCQ0J0gy2w939UyCuyUI9BtRIXE7rEevk3YkbnZAMM+oU8/f8QBnTEzKbdseM6wuVynJBow==",
   "success": true,
   "projectFilePath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\ModelsLayer\\ModelsLayer.csproj",
+=======
+  "dgSpecHash": "ZlvXy98PN5ntYAeqaTNvtHAkH5PIOQFktCm5TCTXVzFF8q7PxzXU5IRqedo2hL9FaA9Zm81B97z7drB2ZBtBKw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\EshopingSite\\group3_Sam_Mominur_Sendes\\P2_Mominur\\ModelsLayer\\ModelsLayer.csproj",
+>>>>>>> main
   "expectedPackageFiles": [],
   "logs": []
 }

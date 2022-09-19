@@ -1,0 +1,109 @@
+# ASP.NET
+# Build and test ASP.NET projects.
+# Add steps that publish symbols, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
+#pr: none #What is pr?
+
+#trigger: # sets a trigger on main for any change made to main
+#- main
+pr: none #pr means the trigger wont go off for ANY change to main branch
+trigger: #To specify which thing in the branch to trigger a run
+  branches:
+    include: #Will SEARCH on main for the path to trigger
+      - main  
+  paths:
+    include:
+      - OFFICIAL_PROJECT2/Final_Project/Final_Project # This entir sectio here is made to trigger on any changes
+      #to the path OFFICIAL_PROJECT2
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: 'OFFICIAL_PROJECT2/Final_Project/*.sln' # this is the path to your sln file in proj - relative path in your repo
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+  workingDirectory: 'OFFICIAL_PROJECT2/Final_Project/'
+
+
+stages:
+
+#---------------------------------------PREP STAGE
+- stage: Prep
+  jobs: 
+    - job: PreppingBy_downloadRequiredSDK #Job name CANNOT have spaces but can have _
+      displayName: download most recent sdk version
+      steps:
+      - task: UseDotNet@2
+        displayName: Get the SDK
+        inputs:
+          packageType: 'sdk'
+          version: '6.x'
+
+#---------------------------------------BUILD STAGE
+- stage: Build
+  jobs:
+  - job: BuildingBy_InstallReguiredPackages
+    steps:
+    - task: NuGetToolInstaller@1 #tool to install packages
+    #NuGetCommand downloads necessary nuget packages
+    - task: NuGetCommand@2 #Generated using the 'NuGet' task and setting path to solution as $(solution)
+      displayName: restore_the_app
+      inputs:
+        command: 'restore'
+        restoreSolution: '$(solution)'
+        # feedsToUse: 'select'
+    
+      #Dotnet SDK installed in the prep stage is used to build
+    - task: DotNetCoreCLI@2
+      displayName: build_the_app
+      inputs:
+        command: 'build'
+        projects: '$(solution)'
+        arguments: '--configuration $(buildConfiguration)'
+        workingDirectory: '$(workingDirectory)'
+
+
+
+#---------------------------------------TEST STAGE
+- stage: Test
+  jobs:
+    - job: TestingBy_TBA
+      # steps:
+    # - task: VSTest@2
+    #   inputs:
+    #     platform: '$(buildPlatform)'
+    #     configuration: '$(buildConfiguration)'
+
+
+#---------------------------------------PUBLISH STAGE
+- stage: Publish
+  dependsOn: Build #if the build fails, the app will not be published
+  jobs:
+    - job: PublishingBy_ConvertingTOZIP
+      steps:
+        - task: DotNetCoreCLI@2
+          displayName: Publishing
+          inputs:
+            command: 'publish'
+            publishWebProjects: true
+            workingDirectory: '$(workingDirectory)'
+            projects: $(solution)
+            zipAfterPublish: true #to makke a zip file of the published app
+
+
+#---------------------------------------DEPLOY STAGE
+# - stage: Deploy
+#   jobs:
+#     - job: DeployingBy_AzureAppServiceDEPLOY
+#       displayName: Deploying To Azure App Service to push to website
+#       steps:
+#       - task: AzureRmWebAppDeployment@4
+#         inputs:
+#           ConnectionType: 'AzureRM'
+#           appType: 'webApp'
+#           WebAppName: 'P2_Ecomm_Store' #Will
+#           deployToSlotOrASE: true
+#           ResourceGroupName: 'Group3_P2_Sam_Mominur_Sendes'
+#           SlotName: 'production'
+#           packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'

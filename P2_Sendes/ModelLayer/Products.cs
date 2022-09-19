@@ -8,10 +8,12 @@ namespace ModelLayer
     public class Product
     {
         private Guid pk_ProductID {get;set;}
-        private string title {get;set;}
-        private string description {get;set;}
+        private string title {get;set;} = "User";
+        private string? description {get;set; } 
         private decimal price {get;set;}
         private int inventory {get;set;}
+        private DateTime dateCreated { get; set; }
+        private string createdBy { get; set; } = "User";
         //TODO Add user ID foreign key
         //public Guid FK_UserID { get; set; }
 
@@ -34,7 +36,7 @@ namespace ModelLayer
             }
         }
 
-        public string Description{
+        public string? Description{
             get{
                 return description;
             }
@@ -63,46 +65,52 @@ namespace ModelLayer
             }
         }
 
-        /// <summary>
-        /// This is a default Product 
-        /// </summary>
-        public Product(){
-            PK_ProductID = Guid.NewGuid();
-            Title = "Product Name";
-            Description = "Product Description";
-            Price = 0;
-            Inventory = 0;
+        public DateTime DateCreated
+        {
+            get
+            {
+                return dateCreated;
+            }
+            set
+            {
+                this.dateCreated = value;
+            }
+        }
+        public string CreatedBy
+        {
+            get
+            {
+                return createdBy;
+            }
+            set
+            {
+                this.createdBy = value;
+            }
         }
 
         /// <summary>
-        /// This is a product that gets created by a user IN THE APP
+        /// This is the default product
         /// </summary>
+        public Product(){}
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
         /// <param name="title"></param>
         /// <param name="description"></param>
         /// <param name="price"></param>
         /// <param name="inventory"></param>
-        public Product(string title, string description, decimal price, int inventory){
-            PK_ProductID = Guid.NewGuid();
+        /// <param name="dateCreated"></param>
+        /// <param name="userID"></param>
+        public Product(Guid id, string title, string description, decimal price, int inventory, DateTime dateCreated, string createdBy){
+            PK_ProductID = id;
             Title = title;
             Description = description;
             Price = price;
             Inventory = inventory;
-        }
-
-        /// <summary>
-        /// This is a product that gets loaded FROM the database
-        /// </summary>
-        /// <param name="ID"></param>
-        /// <param name="title"></param>
-        /// <param name="description"></param>
-        /// <param name="price"></param>
-        /// <param name="inventory"></param>
-        public Product(Guid ID, string title, string description, decimal price, int inventory){//This is a product that gets loaded FROM the Database
-            PK_ProductID = ID;
-            Title = title;
-            Description = description;
-            Price = price;
-            Inventory = inventory;
+            DateCreated = dateCreated;
+            CreatedBy = createdBy;
         }
     }
 

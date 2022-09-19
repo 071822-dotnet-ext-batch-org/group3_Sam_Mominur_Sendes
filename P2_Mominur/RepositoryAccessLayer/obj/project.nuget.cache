@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "VennexdRHAivntbxQQfckOFssp3YtpTa7eQ5fjwyHV7X4wQ0vJ2jD1UPXjOn+pr6vQo8wIdT8y3USR3Z+2/XxA==",
   "success": true,
   "projectFilePath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\RepositoryAccessLayer\\RepositoryAccessLayer.csproj",
+=======
+  "dgSpecHash": "646KADxumAOiH2Ou4hbBlDfUZuFcpxSC0/KZJVViZCtubvuqEpNdK1FTIgF37S9iAh2SgvnzVUz/3JAl+6sy3w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\EshopingSite\\group3_Sam_Mominur_Sendes\\P2_Mominur\\RepositoryAccessLayer\\RepositoryAccessLayer.csproj",
+>>>>>>> main
   "expectedPackageFiles": [
     "C:\\Users\\sobuj\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\sobuj\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

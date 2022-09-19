@@ -1,36 +1,44 @@
 ﻿<Properties StartupConfiguration="{D6FDB08C-F7E8-458E-96EC-1717D4EEFCCE}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="RepoLayer/ADO_Access.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Tests.Project2 FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BusinessLayer/Product_BusinessLayer.cs">
     <Files>
-      <File FileName="BusinessLayer/VerifyAnswers.cs" Line="446" Column="52" />
-      <File FileName="ModelLayer/Products.cs" Line="1" Column="1" />
-      <File FileName="RepoLayer/IADO_Access.cs" Line="8" Column="20" />
-      <File FileName="RepoLayer/ADO_Access.cs" Line="84" Column="17" />
-      <File FileName="BusinessLayer/UserAuthentication.cs" Line="116" Column="57" />
-      <File FileName="ApiLayer/Controllers/UserAuthController.cs" Line="40" Column="69" />
-      <File FileName="BusinessLayer/IUserAuthentication.cs" Line="11" Column="20" />
+      <File FileName="../../../../../.microsoft/usersecrets/788dc3c3-6561-40f4-86a1-23480dd17f08/secrets.json" Line="4" Column="173" />
+      <File FileName="ApiLayer/Program.cs" Line="86" Column="43" />
+      <File FileName="ApiLayer/appsettings.json" Line="19" Column="1" />
+      <File FileName="ApiLayer/Controllers/UserAuthController.cs" Line="110" Column="30" />
+      <File FileName="ModelLayer/Orders.cs" Line="1" Column="1" />
+      <File FileName="BusinessLayer/Product_BusinessLayer.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="P2_Sendes" expanded="True">
             <Node name="ApiLayer" expanded="True">
+              <Node name="Dependencies" expanded="True" />
               <Node name="Controllers" expanded="True" />
             </Node>
-            <Node name="BusinessLayer" expanded="True" />
-            <Node name="RepoLayer" expanded="True" />
+            <Node name="BusinessLayer" expanded="True">
+              <Node name="Product_BusinessLayer.cs" selected="True" />
+            </Node>
+            <Node name="ModelLayer" expanded="True" />
           </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State />
       </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="P2_Sendes" expanded="True" selected="True" />
+        </State>
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.ApiLayer PreferredExecutionTarget="/Applications/Firefox.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
