@@ -15,6 +15,25 @@ C:\Users\sobuj\Documents\RevatureClassTeamGit\MainFolder\group3_Sam_Mominur_Send
 C:\Users\sobuj\Documents\RevatureClassTeamGit\MainFolder\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\obj\Debug\net6.0\refint\BusinessLayer.dll
 C:\Users\sobuj\Documents\RevatureClassTeamGit\MainFolder\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\obj\Debug\net6.0\BusinessLayer.pdb
 C:\Users\sobuj\Documents\RevatureClassTeamGit\MainFolder\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\obj\Debug\net6.0\ref\BusinessLayer.dll
+<<<<<<< HEAD
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\bin\Debug\net6.0\BusinessLayer.deps.json
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\bin\Debug\net6.0\BusinessLayer.dll
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\bin\Debug\net6.0\BusinessLayer.pdb
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\bin\Debug\net6.0\ModelsLayer.dll
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\bin\Debug\net6.0\RepositoryAccessLayer.dll
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\bin\Debug\net6.0\ModelsLayer.pdb
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\bin\Debug\net6.0\RepositoryAccessLayer.pdb
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\obj\Debug\net6.0\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\obj\Debug\net6.0\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\obj\Debug\net6.0\BusinessLayer.AssemblyInfoInputs.cache
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\obj\Debug\net6.0\BusinessLayer.AssemblyInfo.cs
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\obj\Debug\net6.0\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\obj\Debug\net6.0\BusinessLayer.csproj.CopyComplete
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\obj\Debug\net6.0\BusinessLayer.dll
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\obj\Debug\net6.0\refint\BusinessLayer.dll
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\obj\Debug\net6.0\BusinessLayer.pdb
+C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\obj\Debug\net6.0\ref\BusinessLayer.dll
+=======
 C:\Users\sobuj\Documents\RevatureClassTeamGit\EshopingSite\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\bin\Debug\net6.0\BusinessLayer.deps.json
 C:\Users\sobuj\Documents\RevatureClassTeamGit\EshopingSite\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\bin\Debug\net6.0\BusinessLayer.dll
 C:\Users\sobuj\Documents\RevatureClassTeamGit\EshopingSite\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\bin\Debug\net6.0\BusinessLayer.pdb
@@ -32,3 +51,4 @@ C:\Users\sobuj\Documents\RevatureClassTeamGit\EshopingSite\group3_Sam_Mominur_Se
 C:\Users\sobuj\Documents\RevatureClassTeamGit\EshopingSite\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\obj\Debug\net6.0\refint\BusinessLayer.dll
 C:\Users\sobuj\Documents\RevatureClassTeamGit\EshopingSite\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\obj\Debug\net6.0\BusinessLayer.pdb
 C:\Users\sobuj\Documents\RevatureClassTeamGit\EshopingSite\group3_Sam_Mominur_Sendes\P2_Mominur\BusinessLayer\obj\Debug\net6.0\ref\BusinessLayer.dll
+>>>>>>> main

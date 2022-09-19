@@ -8,9 +8,17 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Eshop
 build_property.RootNamespace = Eshop
+<<<<<<< HEAD
+build_property.ProjectDir = C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\Eshop\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\sobuj\Documents\RevatureClassTeamGit\Group3\group3_Sam_Mominur_Sendes\P2_Mominur\Eshop
+=======
 build_property.ProjectDir = C:\Users\sobuj\Documents\RevatureClassTeamGit\EshopingSite\group3_Sam_Mominur_Sendes\P2_Mominur\Eshop\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Users\sobuj\Documents\RevatureClassTeamGit\EshopingSite\group3_Sam_Mominur_Sendes\P2_Mominur\Eshop
+>>>>>>> main
 build_property._RazorSourceGeneratorDebug = 

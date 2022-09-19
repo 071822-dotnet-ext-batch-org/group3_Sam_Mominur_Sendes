@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "VRD7WxSFTYHGtvFqCzbetkDsJ5zun2CykpVxeJseqSU39zRwb4flVgF+UqfVTa5GMD7Q59Hwg6Zc88ci/X9RaA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\Group3\\group3_Sam_Mominur_Sendes\\P2_Mominur\\BusinessLayer\\BusinessLayer.csproj",
+=======
   "dgSpecHash": "lLF6dXXAdUnYmVqz5rX/d3Ag/BFMxksm+cqeF+a9h1+p87fxHVzys+Y7foAGe2wZWjCmd3bENJvRNapwXwyfLg==",
   "success": true,
   "projectFilePath": "C:\\Users\\sobuj\\Documents\\RevatureClassTeamGit\\EshopingSite\\group3_Sam_Mominur_Sendes\\P2_Mominur\\BusinessLayer\\BusinessLayer.csproj",
+>>>>>>> main
   "expectedPackageFiles": [
     "C:\\Users\\sobuj\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\sobuj\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
