@@ -13,17 +13,17 @@ trigger: #To specify which thing in the branch to trigger a run
       - main  
   paths:
     include:
-      - OFFICIAL_PROJECT2 # This entir sectio here is made to trigger on any changes
+      - OFFICIAL_PROJECT2/Final_Project/Final_Project # This entir sectio here is made to trigger on any changes
       #to the path OFFICIAL_PROJECT2
 
 pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: 'OFFICIAL_PROJECT2/*.sln' # this is the path to your sln file in proj - relative path in your repo
+  solution: 'OFFICIAL_PROJECT2/Final_Project/*.sln' # this is the path to your sln file in proj - relative path in your repo
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  workingDirectory: 'OFFICIAL_PROJECT2/'
+  workingDirectory: 'OFFICIAL_PROJECT2/Final_Project/'
 
 
 stages:
