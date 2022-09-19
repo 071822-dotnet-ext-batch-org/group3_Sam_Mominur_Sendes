@@ -1,0 +1,24 @@
+<nav>
+    <ul>
+        <li>
+            <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
+            
+        </li>
+        <li>
+            <!-- <app-user></app-user> -->
+            <a routerLink="/products" routerLinkActive="active" ariaCurrentWhenActive="page">Products</a>
+            <!-- <app-cart></app-cart> -->
+            <!-- <app-user-request></app-user-request> -->
+            <!-- <a routerLink="/Products" routerLinkActive="active" ariaCurrentWhenActive="page">Products</a> -->
+        </li>
+        <li><a routerLink="/users" routerLinkActive="active" ariaCurrentWhenActive="page"
+            *ngIf="(auth.isAuthenticated$ | async ) == true">Registered Users</a></li>
+        <li><a routerLink="/profile" routerLinkActive="active" ariaCurrentWhenActive="page"
+            *ngIf="(auth.isAuthenticated$ | async ) == true">Profile</a></li>
+        <!-- <li *ngIf="auth.user$ | async as user"><a routerLink="/Account" routerLinkActive="active" ariaCurrentWhenActive="page">Welcome {{user.name}}</a></li> -->
+        <li><a routerLink="/cart" routerLinkActive="active" ariaCurrentWhenActive="page">Cart</a></li>
+        <li>
+            <app-auth-buttons></app-auth-buttons>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,33 @@
+<ul >
+    <li *ngFor="let user of allUsers">
+        <!-- <div *ngIf="auth.user$ | async as user"></div> -->
+        <h1>{{user.username | uppercase}}'s Account</h1>
+        <section>
+            <h4>Username: {{user.password}}</h4>
+            <h4>Given Name: {{user.firstname}}</h4>
+            <h4>Family Name: {{user.lastname}}</h4>
+            <h4>Email: {{user.email}}</h4>
+            <h4>Role: {{user.role}}</h4>
+            <h4>Join Date: {{user.signUpDate}}</h4>
+            <h4>ID: {{user.id}}</h4>
+            
+        </section>
+        <!-- {{user.id}} -->
+    </li>
+</ul>
+
+<!-- <form class="loginForm" >
+    <input id="loginEmail" type="email" name="Email" placeholder="Enter your email here..." [(ngModel)]="user.email">
+    <input id="loginPassword" type="password" name="Password" placeholder="Enter your password here..." [(ngModel)]="user.password">
+    <button id="loginBtn" type="submit" name="signup" (click)="loginUser()">signup</button>
+
+</form>  -->
+<!-- <form class="registerForm">
+    <input id="registerU" type="text" name="Username" placeholder="Enter your username here..." [(ngModel)]="currentUser_Register.username">
+    <input id="registerP" type="password" name="Password" placeholder="Enter your password here..." [(ngModel)]="currentUser_Register.password">
+    <input id="registerF" type="text" name="First" placeholder="Enter your first name here..." [(ngModel)]="currentUser_Register.firstname">
+    <input id="registerL" type="text" name="Last" placeholder="Enter your last name here..." [(ngModel)]="currentUser_Register.lastname">
+    <input id="registerE" type="email" name="Email" placeholder="Enter your email here..." [(ngModel)]="currentUser_Register.email">
+    <button id="registerSub" type="submit" name="signup" (click)="registerUser()">Register</button>
+    <button id="registerCancel" type="cancel" name="cancel" (click)="cancelRegistration()">Cancel</button>
+</form> -->

@@ -1,0 +1,26 @@
+<p>profile works!</p>
+<h1>
+    <p>
+        This user with an ID token has gotten their information 
+    </p>
+</h1>
+
+<div *ngIf="auth.user$ | async as user">
+    <strong>This route should be protected!!!</strong>
+    <div class="row align-items-center">
+        <div class="col-md-2 mb-3">
+            <img [src]="user.picture" alt="User's profile pic"
+            class="rounded-circle img-fluid profile-picture"/>
+        </div>
+
+        <div>
+            <h2>{{user.name}}</h2>
+            <p>{{user.email}}</p>
+        </div>
+
+    </div>
+    <div>
+        <!-- To see the entire json data on their profile -->
+        <pre>{{ authenticatedUserProfile }}</pre>
+    </div>
+</div>

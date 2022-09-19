@@ -1,0 +1,76 @@
+
+@media only screen and (max-width: 600px) {
+    body {
+
+        transition: 1s;
+        background-color: lightblue;
+    }
+    body > nav > div{
+        display: inline-block;
+        background-color:aquamarine;
+    }
+    #dashBoard{
+        margin: auto;
+        justify-content: center;
+        margin: auto;
+        padding: auto;
+        display: block;
+        justify-content: center;
+        /* margin-right: 5px; */
+        transition: 1s;
+        background-color: rgb(224, 224, 224);
+        width: 90vw;
+        height: 40vh;
+    }
+    
+}/* End of Max 600 px*/
+
+
+
+@media only screen and (min-width: 600px) {
+    
+    body {
+        justify-content: center;
+        transition: 1s;
+        background-color: blanchedalmond;
+        /* padding-left: 5px;
+        padding-right: 5px; */
+    }
+    body > nav > div{
+        display: inline-block;
+        background-color:aquamarine;
+    }
+    body > div{
+        display: inline-block;
+        margin: auto;
+        /* text-align: center; */
+    }
+    .dashPromptSection{
+        float: left;
+        /* display: inline-block; */
+        width: 20vw;
+    }
+    .sideBar{
+        float: right;
+        /* display: inline-block; */
+        width: 20vw;
+    }
+    #dashBoard{
+        
+        margin: auto;
+        justify-content: center;
+        position: relative;
+        margin: auto;
+        padding: auto;
+        display: block;
+        transition: 1s;
+        background-color: rgb(137, 137, 137);
+        width: 60vw;
+        height: 40vh;
+    }
+    
+    
+}/* End of Min 600 px*/
+/* #navBar{
+    display: flex;
+} */
