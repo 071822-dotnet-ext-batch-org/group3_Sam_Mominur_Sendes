@@ -1,0 +1,16 @@
+.HUD {
+    background-color: rgb(208, 157, 91);
+    display:block;
+    border: 0px;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100vmax;
+    top: 0%;
+    bottom: 0%;
+}
+
+div{
+    padding: 0%;
+}
