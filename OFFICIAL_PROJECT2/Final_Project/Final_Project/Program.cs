@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
 using RepoLayer;
 using ModelLayer;
 using BusinessLayer;
@@ -55,14 +56,17 @@ builder.Services.AddAuthentication(options =>
 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 }).AddJwtBearer(options =>
 {
+    options.Authority = builder.Configuration["_AppSecrets:Auth0Domain"];
+    options.Audience = builder.Configuration["_AppSecrets:Auth0Audience"];
     options.TokenValidationParameters = new TokenValidationParameters()
     {
+        NameClaimType = ClaimTypes.NameIdentifier,
         ValidateIssuer = true,
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
-        ValidIssuer = builder.Configuration["_AppSecrets:Auth0Domain"],
-        ValidAudience = builder.Configuration["_AppSecrets:Auth0Audience"],
+        //ValidIssuer = builder.Configuration["_AppSecrets:Auth0Domain"],
+        //ValidAudience = builder.Configuration["_AppSecrets:Auth0Audience"],
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["_AppSecrets:Auth0SecretKey"]))
     };
 });
