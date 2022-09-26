@@ -1,1 +1,21 @@
-<p>cart works!</p>
+<h3>My CART</h3>
+<div>
+    <div *ngIf="(cart !== null)||(cart !== undefined)">
+        <div>
+            <h6>
+                <strong>Cart ID</strong>: {{cart.id}}
+            </h6>
+        </div>
+        <ul *ngFor="let product of cart.cart;">
+
+            
+            <h6>
+                <strong>Product {{product.id}}</strong>: {{product.title}}
+            </h6>
+            <Button>Remove</Button>
+        </ul>
+        <div>
+            <button>checkout</button>
+        </div>
+    </div>
+</div>

@@ -1,14 +1,14 @@
 <p>products works!</p>
 <div>
     <div>
-        <ul>
-            <li><h3>Title: </h3></li>
+        <ul *ngFor="let product of prodList;">
+            <li><h3>Title: {{product.title}}</h3></li>
             <li><img src="https://source.unsplash.com/random/200x200?sig=incrementingIdentifier" alt="Image Photo"></li>
-            <li><h6>Desc: </h6></li>
-            <li><h6>Inventory: </h6></li>
-            <li><button>View</button></li>
+            <li><h6>Desc: {{product.description}}</h6></li>
+            <li><h6>Inventory: {{product.inventory}}</h6></li>
+    <li><button routerLink="/store/product" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="viewProduct(product)">View</button></li>
             <li><button>Add to wishlist</button></li>
-            <li><button>Add to cart</button></li>
+            <li><button (click)="addToCart(product)">Add to cart</button></li>
             
 
         </ul>

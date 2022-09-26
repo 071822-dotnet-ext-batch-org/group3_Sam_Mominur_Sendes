@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\Final_Project\\RepoLayer\\RepoLayer.csproj": {}
+    "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/OFFICIAL_PROJECT2/Final_Project/RepoLayer/RepoLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\Final_Project\\ModelLayer\\ModelLayer.csproj": {
+    "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/OFFICIAL_PROJECT2/Final_Project/ModelLayer/ModelLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\Final_Project\\ModelLayer\\ModelLayer.csproj",
+        "projectUniqueName": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/OFFICIAL_PROJECT2/Final_Project/ModelLayer/ModelLayer.csproj",
         "projectName": "ModelLayer",
-        "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\Final_Project\\ModelLayer\\ModelLayer.csproj",
-        "packagesPath": "C:\\Users\\samba\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\Final_Project\\ModelLayer\\obj\\",
+        "projectPath": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/OFFICIAL_PROJECT2/Final_Project/ModelLayer/ModelLayer.csproj",
+        "packagesPath": "/Users/sendes/.nuget/packages/",
+        "outputPath": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/OFFICIAL_PROJECT2/Final_Project/ModelLayer/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\samba\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/sendes/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,36 +53,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\Final_Project\\RepoLayer\\RepoLayer.csproj": {
+    "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/OFFICIAL_PROJECT2/Final_Project/RepoLayer/RepoLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\Final_Project\\RepoLayer\\RepoLayer.csproj",
+        "projectUniqueName": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/OFFICIAL_PROJECT2/Final_Project/RepoLayer/RepoLayer.csproj",
         "projectName": "RepoLayer",
-        "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\Final_Project\\RepoLayer\\RepoLayer.csproj",
-        "packagesPath": "C:\\Users\\samba\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\Final_Project\\RepoLayer\\obj\\",
+        "projectPath": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/OFFICIAL_PROJECT2/Final_Project/RepoLayer/RepoLayer.csproj",
+        "packagesPath": "/Users/sendes/.nuget/packages/",
+        "outputPath": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/OFFICIAL_PROJECT2/Final_Project/RepoLayer/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\samba\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/sendes/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\Final_Project\\ModelLayer\\ModelLayer.csproj": {
-                "projectPath": "C:\\Users\\samba\\OneDrive\\Desktop\\Revature\\group3_Sam_Mominur_Sendes\\OFFICIAL_PROJECT2\\Final_Project\\ModelLayer\\ModelLayer.csproj"
+              "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/OFFICIAL_PROJECT2/Final_Project/ModelLayer/ModelLayer.csproj": {
+                "projectPath": "/Users/sendes/Desktop/Revature_Files/Group3/group3_Sam_Mominur_Sendes/OFFICIAL_PROJECT2/Final_Project/ModelLayer/ModelLayer.csproj"
               }
             }
           }
@@ -128,7 +124,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
         }
       }
     }

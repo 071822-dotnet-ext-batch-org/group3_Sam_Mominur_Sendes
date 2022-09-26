@@ -1,3 +1,4 @@
+
 export interface Product{
     id?: number,
     title?: string,
@@ -16,4 +17,11 @@ export interface User{
     firstname: string,
     lastname:string,
     email: string
+}
+
+export interface Cart{
+    id?: string,
+    cart?: Product[],
+    cartTotal?:number,
+    lastUpdated?:Date
 }

@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { AuthModule } from '@auth0/auth0-angular';
+import { environment as env } from 'src/environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,14 +20,14 @@ import { UIDESIGNComponent } from './Components/UIDESIGN/uidesign/uidesign.compo
 import { DashBoardComponent } from './Components/UIDESIGN/dash-board/dash-board.component';
 import { CheckoutComponent } from './Components/Pages/checkout/checkout.component';
 import { OrderCompleteComponent } from './Components/Pages/order-complete/order-complete.component';
-import { ProductDetailComponent } from './Components/Pages/product-detail/product-detail.component';
+import { ProductDetailsComponent } from './Components/Store/Features/product-details/product-details.component';
 import { OrdersComponent } from './Components/Pages/orders/orders.component';
 import { SettingsComponent } from './Components/Pages/settings/settings.component';
 // import { AcountSettingsComponent } from './Components/Pages/Settings/acount-settings/acount-settings.component';
 // import { DashSettingsComponent } from './Components/Pages/Settings/dash-settings/dash-settings.component';
 // import { PoliciesComponent } from './Components/Pages/Settings/policies/policies.component';
 import { ChatroomsComponent } from './Components/Pages/chatrooms/chatrooms.component';
-import { MakeProductComponent } from './Components/Pages/make-product/make-product.component';
+import { MakeProductComponent } from './Components/Store/Features/make-product/make-product.component';
 // import { ProductSettingsComponent } from './Components/Pages/Settings/product-settings/product-settings.component';
 import { ShareProductComponent } from './Components/Store/Features/share-product/share-product.component';
 import { ProductsComponent } from './Components/Store/StoreProducts/products/products.component';
@@ -45,7 +48,7 @@ import { ProductsComponent } from './Components/Store/StoreProducts/products/pro
     DashBoardComponent,
     CheckoutComponent,
     OrderCompleteComponent,
-    ProductDetailComponent,
+    ProductDetailsComponent,
     OrdersComponent,
     SettingsComponent,
     // AcountSettingsComponent,
@@ -59,7 +62,13 @@ import { ProductsComponent } from './Components/Store/StoreProducts/products/pro
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    AuthModule.forRoot(
+      {
+       ...env.auth
+      }
+    )//END OF FORROOT()
   ],
   providers: [],
   bootstrap: [AppComponent]
