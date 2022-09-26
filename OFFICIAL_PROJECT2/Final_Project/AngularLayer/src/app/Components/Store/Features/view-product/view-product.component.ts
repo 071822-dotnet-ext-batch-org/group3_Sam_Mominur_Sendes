@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { GetProductsService } from 'src/app/Services/ProductsService/get-products.service';
+import { Product } from 'src/app/Models/Models';
 
 @Component({
   selector: 'app-view-product',
@@ -6,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-product.component.css']
 })
 export class ViewProductComponent implements OnInit {
-
-  constructor() { }
+  @Input() product:Product = {}
+  constructor( ) { }
 
   ngOnInit(): void {
   }
