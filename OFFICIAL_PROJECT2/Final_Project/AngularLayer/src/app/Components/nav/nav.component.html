@@ -1,14 +1,18 @@
-<p>nav works!</p>
-<a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
-<a routerLink="/store" routerLinkActive="active" ariaCurrentWhenActive="page">Store</a>
-<a routerLink="/account" routerLinkActive="active" ariaCurrentWhenActive="page">Account</a>
-<span *ngIf="(auth.isAuthenticated$ | async) === false">
-    <app-login></app-login>
-    <app-register></app-register>
-</span>
-<span *ngIf="(auth.isAuthenticated$ | async) === true">
-    <app-logout></app-logout>
-
-</span>
+<div class="NAV ">
+    <div>
+        <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
+        <a routerLink="/store" routerLinkActive="active" ariaCurrentWhenActive="page">Store</a>
+        <a routerLink="/account" routerLinkActive="active" ariaCurrentWhenActive="page">Account</a>
+    </div>
+    <div id="authButtons">
+        <div *ngIf="(auth.isAuthenticated$ | async) === false">
+            <app-login></app-login>
+            <app-register></app-register>
+        </div>
+        <div *ngIf="(auth.isAuthenticated$ | async) === true">
+            <app-logout></app-logout>
+        </div>
+    </div>
+</div>
 
 

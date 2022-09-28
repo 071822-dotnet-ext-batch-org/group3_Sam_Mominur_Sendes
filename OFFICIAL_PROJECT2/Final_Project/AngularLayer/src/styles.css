@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files
 body{
     border: 0px;
     margin: 0%;
@@ -11,4 +11,33 @@ body{
     left: 0%;
     right: 0%;
     
+} */
+
+
+@media only screen and (max-width: 600px) {
+    body{
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(223, 247, 171);
+        transition: 20s;
+    
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    body{
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        background-color: antiquewhite;
+        transition: 20s;
+    
+    }
 }
