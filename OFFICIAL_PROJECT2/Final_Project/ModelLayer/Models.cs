@@ -54,6 +54,52 @@ public class Models
             this.SignupDate = signUpDate;
         }
     }//End of User Class
+    public class AuthUser
+    {
+        public Guid? ID {get;set;}
+        public string? Auth0ID {get;set;}
+        public DateTime? SignUpDate {get;set;} 
+        public DateTime? LastSignIn {get;set;} 
+        public AuthUser(){}
+        public AuthUser(Guid? id, string? auth0ID, DateTime? signUpDate, DateTime? lastSignIn)
+        {
+            this.ID = id;
+            this.Auth0ID = auth0ID;
+            this.SignUpDate = signUpDate;
+            this.LastSignIn = lastSignIn;
+        }
+    }
+
+    /// <summary>
+    /// This is the Model to create a User Profile
+    /// </summary>
+    public class UserProfile
+    {
+        public Guid? ProfileID {get;set;}
+        public Guid? Fk_AuthUserID {get;set;} 
+        public string? Username {get;set;} 
+        public string? Firstname {get;set;} 
+        public string? Lastname {get;set;} 
+        public string? Email {get;set;} 
+        public string? About {get;set;} 
+        public Status? Role {get;set;} 
+        public DateTime? CreateDate {get;set;} 
+
+        public UserProfile(){}
+        public UserProfile(Guid? profileID, Guid? fk_AuthUserID, string? username, string? firstname, string? lastname, string? email, string? about, Status? role, DateTime? createDate)
+        {
+            this.ProfileID = profileID;
+            this.Fk_AuthUserID = fk_AuthUserID;
+            this.Username = username;
+            this.Firstname = firstname;
+            this.Lastname = lastname;
+            this.Email = email;
+            this.About = about;
+            this.Role = role;
+            this.CreateDate = createDate;
+        }
+    }
+
 
     //------------Product Section -----------------
     /// <summary>
