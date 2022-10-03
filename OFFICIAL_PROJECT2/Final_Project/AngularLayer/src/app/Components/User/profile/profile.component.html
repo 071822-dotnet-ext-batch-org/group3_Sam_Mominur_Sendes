@@ -1,22 +1,29 @@
-<div>
-    <div>
-        <img id="profilePHOTO" src="https://source.unsplash.com/random/200x200?sig=incrementingIdentifier" alt="Banner Photo">
-        <table class="PROFILEinfo ">
-            <!-- <td></td><td>Info</td> -->
-            <tr>
-                <td>First Name</td><td>Value</td>
-            </tr>
-            <tr>
-                <td>Last Name</td><td>Value</td>
-            </tr>
-            <tr>
-                <td>Username</td><td>Value</td>
-            </tr>
-            <tr>
-                <td>Email</td><td>Value</td>
-            </tr>
+<div class="row align-items-center profileheader">
+    <div *ngIf="auth.user$ | async as user" class="col-md-2 mb-3">
+        <h2>Welcome Back</h2><h3> {{user.name}} <p>...or shall I say..</p> {{user.nickname | uppercase}} </h3>
+        <ul>
+            <li>
+                <img [src]="user.picture" alt="Profile Photo" class="rounded-circle img-fluid profile-picture">
+            </li>
+            <li>
+                <h3>First Name</h3> ---- <h4>{{user.given_name}}</h4>
+            </li>
+            <li>
+                <h3>Last Name</h3> ---- <h4>{{user.family_name}}</h4>
+            </li>
+            <li *ngIf="user.email_verified == true; else yourEmailMustVerify">
+                <h3>My Email</h3> ---- <h4>{{user.email}} - <span><i>Verified</i></span> </h4>
+            </li>
+            <li>
+                <ng-template #yourEmailMustVerify>
+                    <h3>My Email</h3> ---- <h4>{{user.email}} - <span><i>Must be verified</i></span></h4>
+                </ng-template>
+            </li>
+            <li>
+                <h3>Last Logged in <span><strong>at</strong></span>:</h3> ---- <h4> {{user.updated_at}}</h4>
+            </li>
+        </ul>
 
-        </table>
-    </div>
+        
     <div></div>
 </div>

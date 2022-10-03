@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthModule } from '@auth0/auth0-angular';
 import { environment as env } from 'src/environments/environment';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -68,7 +69,8 @@ import { ProductsComponent } from './Components/Store/StoreProducts/products/pro
       {
        ...env.auth
       }
-    )//END OF FORROOT()
+    ),//END OF FORROOT()
+    MatProgressSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
