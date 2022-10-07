@@ -1,0 +1,21 @@
+<p>store works!</p>
+
+<ul id="screen" *ngIf="allProducts != null">
+    <li *ngFor="let product of allProducts" >
+        <form action=""></form>
+            <table id="ProductTable" >
+                <div>
+                    <tr><th>{{product.Title}}{{currentProduct.Title}}</th></tr>
+                    <img src="https://source.unsplash.com/random/200x200?sig=incrementingIdentifier" alt="">
+                </div>
+                <div>
+                    <tr><td [ngModel]="product.ID">Id: {{product.ID}}{{product.ID}}</td></tr>
+                    <tr><td>Description: {{product.Description}}{{product.Description}}</td></tr>
+                    <tr><td>Price: {{product.Price}}{{product.Price}}</td></tr>
+                    <tr><td>{{product.Inventory}}{{product.Inventory}} left in stock</td></tr>
+                    <tr><td>{{ product.DateAdded | date }}{{ product.DateAdded | date }} left in stock</td></tr>
+                </div>
+                <tr><td><button routerLink="/store/product" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="viewProductDetails()">View Product</button></td></tr>
+            </table>
+    </li>
+</ul>

@@ -1,9 +1,14 @@
 <section>
     <h2>This is your Cart</h2>
-    
-    <div *ngFor="let product of currentCart">
-        <div>
-            <h3><span>{{product.id}}</span></h3>
+    <!-- <app-product [(current)]="currentCart"></app-product> -->
+    <!-- <app-product [(currentCart)]="currentCart">
+        <div *ngFor="let product of cart">
+            <ul>
+                <li><h4><strong>{{ product.title }}</strong></h4> | <h5>${{ product.price }}</h5> | <h5>{{ product.inventory }} left</h5></li>
+            </ul>
         </div>
+    </app-product> -->
+    <div>
+        <!-- <div><button type="submit" (click)=""></button></div> -->
     </div>
 </section>

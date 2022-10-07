@@ -8,12 +8,12 @@
 </head>
 <body>
   <div class="containter" *ngIf="auth.isLoading$ | async; else loaded">
-    <!-- <app-loading></app-loading> -->
+    <app-loading></app-loading>
     
   </div>
 
   <ng-template #loaded>
-    <app-nav-bar></app-nav-bar>
+    <!-- <app-nav-bar></app-nav-bar> -->
     <router-outlet></router-outlet>
     
   </ng-template>
