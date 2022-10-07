@@ -2,11 +2,19 @@
     <p>uidesign works!</p>
     <div>
         <div>
-            <app-nav></app-nav>
         </div>
         <div>
-            <app-dash-board></app-dash-board>
+            <app-nav></app-nav>
         </div>
+        <div *ngIf="auth.isLoading$ | async; else loaded">
+            <!-- <app-loading></app-loading> -->
+            <mat-spinner></mat-spinner>    
+            
+        </div>
+        
+        <ng-template #loaded>
+            <app-dash-board></app-dash-board>
+        </ng-template>
 
     </div>
 </div>

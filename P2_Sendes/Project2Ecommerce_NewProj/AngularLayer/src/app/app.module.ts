@@ -25,28 +25,32 @@ import { ProfileComponent } from './AllComponents/profile/profile.component';
 //
 // Import the module from the SDK
 import { AuthModule } from '@auth0/auth0-angular'; //To configure Auth0 in angular
-import { environment as envirn } from 'src/environments/environment'; //To get angular credentials from env gotten from the json file
+import { environment as envirn } from 'src/environments/environment';
+import { ProductDetailsComponent } from './AllComponents/products/ProductDetails/product-details/product-details.component';
+import { StoreComponent } from './AllComponents/products/Store/store/store.component'; //To get angular credentials from env gotten from the json file
 
 
 @NgModule({
   declarations: [
-    //Added Modules
+    //Default Components
+    AppComponent,
+    
+    //Third Party
+    
+    //My Added Building Blocks
     NavBarComponent,
     UserComponent,
     CartComponent,
     ProductsComponent,
-    
-    //Third Party
-    
-    //Default Modules
-    AppComponent,
-     LoginComponent,
-     LogoutComponent,
-     RegisterComponent,
-     AuthButtonsComponent,
-     HomeComponent,
-     CheckoutComponent,
-     ProfileComponent
+    LoginComponent,
+    LogoutComponent,
+    RegisterComponent,
+    AuthButtonsComponent,
+    HomeComponent,
+    CheckoutComponent,
+    ProfileComponent,
+    ProductDetailsComponent,
+    StoreComponent
   ],
   imports: [
     //Default Modules

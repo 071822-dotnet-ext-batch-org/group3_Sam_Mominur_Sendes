@@ -18,10 +18,10 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   loginWITHRedirect():void{
-    let User = this.auth.loginWithRedirect();
-    this.User = this.auth.getIdTokenClaims()
-    // console.log(`THe user logged in with ${User}, ${JSON.parse(this.User)}`)
-    this.User = this.auth.getUser();
+    this.auth.loginWithRedirect();
+    this.User = this.auth.user$
+    console.log(`THe user logged in with ${this.User}`)
+    // this.User = this.auth.getUser();
     // console.log(`THe user logged in with ${User}, ${JSON.parse(this.User)}`)
   }
 

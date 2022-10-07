@@ -20,11 +20,25 @@ body{
         margin: 0px;
         padding: 0px;
         display: block;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         background-color: rgb(223, 247, 171);
-        transition: 20s;
+        transition: 2s;
     
+    }
+    .PRODUCT{
+        background-color: rebeccapurple;
+        display: block;
+    }
+
+    .PRODUCT > img{
+        max-width: 80vw;
+    }
+
+    .DASHBAORD{
+        width: 100vw;
+        background-color: black;
+        padding: 10px;
     }
 }
 
@@ -37,7 +51,14 @@ body{
         width: 100vw;
         height: 100vh;
         background-color: antiquewhite;
-        transition: 20s;
+        transition: 2s;
     
     }
+    .PRODUCT{
+        background-color: rebeccapurple;
+        display: block;
+
+    }
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

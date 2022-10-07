@@ -1,9 +1,9 @@
 export interface Product{
-    id?: number,
-    title?: string,
-    description?: string,
-    price?: number,
-    inventory?: number,
-    dateCreated?: Date
+    ID?: number,
+    Title?: string,
+    Description?: string,
+    Price?: number,
+    Inventory?: number,
+    DateAdded?: Date
     
 }

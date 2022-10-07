@@ -9,7 +9,8 @@ export interface Product{
 }
 
 export interface User{
-    pK_UserID: string,
+    UserID: any,
+    Auth0ID: string,
     username:string,
     password: string,
     signUpDate: Date,

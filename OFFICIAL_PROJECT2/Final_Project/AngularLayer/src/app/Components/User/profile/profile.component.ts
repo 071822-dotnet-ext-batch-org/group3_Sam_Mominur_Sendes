@@ -9,13 +9,21 @@ import { User } from '@auth0/auth0-angular';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  private user:User = {}
-  constructor(private auth: AuthService, private GUS: GetUsersService) {
+  // private userProfile:User = {}
+  constructor(public auth: AuthService, private GUS: GetUsersService) {
     this.GUS;
   }
 
+  public userProfile?: string = "";
+
   ngOnInit(): void {
     this.getUserProfile();
+    this.auth.user$.subscribe(
+      userProfile => {
+        this.userProfile = JSON.stringify(userProfile) ;
+        console.log(`Your id is ${this.userProfile}`)
+      }
+    )
   }
 
   getUserProfile(){

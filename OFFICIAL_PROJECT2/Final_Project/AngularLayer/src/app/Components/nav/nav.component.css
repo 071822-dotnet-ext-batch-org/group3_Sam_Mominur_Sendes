@@ -11,3 +11,21 @@ div>div{
 .NAV{
 
 }
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    /* overflow: hidden; */
+}
+li{
+    /* display: block; */
+    margin: 0;
+    padding: 0;
+    float: left;
+
+}
+
+a{
+    padding: 14px 16px;
+}

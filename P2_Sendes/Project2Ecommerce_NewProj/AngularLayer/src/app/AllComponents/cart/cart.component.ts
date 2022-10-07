@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { User } from '@auth0/auth0-angular';
 import { Product } from '../../Models/Products'; 
 
@@ -10,9 +10,12 @@ import { Product } from '../../Models/Products';
 export class CartComponent implements OnInit {
   // public cart: any
   constructor() { }
-  public currentCart?: Product[] = []
+  @Input() product: Product = {}
+  @Input() currentCart: Product[] = []
+  @Input() sendCartResponse: any
 
   ngOnInit(): void {
+    this.currentCart.push(this.product)
     this.getCart()
   }
 
@@ -32,7 +35,9 @@ export class CartComponent implements OnInit {
 
 
   checkout(){
-
+    if(this.currentCart != null){
+      
+    }
   }
 
 }

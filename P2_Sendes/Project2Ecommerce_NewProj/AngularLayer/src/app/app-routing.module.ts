@@ -11,23 +11,27 @@ import { LogoutComponent } from './AllComponents/logout/logout.component';
 import { UserComponent } from './AllComponents/user/user.component';
 import { CartComponent } from './AllComponents/cart/cart.component';
 import { ProfileComponent } from './AllComponents/profile/profile.component';
+import { StoreComponent } from './AllComponents/products/Store/store/store.component';
 
 
 //Auth0 Imports
 import { AuthGuard } from '@auth0/auth0-angular';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InterceptorService } from './Services/Interceptor/interceptor.service';
+import { ProductDetailsComponent } from './AllComponents/products/ProductDetails/product-details/product-details.component';
 //---------------------------------------Routing Section----------------------
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'products', component: ProductsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'logout', component: LogoutComponent },
   { path: 'users', component: UserComponent, canActivate: [AuthGuard] },
   { path: 'cart', component: CartComponent },
-  {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]}
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
+  { path: 'store/product', component: ProductsComponent },
+  // { path: 'store/product', component: ProductDetailsComponent},
+  { path: 'store', component: StoreComponent}
 
 ];
 
